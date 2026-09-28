@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Should You Drink Ice Water? Cold Drinks and Body Type: FoodLore Blog</title>
+    <meta name="description" content="Is ice water bad for you? TCM says cold injures digestive yang, but the answer depends on your constitution. Learn which of the nine body types should choose warm water.">
+    <link rel="canonical" href="https://foodlore.app/blog/ice-water-body-type">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --blue: #2563EB; --blue-dark: #1D4ED8; --blue-light: #DBEAFE;
+            --slate-900: #0F172A; --slate-700: #334155; --slate-500: #64748B;
+            --slate-300: #CBD5E1; --slate-100: #F1F5F9; --white: #FFFFFF;
+            --green: #059669; --green-light: #D1FAE5;
+            --purple: #7C3AED; --purple-light: #EDE9FE;
+            --rose: #E11D48; --rose-light: #FFE4E6;
+            --amber: #D97706; --amber-light: #FEF3C7;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7; color: var(--slate-700); background: var(--white);
+            -webkit-font-smoothing: antialiased;
+        }
+        nav {
+            position: fixed; top: 0; width: 100%; z-index: 100;
+            background: rgba(255,255,255,0.92); backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+        .nav-inner {
+            max-width: 1120px; margin: 0 auto; display: flex;
+            align-items: center; justify-content: space-between; padding: 16px 24px;
+        }
+        .nav-brand {
+            font-size: 22px; font-weight: 800; color: var(--slate-900);
+            text-decoration: none; display: flex; align-items: center; gap: 10px;
+        }
+        .nav-brand-icon {
+            width: 36px; height: 36px; border-radius: 10px;
+            background: linear-gradient(135deg, var(--blue), var(--purple));
+            display: flex; align-items: center; justify-content: center;
+            font-size: 18px; color: white;
+        }
+        .nav-links { display: flex; gap: 32px; align-items: center; }
+        .nav-links a {
+            font-size: 14px; font-weight: 500; color: var(--slate-500);
+            text-decoration: none; transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--slate-900); }
+        .nav-cta {
+            background: var(--blue) !important; color: var(--white) !important;
+            padding: 8px 20px !important; border-radius: 8px !important;
+            font-weight: 600 !important;
+        }
+        .nav-cta:hover { background: var(--blue-dark) !important; }
+
+        .article-hero {
+            padding: 140px 24px 48px; text-align: center;
+            background: linear-gradient(180deg, #DBEAFE 0%, var(--white) 100%);
+        }
+        .article-badge {
+            display: inline-block; padding: 6px 16px; border-radius: 100px;
+            font-size: 13px; font-weight: 600; margin-bottom: 20px;
+            background: var(--white); color: var(--blue);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .article-hero h1 {
+            font-size: clamp(30px, 4.5vw, 44px); font-weight: 800;
+            color: var(--slate-900); line-height: 1.15; margin-bottom: 16px;
+            letter-spacing: -0.02em; max-width: 720px; margin-left: auto; margin-right: auto;
+        }
+        .article-meta {
+            font-size: 14px; color: var(--slate-500);
+            display: flex; gap: 12px; justify-content: center;
+        }
+
+        .article-body { max-width: 740px; margin: 0 auto; padding: 48px 24px 24px; }
+        .article-body p { margin-bottom: 20px; font-size: 17px; }
+        .article-body h2 {
+            font-size: 26px; font-weight: 800; color: var(--slate-900);
+            margin: 44px 0 16px; letter-spacing: -0.01em;
+        }
+        .article-body h3 {
+            font-size: 19px; font-weight: 700; color: var(--slate-900);
+            margin: 28px 0 10px;
+        }
+        .article-body ul, .article-body ol { margin: 0 0 20px 24px; font-size: 17px; }
+        .article-body li { margin-bottom: 10px; }
+        .article-body strong { color: var(--slate-900); }
+
+        .callout {
+            border-radius: 14px; padding: 24px 28px; margin: 28px 0;
+            background: var(--purple-light);
+            border-left: 4px solid var(--purple);
+        }
+        .callout h3 { margin-top: 0 !important; color: var(--purple) !important; }
+        .callout p, .callout li { font-size: 15px !important; }
+        .callout ul { margin-bottom: 0; }
+
+        .verdict-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+        .verdict {
+            border-radius: 14px; padding: 20px 22px;
+            border: 1px solid rgba(0,0,0,0.06);
+        }
+        .verdict h4 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+        .verdict ul { margin: 0 0 0 18px; font-size: 14px; }
+        .verdict li { margin-bottom: 6px; }
+        .verdict.good { background: var(--green-light); }
+        .verdict.good h4 { color: var(--green); }
+        .verdict.caution { background: var(--amber-light); }
+        .verdict.caution h4 { color: var(--amber); }
+
+        .disclaimer {
+            background: var(--slate-100); border-radius: 12px;
+            padding: 18px 22px; margin: 36px 0; font-size: 13px !important;
+            color: var(--slate-500) !important; line-height: 1.6;
+        }
+        .disclaimer p { font-size: 13px !important; margin-bottom: 0 !important; }
+
+        .cta-section {
+            text-align: center; padding: 72px 24px;
+            background: linear-gradient(135deg, var(--blue) 0%, var(--purple) 100%);
+            color: var(--white); margin-top: 24px;
+        }
+        .cta-section h2 {
+            font-size: clamp(26px, 3.5vw, 36px); font-weight: 800;
+            margin-bottom: 14px; letter-spacing: -0.01em;
+        }
+        .cta-section p {
+            font-size: 16px; opacity: 0.85; margin-bottom: 28px;
+            max-width: 480px; margin-left: auto; margin-right: auto;
+        }
+        .btn-white {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--white); color: var(--blue);
+            padding: 14px 36px; border-radius: 12px;
+            font-size: 16px; font-weight: 700; text-decoration: none;
+            transition: all 0.2s; box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+        }
+        .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+
+        .related { max-width: 740px; margin: 0 auto; padding: 40px 24px 64px; }
+        .related h3 { font-size: 18px; font-weight: 700; color: var(--slate-900); margin-bottom: 16px; }
+        .related a {
+            display: block; padding: 14px 18px; border-radius: 10px;
+            border: 1px solid rgba(0,0,0,0.06); margin-bottom: 10px;
+            text-decoration: none; color: var(--slate-700); font-size: 15px; font-weight: 500;
+            transition: all 0.2s;
+        }
+        .related a:hover { border-color: var(--blue); color: var(--blue); }
+
+        footer {
+            background: var(--slate-900); color: rgba(255,255,255,0.5);
+            padding: 48px 24px;
+        }
+        .footer-inner {
+            max-width: 1120px; margin: 0 auto;
+            display: flex; justify-content: space-between; align-items: center;
+            flex-wrap: wrap; gap: 16px;
+        }
+        .footer-brand {
+            font-size: 18px; font-weight: 700; color: var(--white);
+            display: flex; align-items: center; gap: 8px;
+        }
+        .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+        .footer-links a {
+            font-size: 14px; color: rgba(255,255,255,0.5);
+            text-decoration: none; transition: color 0.2s;
+        }
+        .footer-links a:hover { color: var(--white); }
+        .footer-copy {
+            font-size: 13px; width: 100%; text-align: center;
+            margin-top: 24px; padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .article-hero { padding: 120px 20px 40px; }
+            .verdict-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="/" class="nav-brand">
+            <div class="nav-brand-icon">FL</div>
+            FoodLore
+        </a>
+        <div class="nav-links">
+            <a href="/#features">Features</a>
+            <a href="/blog">Blog</a>
+            <a href="/support">Support</a>
+            <a href="https://apps.apple.com/app/foodlore/id6760920100" class="nav-cta">Download</a>
+        </div>
+    </div>
+</nav>
+
+<header class="article-hero">
+    <div class="article-badge">🧊 TCM Body Types</div>
+    <h1>Should You Drink Ice Water? Cold Drinks and Body Type</h1>
+    <div class="article-meta"><span>Sep 28, 2026</span><span>·</span><span>5 min read</span></div>
+</header>
+
+<article class="article-body">
+    <p>
+        Few food topics divide East and West like ice water. In much of the West, a glass packed
+        with ice is the default. In Traditional Chinese Medicine, cold drinks have been viewed
+        with suspicion for centuries. So who is right? As usual in constitution-based thinking,
+        the honest answer is: it depends on the body doing the drinking.
+    </p>
+
+    <div class="callout">
+        <h3>The nine TCM body constitutions</h3>
+        <p>
+            TCM groups people into nine body constitutions: <strong>Balanced</strong>,
+            <strong>Qi Deficiency</strong>, <strong>Yang Deficiency</strong>, <strong>Yin Deficiency</strong>,
+            <strong>Phlegm-Dampness</strong>, <strong>Damp-Heat</strong>, <strong>Blood Stasis</strong>,
+            <strong>Qi Stagnation</strong>, and <strong>Special/Inherited</strong>. Your constitution
+            shapes how you respond to a food's thermal nature, not just its calories. FoodLore maps
+            your constitution and scores foods against it.
+        </p>
+    </div>
+
+    <h2>What TCM says: cold injures digestive yang</h2>
+    <p>
+        TCM describes digestion as a warming, transformative process powered by the spleen and
+        stomach, sometimes called the digestive fire. Cold is classified as a yin pathogen: it
+        constricts, slows, and congeals. Regularly drinking ice water, in this view, pours cold
+        directly onto that fire. The result can be bloating, sluggish digestion, loose stools,
+        and a general sense of heaviness, especially in people whose digestive warmth is already
+        low.
+    </p>
+    <p>
+        This is also why TCM traditionally favors warm or room-temperature water, particularly in
+        the morning, to wake the digestive system gently rather than shocking it.
+    </p>
+
+    <h2>What modern science says</h2>
+    <p>
+        Modern research is less dramatic. For most healthy people, cold water is perfectly safe,
+        and staying hydrated matters far more than the temperature of the water. Some people do
+        report that ice-cold drinks trigger headaches, worsen acid reflux, or cause stomach
+        cramping, and cold water may slow the rate of gastric emptying slightly. But there is no
+        strong evidence that it damages digestion in healthy adults. Both views agree on the one
+        thing that matters most: drink enough water.
+    </p>
+
+    <h2>How each body type responds</h2>
+    <div class="verdict-grid">
+        <div class="verdict good">
+            <h4>✓ Cold drinks are fine</h4>
+            <ul>
+                <li><strong>Balanced:</strong> a healthy digestive system handles cold drinks without trouble, especially in summer.</li>
+                <li><strong>Damp-Heat:</strong> cooling drinks can actually relieve internal heat. Iced herbal teas are a good fit.</li>
+            </ul>
+        </div>
+        <div class="verdict caution">
+            <h4>⚠ Choose warm instead</h4>
+            <ul>
+                <li><strong>Yang Deficiency:</strong> the classic cold-type constitution. Cold drinks worsen cold limbs, fatigue, and weak digestion.</li>
+                <li><strong>Qi Deficiency:</strong> low digestive energy plus cold drinks often means bloating and heaviness after drinking.</li>
+                <li><strong>Phlegm-Dampness:</strong> cold and dampness reinforce each other. Warm water helps the body process fluids better.</li>
+                <li><strong>Blood Stasis:</strong> cold constricts circulation, so warm drinks are the safer default.</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>Practical guidelines</h2>
+    <ul>
+        <li><strong>Make room temperature your default.</strong> It is the choice no constitution regrets.</li>
+        <li><strong>Drink warm water in the morning.</strong> A warm glass on waking supports digestion better than an icy one.</li>
+        <li><strong>Cold is fine after heat and exercise.</strong> After a workout or on a hot day, cold water helps most balanced and heat-type constitutions cool down.</li>
+        <li><strong>Never ice cold with meals</strong> if your digestion is weak. Room-temperature water alongside food is the gentler option.</li>
+        <li><strong>Listen to your body.</strong> If cold drinks consistently give you cramps, bloating, or brain freeze, your constitution is telling you something.</li>
+    </ul>
+
+    <h2>The bottom line</h2>
+    <p>
+        Ice water is not dangerous, but it is not neutral either. For cold-type and damp-type
+        constitutions, switching to warm or room-temperature water is one of the simplest
+        changes with the most noticeable payoff. For everyone else, hydrating well matters more
+        than the temperature of the glass.
+    </p>
+
+    <div class="disclaimer">
+        <p>
+            <strong>Wellness information, not medical advice.</strong> This article shares general
+            Traditional Chinese Medicine food wisdom for educational purposes. It is not a diagnosis
+            or treatment recommendation. If you have a digestive condition or other health concern,
+            talk to a qualified healthcare provider.
+        </p>
+    </div>
+</article>
+
+<section class="cta-section">
+    <h2>What is your body type?</h2>
+    <p>Scan any food or drink with FoodLore and see how it scores for your TCM constitution, plus 60+ nutrients from modern science.</p>
+    <a href="https://apps.apple.com/app/foodlore/id6760920100" class="btn-white">Download FoodLore for iOS</a>
+</section>
+
+<div class="related">
+    <h3>Keep reading</h3>
+    <a href="/blog/watermelon-body-type">🍉 Is Watermelon Good for Your Body Type? A TCM Perspective</a>
+    <a href="/blog/bubble-tea-body-type">🧋 Bubble Tea and Your Body Type: What TCM Says About Boba</a>
+</div>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="nav-brand-icon" style="width:28px; height:28px; font-size:13px; border-radius:7px;">FL</div>
+            FoodLore
+        </div>
+        <div class="footer-links">
+            <a href="/blog">Blog</a>
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms of Use</a>
+            <a href="/support">Support</a>
+            <a href="mailto:support@foodlore.app">Contact</a>
+        </div>
+        <div class="footer-copy">
+            &copy; 2026 FoodLore. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
