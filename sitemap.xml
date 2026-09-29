@@ -73,6 +73,24 @@
         <priority>0.7</priority>
     </url>
     <url>
+        <loc>https://foodlore.app/blog/goji-body-type</loc>
+        <lastmod>2026-09-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://foodlore.app/blog/chrysanthemum-tea-body-type</loc>
+        <lastmod>2026-09-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://foodlore.app/blog/black-sesame-body-type</loc>
+        <lastmod>2026-09-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
         <loc>https://foodlore.app/support</loc>
         <lastmod>2026-09-28</lastmod>
         <changefreq>yearly</changefreq>

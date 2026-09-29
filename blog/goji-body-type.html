@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is Goji Berry Good for Your Body Type? Tonic Berry and Constitution: FoodLore Blog</title>
+    <meta name="description" content="Goji berries are TCM's gentlest tonic food — sweet, neutral, and eaten for eyes, liver, and longevity. But even gentle tonics can backfire for damp bodies. Learn how the nine constitutions respond.">
+    <link rel="canonical" href="https://foodlore.app/blog/goji-body-type">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --blue: #2563EB; --blue-dark: #1D4ED8; --blue-light: #DBEAFE;
+            --slate-900: #0F172A; --slate-700: #334155; --slate-500: #64748B;
+            --slate-300: #CBD5E1; --slate-100: #F1F5F9; --white: #FFFFFF;
+            --green: #059669; --green-light: #D1FAE5;
+            --purple: #7C3AED; --purple-light: #EDE9FE;
+            --rose: #E11D48; --rose-light: #FFE4E6;
+            --amber: #D97706; --amber-light: #FEF3C7;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7; color: var(--slate-700); background: var(--white);
+            -webkit-font-smoothing: antialiased;
+        }
+        nav {
+            position: fixed; top: 0; width: 100%; z-index: 100;
+            background: rgba(255,255,255,0.92); backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+        .nav-inner {
+            max-width: 1120px; margin: 0 auto; display: flex;
+            align-items: center; justify-content: space-between; padding: 16px 24px;
+        }
+        .nav-brand {
+            font-size: 22px; font-weight: 800; color: var(--slate-900);
+            text-decoration: none; display: flex; align-items: center; gap: 10px;
+        }
+        .nav-brand-icon {
+            width: 36px; height: 36px; border-radius: 10px;
+            background: linear-gradient(135deg, var(--blue), var(--purple));
+            display: flex; align-items: center; justify-content: center;
+            font-size: 18px; color: white;
+        }
+        .nav-links { display: flex; gap: 32px; align-items: center; }
+        .nav-links a {
+            font-size: 14px; font-weight: 500; color: var(--slate-500);
+            text-decoration: none; transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--slate-900); }
+        .nav-cta {
+            background: var(--blue) !important; color: var(--white) !important;
+            padding: 8px 20px !important; border-radius: 8px !important;
+            font-weight: 600 !important;
+        }
+        .nav-cta:hover { background: var(--blue-dark) !important; }
+
+        .article-hero {
+            padding: 140px 24px 48px; text-align: center;
+            background: linear-gradient(180deg, #FEF2F2 0%, var(--white) 100%);
+        }
+        .article-badge {
+            display: inline-block; padding: 6px 16px; border-radius: 100px;
+            font-size: 13px; font-weight: 600; margin-bottom: 20px;
+            background: var(--white); color: var(--blue);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .article-hero h1 {
+            font-size: clamp(30px, 4.5vw, 44px); font-weight: 800;
+            color: var(--slate-900); line-height: 1.15; margin-bottom: 16px;
+            letter-spacing: -0.02em; max-width: 720px; margin-left: auto; margin-right: auto;
+        }
+        .article-meta {
+            font-size: 14px; color: var(--slate-500);
+            display: flex; gap: 12px; justify-content: center;
+        }
+
+        .article-body { max-width: 740px; margin: 0 auto; padding: 48px 24px 24px; }
+        .article-body p { margin-bottom: 20px; font-size: 17px; }
+        .article-body h2 {
+            font-size: 26px; font-weight: 800; color: var(--slate-900);
+            margin: 44px 0 16px; letter-spacing: -0.01em;
+        }
+        .article-body h3 {
+            font-size: 19px; font-weight: 700; color: var(--slate-900);
+            margin: 28px 0 10px;
+        }
+        .article-body ul, .article-body ol { margin: 0 0 20px 24px; font-size: 17px; }
+        .article-body li { margin-bottom: 10px; }
+        .article-body strong { color: var(--slate-900); }
+
+        .callout {
+            border-radius: 14px; padding: 24px 28px; margin: 28px 0;
+            background: var(--purple-light);
+            border-left: 4px solid var(--purple);
+        }
+        .callout h3 { margin-top: 0 !important; color: var(--purple) !important; }
+        .callout p, .callout li { font-size: 15px !important; }
+        .callout ul { margin-bottom: 0; }
+
+        .verdict-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+        .verdict {
+            border-radius: 14px; padding: 20px 22px;
+            border: 1px solid rgba(0,0,0,0.06);
+        }
+        .verdict h4 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+        .verdict ul { margin: 0 0 0 18px; font-size: 14px; }
+        .verdict li { margin-bottom: 6px; }
+        .verdict.good { background: var(--green-light); }
+        .verdict.good h4 { color: var(--green); }
+        .verdict.caution { background: var(--amber-light); }
+        .verdict.caution h4 { color: var(--amber); }
+
+        .disclaimer {
+            background: var(--slate-100); border-radius: 12px;
+            padding: 18px 22px; margin: 36px 0; font-size: 13px !important;
+            color: var(--slate-500) !important; line-height: 1.6;
+        }
+        .disclaimer p { font-size: 13px !important; margin-bottom: 0 !important; }
+
+        .cta-section {
+            text-align: center; padding: 72px 24px;
+            background: linear-gradient(135deg, var(--blue) 0%, var(--purple) 100%);
+            color: var(--white); margin-top: 24px;
+        }
+        .cta-section h2 {
+            font-size: clamp(26px, 3.5vw, 36px); font-weight: 800;
+            margin-bottom: 14px; letter-spacing: -0.01em;
+        }
+        .cta-section p {
+            font-size: 16px; opacity: 0.85; margin-bottom: 28px;
+            max-width: 480px; margin-left: auto; margin-right: auto;
+        }
+        .btn-white {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--white); color: var(--blue);
+            padding: 14px 36px; border-radius: 12px;
+            font-size: 16px; font-weight: 700; text-decoration: none;
+            transition: all 0.2s; box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+        }
+        .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+
+        .related { max-width: 740px; margin: 0 auto; padding: 40px 24px 64px; }
+        .related h3 { font-size: 18px; font-weight: 700; color: var(--slate-900); margin-bottom: 16px; }
+        .related a {
+            display: block; padding: 14px 18px; border-radius: 10px;
+            border: 1px solid rgba(0,0,0,0.06); margin-bottom: 10px;
+            text-decoration: none; color: var(--slate-700); font-size: 15px; font-weight: 500;
+            transition: all 0.2s;
+        }
+        .related a:hover { border-color: var(--blue); color: var(--blue); }
+
+        footer {
+            background: var(--slate-900); color: rgba(255,255,255,0.5);
+            padding: 48px 24px;
+        }
+        .footer-inner {
+            max-width: 1120px; margin: 0 auto;
+            display: flex; justify-content: space-between; align-items: center;
+            flex-wrap: wrap; gap: 16px;
+        }
+        .footer-brand {
+            font-size: 18px; font-weight: 700; color: var(--white);
+            display: flex; align-items: center; gap: 8px;
+        }
+        .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+        .footer-links a {
+            font-size: 14px; color: rgba(255,255,255,0.5);
+            text-decoration: none; transition: color 0.2s;
+        }
+        .footer-links a:hover { color: var(--white); }
+        .footer-copy {
+            font-size: 13px; width: 100%; text-align: center;
+            margin-top: 24px; padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .article-hero { padding: 120px 20px 40px; }
+            .verdict-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="/" class="nav-brand">
+            <div class="nav-brand-icon">FL</div>
+            FoodLore
+        </a>
+        <div class="nav-links">
+            <a href="/#features">Features</a>
+            <a href="/blog">Blog</a>
+            <a href="/support">Support</a>
+            <a href="https://apps.apple.com/app/foodlore/id6760920100" class="nav-cta">Download</a>
+        </div>
+    </div>
+</nav>
+
+<header class="article-hero">
+    <div class="article-badge">🫐 TCM Body Types</div>
+    <h1>Is Goji Berry Good for Your Body Type? Tonic Berry and Constitution</h1>
+    <div class="article-meta"><span>Sep 29, 2026</span><span>·</span><span>5 min read</span></div>
+</header>
+
+<article class="article-body">
+    <p>
+        Goji berries — <em>gou qi zi</em> — are the rare tonic food that TCM considers gentle
+        enough for almost daily eating. Small, red, and honey-sweet, they have been simmered
+        into soups, steeped into teas, and eaten by the handful for centuries as a longevity
+        food for the eyes, the liver, and the blood. But "gentle" is not the same as
+        "for everyone": in TCM terms, goji is a sweet tonic, and sweet tonics feed dampness.
+        For dry, depleted bodies it is close to ideal. For heavy, sluggish ones, it can add
+        to the very burden they are trying to shed.
+    </p>
+
+    <div class="callout">
+        <h3>The nine TCM body constitutions</h3>
+        <p>
+            TCM groups people into nine body constitutions: <strong>Balanced</strong>,
+            <strong>Qi Deficiency</strong>, <strong>Yang Deficiency</strong>, <strong>Yin Deficiency</strong>,
+            <strong>Phlegm-Dampness</strong>, <strong>Damp-Heat</strong>, <strong>Blood Stasis</strong>,
+            <strong>Qi Stagnation</strong>, and <strong>Special/Inherited</strong>. Your constitution
+            shapes how you respond to a food's thermal nature, not just its calories. FoodLore maps
+            your constitution and scores foods against it.
+        </p>
+    </div>
+
+    <h2>What TCM says: the gentle tonic that nourishes liver, kidney, and eyes</h2>
+    <p>
+        Goji is classically described as sweet and neutral in nature: it tonifies the liver
+        and kidney, nourishes yin and blood, and "brightens the eyes." In the classical
+        framework, the liver "opens to the eyes," so blurry vision, dry eyes, and eye fatigue
+        from overuse are read as signs the liver blood is depleted — and goji is one of the
+        first foods recommended. Because its nature is neutral rather than hot or cold, it
+        does not push the body strongly in either direction, which is why it earned its
+        reputation as a safe everyday tonic. The cautions are equally classical:
+        <strong>sweet tonics generate dampness</strong>, so people with heavy, sluggish
+        digestion or loose stools are told to go easy; and tonics in general are paused
+        during an acute cold or flu, when the body is busy expelling a pathogen rather
+        than building itself up.
+    </p>
+    <p>
+        The most famous pairing is goji with chrysanthemum — one nourishing, one clearing —
+        brewed together as a tea for tired, dry eyes. The logic is pure TCM formulation
+        thinking: the chrysanthemum vents heat upward and outward while the goji replenishes
+        what the heat consumed. It is also why goji shows up in slow-simmered soups rather
+        than stir-fries: gentle, long cooking suits a tonic meant to build over time.
+    </p>
+
+    <h2>What modern science says</h2>
+    <p>
+        Goji's standout nutrient is zeaxanthin, a carotenoid that accumulates in the retina —
+        small trials suggest goji consumption can raise macular pigment density, which is
+        genuinely relevant to eye health. The berries are also rich in vitamin C, iron, and
+        unique polysaccharides (often called LBP) that show immune-supporting activity in
+        lab and animal studies, though human evidence is still early. The honest limits:
+        dried goji is roughly 60% sugar by weight, so the "handful a day" habit adds up;
+        and most dramatic claims (anti-aging miracles, cancer effects) come from test tubes,
+        not people. Drug interactions are worth a mention too — goji may potentiate
+        blood thinners such as warfarin, so anyone on those medications should check with
+        their doctor first.
+    </p>
+
+    <h2>How each body type responds</h2>
+    <div class="verdict-grid">
+        <div class="verdict good">
+            <h4>✓ Goji loves you back</h4>
+            <ul>
+                <li><strong>Yin Deficiency:</strong> sweet, neutral, and moistening — directly nourishes the dryness, restless heat, and eye fatigue of depleted yin.</li>
+                <li><strong>Qi Deficiency / Blood Deficiency:</strong> a gentle builder that tonifies without the heaviness of richer tonics like red dates in excess.</li>
+                <li><strong>Balanced (as a habit):</strong> the classic everyday tonic — a small daily amount suits maintenance for most bodies.</li>
+            </ul>
+        </div>
+        <div class="verdict caution">
+            <h4>⚠ Go easy or skip</h4>
+            <ul>
+                <li><strong>Phlegm-Dampness:</strong> sweet tonics feed dampness — heaviness, bloating, and loose stools get worse, not better, with daily handfuls.</li>
+                <li><strong>During a cold or flu:</strong> classical guidance pauses all tonics while the body is expelling a pathogen; wait until you recover.</li>
+                <li><strong>On blood thinners:</strong> goji may interact with warfarin-type medications — check with your doctor, whatever your constitution.</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>Practical guidelines</h2>
+    <ul>
+        <li><strong>A small handful, not a bowl.</strong> About 15–20 grams a day is the traditional range — dried goji is mostly sugar, so more is not better.</li>
+        <li><strong>Pair with chrysanthemum for eyes.</strong> The classic tea combo: goji nourishes while chrysanthemum clears — one builds, one vents.</li>
+        <li><strong>Simmer, don't scorch.</strong> Add goji near the end of soup cooking; long boiling dulls both flavor and character.</li>
+        <li><strong>Skip it while sick.</strong> Colds, flu, or acute digestive upset — put the tonic on hold until the acute phase passes.</li>
+        <li><strong>Check the color.</strong> Good dried goji is deep red and soft; bleached-orange, brittle berries suggest sulfur fumigation.</li>
+        <li><strong>Watch total sugar.</strong> If you eat a lot of dried fruit already, count goji toward that — the "tonic" label doesn't cancel the sugar.</li>
+    </ul>
+
+    <h2>The bottom line</h2>
+    <p>
+        Goji is the friendliest tonic in the TCM pantry — neutral, gentle, and genuinely useful
+        for dry, tired eyes and depleted bodies. But friendliness has edges: sweet builds
+        dampness, tonics pause during illness, and a superfood label never cancels sugar.
+        Eaten in the traditional small handful, it is one of the easiest constitution-friendly
+        habits there is. Eaten by the bagful, it is just candy with a good story.
+    </p>
+
+    <div class="disclaimer">
+        <p>
+            <strong>Wellness information, not medical advice.</strong> This article shares general
+            Traditional Chinese Medicine food wisdom for educational purposes. It is not a diagnosis
+            or treatment recommendation. If you have a digestive condition or other health concern,
+            talk to a qualified healthcare provider.
+        </p>
+    </div>
+</article>
+
+<section class="cta-section">
+    <h2>What is your body type?</h2>
+    <p>Scan any food or drink with FoodLore and see how it scores for your TCM constitution, plus 60+ nutrients from modern science.</p>
+    <a href="https://apps.apple.com/app/foodlore/id6760920100" class="btn-white">Download FoodLore for iOS</a>
+</section>
+
+<div class="related">
+    <h3>Keep reading</h3>
+    <a href="/blog/chrysanthemum-tea-body-type">🌼 Is Chrysanthemum Tea Good for Your Body Type? Cooling Flowers and Constitution</a>
+    <a href="/blog/turmeric-body-type">🫚 Is Turmeric Good for Your Body Type? Golden Spice and Constitution</a>
+    <a href="/blog/ginger-body-type">🫚 Is Ginger Good for Your Body Type? Warming Spice and Constitution</a>
+</div>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="nav-brand-icon" style="width:28px; height:28px; font-size:13px; border-radius:7px;">FL</div>
+            FoodLore
+        </div>
+        <div class="footer-links">
+            <a href="/blog">Blog</a>
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms of Use</a>
+            <a href="/support">Support</a>
+            <a href="mailto:support@foodlore.app">Contact</a>
+        </div>
+        <div class="footer-copy">
+            &copy; 2026 FoodLore. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
