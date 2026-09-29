@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is Coffee Good for Your Body Type? Caffeine and TCM Constitution: FoodLore Blog</title>
+    <meta name="description" content="Coffee warms and stimulates — but TCM warns it can injure yin and disturb sleep. Learn how the nine TCM body constitutions respond to coffee, and how to drink it wisely.">
+    <link rel="canonical" href="https://foodlore.app/blog/coffee-body-type">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --blue: #2563EB; --blue-dark: #1D4ED8; --blue-light: #DBEAFE;
+            --slate-900: #0F172A; --slate-700: #334155; --slate-500: #64748B;
+            --slate-300: #CBD5E1; --slate-100: #F1F5F9; --white: #FFFFFF;
+            --green: #059669; --green-light: #D1FAE5;
+            --purple: #7C3AED; --purple-light: #EDE9FE;
+            --rose: #E11D48; --rose-light: #FFE4E6;
+            --amber: #D97706; --amber-light: #FEF3C7;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7; color: var(--slate-700); background: var(--white);
+            -webkit-font-smoothing: antialiased;
+        }
+        nav {
+            position: fixed; top: 0; width: 100%; z-index: 100;
+            background: rgba(255,255,255,0.92); backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+        .nav-inner {
+            max-width: 1120px; margin: 0 auto; display: flex;
+            align-items: center; justify-content: space-between; padding: 16px 24px;
+        }
+        .nav-brand {
+            font-size: 22px; font-weight: 800; color: var(--slate-900);
+            text-decoration: none; display: flex; align-items: center; gap: 10px;
+        }
+        .nav-brand-icon {
+            width: 36px; height: 36px; border-radius: 10px;
+            background: linear-gradient(135deg, var(--blue), var(--purple));
+            display: flex; align-items: center; justify-content: center;
+            font-size: 18px; color: white;
+        }
+        .nav-links { display: flex; gap: 32px; align-items: center; }
+        .nav-links a {
+            font-size: 14px; font-weight: 500; color: var(--slate-500);
+            text-decoration: none; transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--slate-900); }
+        .nav-cta {
+            background: var(--blue) !important; color: var(--white) !important;
+            padding: 8px 20px !important; border-radius: 8px !important;
+            font-weight: 600 !important;
+        }
+        .nav-cta:hover { background: var(--blue-dark) !important; }
+
+        .article-hero {
+            padding: 140px 24px 48px; text-align: center;
+            background: linear-gradient(180deg, #E7D3C0 0%, var(--white) 100%);
+        }
+        .article-badge {
+            display: inline-block; padding: 6px 16px; border-radius: 100px;
+            font-size: 13px; font-weight: 600; margin-bottom: 20px;
+            background: var(--white); color: var(--blue);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .article-hero h1 {
+            font-size: clamp(30px, 4.5vw, 44px); font-weight: 800;
+            color: var(--slate-900); line-height: 1.15; margin-bottom: 16px;
+            letter-spacing: -0.02em; max-width: 720px; margin-left: auto; margin-right: auto;
+        }
+        .article-meta {
+            font-size: 14px; color: var(--slate-500);
+            display: flex; gap: 12px; justify-content: center;
+        }
+
+        .article-body { max-width: 740px; margin: 0 auto; padding: 48px 24px 24px; }
+        .article-body p { margin-bottom: 20px; font-size: 17px; }
+        .article-body h2 {
+            font-size: 26px; font-weight: 800; color: var(--slate-900);
+            margin: 44px 0 16px; letter-spacing: -0.01em;
+        }
+        .article-body h3 {
+            font-size: 19px; font-weight: 700; color: var(--slate-900);
+            margin: 28px 0 10px;
+        }
+        .article-body ul, .article-body ol { margin: 0 0 20px 24px; font-size: 17px; }
+        .article-body li { margin-bottom: 10px; }
+        .article-body strong { color: var(--slate-900); }
+
+        .callout {
+            border-radius: 14px; padding: 24px 28px; margin: 28px 0;
+            background: var(--purple-light);
+            border-left: 4px solid var(--purple);
+        }
+        .callout h3 { margin-top: 0 !important; color: var(--purple) !important; }
+        .callout p, .callout li { font-size: 15px !important; }
+        .callout ul { margin-bottom: 0; }
+
+        .verdict-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+        .verdict {
+            border-radius: 14px; padding: 20px 22px;
+            border: 1px solid rgba(0,0,0,0.06);
+        }
+        .verdict h4 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+        .verdict ul { margin: 0 0 0 18px; font-size: 14px; }
+        .verdict li { margin-bottom: 6px; }
+        .verdict.good { background: var(--green-light); }
+        .verdict.good h4 { color: var(--green); }
+        .verdict.caution { background: var(--amber-light); }
+        .verdict.caution h4 { color: var(--amber); }
+
+        .disclaimer {
+            background: var(--slate-100); border-radius: 12px;
+            padding: 18px 22px; margin: 36px 0; font-size: 13px !important;
+            color: var(--slate-500) !important; line-height: 1.6;
+        }
+        .disclaimer p { font-size: 13px !important; margin-bottom: 0 !important; }
+
+        .cta-section {
+            text-align: center; padding: 72px 24px;
+            background: linear-gradient(135deg, var(--blue) 0%, var(--purple) 100%);
+            color: var(--white); margin-top: 24px;
+        }
+        .cta-section h2 {
+            font-size: clamp(26px, 3.5vw, 36px); font-weight: 800;
+            margin-bottom: 14px; letter-spacing: -0.01em;
+        }
+        .cta-section p {
+            font-size: 16px; opacity: 0.85; margin-bottom: 28px;
+            max-width: 480px; margin-left: auto; margin-right: auto;
+        }
+        .btn-white {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--white); color: var(--blue);
+            padding: 14px 36px; border-radius: 12px;
+            font-size: 16px; font-weight: 700; text-decoration: none;
+            transition: all 0.2s; box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+        }
+        .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+
+        .related { max-width: 740px; margin: 0 auto; padding: 40px 24px 64px; }
+        .related h3 { font-size: 18px; font-weight: 700; color: var(--slate-900); margin-bottom: 16px; }
+        .related a {
+            display: block; padding: 14px 18px; border-radius: 10px;
+            border: 1px solid rgba(0,0,0,0.06); margin-bottom: 10px;
+            text-decoration: none; color: var(--slate-700); font-size: 15px; font-weight: 500;
+            transition: all 0.2s;
+        }
+        .related a:hover { border-color: var(--blue); color: var(--blue); }
+
+        footer {
+            background: var(--slate-900); color: rgba(255,255,255,0.5);
+            padding: 48px 24px;
+        }
+        .footer-inner {
+            max-width: 1120px; margin: 0 auto;
+            display: flex; justify-content: space-between; align-items: center;
+            flex-wrap: wrap; gap: 16px;
+        }
+        .footer-brand {
+            font-size: 18px; font-weight: 700; color: var(--white);
+            display: flex; align-items: center; gap: 8px;
+        }
+        .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+        .footer-links a {
+            font-size: 14px; color: rgba(255,255,255,0.5);
+            text-decoration: none; transition: color 0.2s;
+        }
+        .footer-links a:hover { color: var(--white); }
+        .footer-copy {
+            font-size: 13px; width: 100%; text-align: center;
+            margin-top: 24px; padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .article-hero { padding: 120px 20px 40px; }
+            .verdict-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="/" class="nav-brand">
+            <div class="nav-brand-icon">FL</div>
+            FoodLore
+        </a>
+        <div class="nav-links">
+            <a href="/#features">Features</a>
+            <a href="/blog">Blog</a>
+            <a href="/support">Support</a>
+            <a href="https://apps.apple.com/app/foodlore/id6760920100" class="nav-cta">Download</a>
+        </div>
+    </div>
+</nav>
+
+<header class="article-hero">
+    <div class="article-badge">☕ TCM Body Types</div>
+    <h1>Is Coffee Good for Your Body Type? Caffeine and Constitution</h1>
+    <div class="article-meta"><span>Sep 28, 2026</span><span>·</span><span>5 min read</span></div>
+</header>
+
+<article class="article-body">
+    <p>
+        Coffee is the world's most debated daily habit. One camp calls it a productivity elixir
+        with real health perks; the other blames it for anxiety, insomnia, and jittery afternoons.
+        Traditional Chinese Medicine has a more nuanced take: coffee is warming and stimulating,
+        which makes it genuinely helpful for some constitutions and quietly harmful for others.
+        The question is not whether coffee is good or bad — it is whether it suits your body type.
+    </p>
+
+    <div class="callout">
+        <h3>The nine TCM body constitutions</h3>
+        <p>
+            TCM groups people into nine body constitutions: <strong>Balanced</strong>,
+            <strong>Qi Deficiency</strong>, <strong>Yang Deficiency</strong>, <strong>Yin Deficiency</strong>,
+            <strong>Phlegm-Dampness</strong>, <strong>Damp-Heat</strong>, <strong>Blood Stasis</strong>,
+            <strong>Qi Stagnation</strong>, and <strong>Special/Inherited</strong>. Your constitution
+            shapes how you respond to a food's thermal nature, not just its calories. FoodLore maps
+            your constitution and scores foods against it.
+        </p>
+    </div>
+
+    <h2>What TCM says: coffee warms, moves, and can injure yin</h2>
+    <p>
+        TCM describes coffee as warm-to-hot in nature with a bitter flavor. Bitterness drains and
+        dries; warmth stimulates. In this view, coffee lifts yang, moves qi, and sharpens the mind —
+        which is exactly why cold-type, sluggish constitutions often feel better with it. But the
+        same properties have a cost: over time, excessive stimulation is said to consume yin
+        (the body's cooling, moistening reserves) and disturb the shen (the settled mind),
+        showing up as insomnia, restlessness, dry mouth, and that wired-but-tired feeling.
+    </p>
+    <p>
+        TCM also notes the company coffee keeps. A black coffee and a caramel frappuccino are
+        different foods: heavy milk and sugar add dampness and phlegm, which changes the verdict
+        for damp-type constitutions entirely.
+    </p>
+
+    <h2>What modern science says</h2>
+    <p>
+        Caffeine works mainly by blocking adenosine, the brain chemical that signals sleepiness —
+        which explains both the alertness and the insomnia. Large observational studies link
+        moderate coffee drinking (roughly 3–4 cups a day) with a lower risk of several chronic
+        conditions, though these studies cannot prove cause and effect. On the other side, caffeine
+        reliably worsens anxiety and sleep quality in sensitive people, can trigger acid reflux,
+        and most health authorities suggest keeping intake around 400 mg of caffeine a day or less
+        for healthy adults (about 3–4 brewed cups), with lower limits during pregnancy. Genetics
+        matter too: fast caffeine metabolizers feel less of the downside than slow metabolizers.
+    </p>
+
+    <h2>How each body type responds</h2>
+    <div class="verdict-grid">
+        <div class="verdict good">
+            <h4>✓ Usually a good match</h4>
+            <ul>
+                <li><strong>Yang Deficiency:</strong> cold limbs, low energy, sluggish mornings. Coffee's warmth and stimulation directly counter this pattern.</li>
+                <li><strong>Phlegm-Dampness:</strong> heaviness and mental fog often lift with coffee's moving, drying nature — black coffee, not milky-sweet.</li>
+                <li><strong>Balanced (in moderation):</strong> a healthy constitution handles 1–2 cups well, especially in the morning.</li>
+            </ul>
+        </div>
+        <div class="verdict caution">
+            <h4>⚠ Go easy or reconsider</h4>
+            <ul>
+                <li><strong>Yin Deficiency:</strong> dryness, night sweats, afternoon heat. Coffee's drying, stimulating nature can deepen these patterns.</li>
+                <li><strong>Qi Stagnation:</strong> prone to anxiety, irritability, and tension. Caffeine often amplifies the jittery edge.</li>
+                <li><strong>Damp-Heat:</strong> internal heat plus coffee's warmth is a poor combination; bitterness alone does not offset it.</li>
+                <li><strong>Qi Deficiency:</strong> borrowing energy on credit. Coffee masks fatigue without restoring it — rest and food rebuild what caffeine spends.</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>Practical guidelines</h2>
+    <ul>
+        <li><strong>Keep it before noon.</strong> Caffeine's half-life is around 5–6 hours; afternoon cups are the most common cause of "mystery" insomnia.</li>
+        <li><strong>Drink it black (or close).</strong> Heavy cream and syrups add the dampness that turns coffee from stimulating to sluggish-making.</li>
+        <li><strong>One to two cups is the sweet spot</strong> for most constitutions. If you need a fourth cup to function, the issue is rest, not coffee.</li>
+        <li><strong>Never on an empty, anxious stomach.</strong> If coffee gives you reflux or jitters, try it after food — or try half-caf.</li>
+        <li><strong>Watch your sleep and mood.</strong> Trouble falling asleep, 3am wake-ups, or a shorter fuse are your body voting on your coffee habit.</li>
+        <li><strong>Pregnant or managing a heart condition?</strong> Talk to your doctor about your personal caffeine limit.</li>
+    </ul>
+
+    <h2>The bottom line</h2>
+    <p>
+        Coffee is neither superfood nor poison — it is a strong, warming stimulant, and strong
+        things suit some bodies and not others. Cold-type constitutions often thrive with a
+        morning cup; yin-deficient and anxiety-prone types usually pay for it in sleep and calm.
+        Your constitution, not the headlines, should set your dose.
+    </p>
+
+    <div class="disclaimer">
+        <p>
+            <strong>Wellness information, not medical advice.</strong> This article shares general
+            Traditional Chinese Medicine food wisdom for educational purposes. It is not a diagnosis
+            or treatment recommendation. If you have a digestive condition or other health concern,
+            talk to a qualified healthcare provider.
+        </p>
+    </div>
+</article>
+
+<section class="cta-section">
+    <h2>What is your body type?</h2>
+    <p>Scan any food or drink with FoodLore and see how it scores for your TCM constitution, plus 60+ nutrients from modern science.</p>
+    <a href="https://apps.apple.com/app/foodlore/id6760920100" class="btn-white">Download FoodLore for iOS</a>
+</section>
+
+<div class="related">
+    <h3>Keep reading</h3>
+    <a href="/blog/ginger-body-type">🫚 Is Ginger Good for Your Body Type? Warming Foods and Constitution</a>
+    <a href="/blog/ice-water-body-type">🧊 Should You Drink Ice Water? Cold Drinks and Body Type</a>
+    <a href="/blog/watermelon-body-type">🍉 Is Watermelon Good for Your Body Type? A TCM Perspective</a>
+</div>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="nav-brand-icon" style="width:28px; height:28px; font-size:13px; border-radius:7px;">FL</div>
+            FoodLore
+        </div>
+        <div class="footer-links">
+            <a href="/blog">Blog</a>
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms of Use</a>
+            <a href="/support">Support</a>
+            <a href="mailto:support@foodlore.app">Contact</a>
+        </div>
+        <div class="footer-copy">
+            &copy; 2026 FoodLore. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
