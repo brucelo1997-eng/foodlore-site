@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is Bone Broth Good for Your Body Type? Slow-Simmered Tonic and Constitution: FoodLore Blog</title>
+    <meta name="description" content="Bone broth is trending — but slow-simmered bone soups are one of the oldest foods in Chinese cooking. Learn how the nine TCM constitutions respond to bone broth.">
+    <link rel="canonical" href="https://foodlore.app/blog/bone-broth-body-type">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --blue: #2563EB; --blue-dark: #1D4ED8; --blue-light: #DBEAFE;
+            --slate-900: #0F172A; --slate-700: #334155; --slate-500: #64748B;
+            --slate-300: #CBD5E1; --slate-100: #F1F5F9; --white: #FFFFFF;
+            --green: #059669; --green-light: #D1FAE5;
+            --purple: #7C3AED; --purple-light: #EDE9FE;
+            --rose: #E11D48; --rose-light: #FFE4E6;
+            --amber: #D97706; --amber-light: #FEF3C7;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7; color: var(--slate-700); background: var(--white);
+            -webkit-font-smoothing: antialiased;
+        }
+        nav {
+            position: fixed; top: 0; width: 100%; z-index: 100;
+            background: rgba(255,255,255,0.92); backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+        .nav-inner {
+            max-width: 1120px; margin: 0 auto; display: flex;
+            align-items: center; justify-content: space-between; padding: 16px 24px;
+        }
+        .nav-brand {
+            font-size: 22px; font-weight: 800; color: var(--slate-900);
+            text-decoration: none; display: flex; align-items: center; gap: 10px;
+        }
+        .nav-brand-icon {
+            width: 36px; height: 36px; border-radius: 10px;
+            background: linear-gradient(135deg, var(--blue), var(--purple));
+            display: flex; align-items: center; justify-content: center;
+            font-size: 18px; color: white;
+        }
+        .nav-links { display: flex; gap: 32px; align-items: center; }
+        .nav-links a {
+            font-size: 14px; font-weight: 500; color: var(--slate-500);
+            text-decoration: none; transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--slate-900); }
+        .nav-cta {
+            background: var(--blue) !important; color: var(--white) !important;
+            padding: 8px 20px !important; border-radius: 8px !important;
+            font-weight: 600 !important;
+        }
+        .nav-cta:hover { background: var(--blue-dark) !important; }
+
+        .article-hero {
+            padding: 140px 24px 48px; text-align: center;
+            background: linear-gradient(180deg, #FFF7ED 0%, var(--white) 100%);
+        }
+        .article-badge {
+            display: inline-block; padding: 6px 16px; border-radius: 100px;
+            font-size: 13px; font-weight: 600; margin-bottom: 20px;
+            background: var(--white); color: var(--blue);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .article-hero h1 {
+            font-size: clamp(30px, 4.5vw, 44px); font-weight: 800;
+            color: var(--slate-900); line-height: 1.15; margin-bottom: 16px;
+            letter-spacing: -0.02em; max-width: 720px; margin-left: auto; margin-right: auto;
+        }
+        .article-meta {
+            font-size: 14px; color: var(--slate-500);
+            display: flex; gap: 12px; justify-content: center;
+        }
+
+        .article-body { max-width: 740px; margin: 0 auto; padding: 48px 24px 24px; }
+        .article-body p { margin-bottom: 20px; font-size: 17px; }
+        .article-body h2 {
+            font-size: 26px; font-weight: 800; color: var(--slate-900);
+            margin: 44px 0 16px; letter-spacing: -0.01em;
+        }
+        .article-body h3 {
+            font-size: 19px; font-weight: 700; color: var(--slate-900);
+            margin: 28px 0 10px;
+        }
+        .article-body ul, .article-body ol { margin: 0 0 20px 24px; font-size: 17px; }
+        .article-body li { margin-bottom: 10px; }
+        .article-body strong { color: var(--slate-900); }
+
+        .callout {
+            border-radius: 14px; padding: 24px 28px; margin: 28px 0;
+            background: var(--purple-light);
+            border-left: 4px solid var(--purple);
+        }
+        .callout h3 { margin-top: 0 !important; color: var(--purple) !important; }
+        .callout p, .callout li { font-size: 15px !important; }
+        .callout ul { margin-bottom: 0; }
+
+        .verdict-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+        .verdict {
+            border-radius: 14px; padding: 20px 22px;
+            border: 1px solid rgba(0,0,0,0.06);
+        }
+        .verdict h4 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+        .verdict ul { margin: 0 0 0 18px; font-size: 14px; }
+        .verdict li { margin-bottom: 6px; }
+        .verdict.good { background: var(--green-light); }
+        .verdict.good h4 { color: var(--green); }
+        .verdict.caution { background: var(--amber-light); }
+        .verdict.caution h4 { color: var(--amber); }
+
+        .disclaimer {
+            background: var(--slate-100); border-radius: 12px;
+            padding: 18px 22px; margin: 36px 0; font-size: 13px !important;
+            color: var(--slate-500) !important; line-height: 1.6;
+        }
+        .disclaimer p { font-size: 13px !important; margin-bottom: 0 !important; }
+
+        .cta-section {
+            text-align: center; padding: 72px 24px;
+            background: linear-gradient(135deg, var(--blue) 0%, var(--purple) 100%);
+            color: var(--white); margin-top: 24px;
+        }
+        .cta-section h2 {
+            font-size: clamp(26px, 3.5vw, 36px); font-weight: 800;
+            margin-bottom: 14px; letter-spacing: -0.01em;
+        }
+        .cta-section p {
+            font-size: 16px; opacity: 0.85; margin-bottom: 28px;
+            max-width: 480px; margin-left: auto; margin-right: auto;
+        }
+        .btn-white {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--white); color: var(--blue);
+            padding: 14px 36px; border-radius: 12px;
+            font-size: 16px; font-weight: 700; text-decoration: none;
+            transition: all 0.2s; box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+        }
+        .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+
+        .related { max-width: 740px; margin: 0 auto; padding: 40px 24px 64px; }
+        .related h3 { font-size: 18px; font-weight: 700; color: var(--slate-900); margin-bottom: 16px; }
+        .related a {
+            display: block; padding: 14px 18px; border-radius: 10px;
+            border: 1px solid rgba(0,0,0,0.06); margin-bottom: 10px;
+            text-decoration: none; color: var(--slate-700); font-size: 15px; font-weight: 500;
+            transition: all 0.2s;
+        }
+        .related a:hover { border-color: var(--blue); color: var(--blue); }
+
+        footer {
+            background: var(--slate-900); color: rgba(255,255,255,0.5);
+            padding: 48px 24px;
+        }
+        .footer-inner {
+            max-width: 1120px; margin: 0 auto;
+            display: flex; justify-content: space-between; align-items: center;
+            flex-wrap: wrap; gap: 16px;
+        }
+        .footer-brand {
+            font-size: 18px; font-weight: 700; color: var(--white);
+            display: flex; align-items: center; gap: 8px;
+        }
+        .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+        .footer-links a {
+            font-size: 14px; color: rgba(255,255,255,0.5);
+            text-decoration: none; transition: color 0.2s;
+        }
+        .footer-links a:hover { color: var(--white); }
+        .footer-copy {
+            font-size: 13px; width: 100%; text-align: center;
+            margin-top: 24px; padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .article-hero { padding: 120px 20px 40px; }
+            .verdict-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="/" class="nav-brand">
+            <div class="nav-brand-icon">FL</div>
+            FoodLore
+        </a>
+        <div class="nav-links">
+            <a href="/#features">Features</a>
+            <a href="/blog">Blog</a>
+            <a href="/support">Support</a>
+            <a href="https://apps.apple.com/app/foodlore/id6760920100" class="nav-cta">Download</a>
+        </div>
+    </div>
+</nav>
+
+<header class="article-hero">
+    <div class="article-badge">🍲 TCM Body Types</div>
+    <h1>Is Bone Broth Good for Your Body Type? Slow-Simmered Tonic and Constitution</h1>
+    <div class="article-meta"><span>Sep 29, 2026</span><span>·</span><span>5 min read</span></div>
+</header>
+
+<article class="article-body">
+    <p>
+        Bone broth is having a modern wellness moment — sold in coffee cups, marketed for gut
+        health and glowing skin. But slow-simmered bone soups are among the oldest foods in
+        Chinese cooking. The Cantonese call them 老火汤, "old-fire soups," simmered for hours
+        until the pot gives up everything it has. New mothers drink them, recovering patients
+        are brought them, and winter tables are built around them. This is one trend the
+        wellness world did not invent — it rediscovered.
+    </p>
+
+    <div class="callout">
+        <h3>The nine TCM body constitutions</h3>
+        <p>
+            TCM groups people into nine body constitutions: <strong>Balanced</strong>,
+            <strong>Qi Deficiency</strong>, <strong>Yang Deficiency</strong>, <strong>Yin Deficiency</strong>,
+            <strong>Phlegm-Dampness</strong>, <strong>Damp-Heat</strong>, <strong>Blood Stasis</strong>,
+            <strong>Qi Stagnation</strong>, and <strong>Special/Inherited</strong>. Your constitution
+            shapes how you respond to a food's thermal nature, not just its calories. FoodLore maps
+            your constitution and scores foods against it.
+        </p>
+    </div>
+
+    <h2>What TCM says: long simmering extracts deep nourishment</h2>
+    <p>
+        In TCM thinking, the logic of bone broth is straightforward: long, slow cooking breaks
+        food down before you eat it, so even a weak digestive center can absorb it. Bones and
+        marrow connect to the Kidney system, which stores essence (jing) and governs the bones
+        themselves — "like nourishes like." A well-made broth is considered warming, tonifying
+        to qi and blood, and supportive during recovery from illness, childbirth, or prolonged
+        overwork. This is why broth, not salad, is the traditional food of convalescence.
+    </p>
+    <p>
+        The warming part matters. A proper bone broth is served hot and built on long simmering,
+        often with ginger, scallion, and warming spices. It is the opposite of a cold,
+        raw, hard-to-digest meal — which is exactly why it suits depleted, cold-type bodies
+        and exactly why it is not for everyone.
+    </p>
+
+    <h2>What modern science says</h2>
+    <p>
+        Here is the honest version. Bone broth contains gelatin and collagen fragments that break
+        down into amino acids like glycine and proline, plus modest amounts of minerals and
+        electrolytes, in a hydrating, easy-to-digest liquid. What it does <em>not</em> have is
+        strong clinical evidence for the biggest marketing claims: studies directly testing bone
+        broth for "healing the gut lining" or rebuilding joints are thin, and most benefits are
+        extrapolated from its amino acid content rather than proven in broth trials. It is a
+        nutritious, hydrating, protein-sparing food — genuinely useful in recovery — but it is
+        not magic. Store-bought versions vary wildly in actual bone content, and many are
+        essentially salty stock.
+    </p>
+
+    <h2>How each body type responds</h2>
+    <div class="verdict-grid">
+        <div class="verdict good">
+            <h4>✓ Bone broth loves you back</h4>
+            <ul>
+                <li><strong>Qi Deficiency:</strong> pre-digested by long cooking, easy to absorb — ideal for weak digestion and post-illness recovery.</li>
+                <li><strong>Yang Deficiency:</strong> served hot and warming, it directly counters cold-type depletion.</li>
+                <li><strong>Blood Stasis / post-exertion:</strong> warm, nourishing liquids support circulation and recovery after heavy effort.</li>
+                <li><strong>Balanced (autumn/winter):</strong> a seasonal staple — warming nourishment when the weather turns cold.</li>
+            </ul>
+        </div>
+        <div class="verdict caution">
+            <h4>⚠ Go easy or skip</h4>
+            <ul>
+                <li><strong>Damp-Heat:</strong> rich, greasy broth feeds internal dampness — oily skin, heaviness, and bitter taste get worse, not better.</li>
+                <li><strong>Phlegm-Dampness:</strong> same problem: heavy, rich liquids are hard to transform for damp-prone digestion.</li>
+                <li><strong>Acute heat signs:</strong> fever, sore throat with heat, or active inflammation — warming tonics are the wrong direction during an acute heat pattern.</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>Practical guidelines</h2>
+    <ul>
+        <li><strong>Skim the fat.</strong> The nourishing part is the broth, not the grease cap. Skimming makes it suitable for more constitutions.</li>
+        <li><strong>Build it warming.</strong> Ginger, scallion, a little white pepper, goji berries — the classic additions are not garnish, they are the formula.</li>
+        <li><strong>Simmer long, salt late.</strong> 8–24 hours for real extraction; salting at the end keeps the flavor clean.</li>
+        <li><strong>One to two cups.</strong> It is a tonic food, not a water replacement. A mug with or between meals is the traditional dose.</li>
+        <li><strong>Watch the sodium.</strong> Store-bought broths can be very salty — relevant if you track sodium, and a reason homemade wins.</li>
+        <li><strong>Gout note:</strong> long-simmered meat broths concentrate purines; if you manage uric acid, keep portions small and talk to your doctor.</li>
+    </ul>
+
+    <h2>The bottom line</h2>
+    <p>
+        Bone broth earns its reputation more honestly than most wellness trends: it is the rare
+        one with centuries of continuous use behind it. For depleted, cold, recovering bodies it
+        is close to ideal food. For damp-heat bodies, the same richness works against them.
+        Tradition got the direction right — constitution tells you whether you are the person
+        the tradition was written for.
+    </p>
+
+    <div class="disclaimer">
+        <p>
+            <strong>Wellness information, not medical advice.</strong> This article shares general
+            Traditional Chinese Medicine food wisdom for educational purposes. It is not a diagnosis
+            or treatment recommendation. If you have a digestive condition or other health concern,
+            talk to a qualified healthcare provider.
+        </p>
+    </div>
+</article>
+
+<section class="cta-section">
+    <h2>What is your body type?</h2>
+    <p>Scan any food or drink with FoodLore and see how it scores for your TCM constitution, plus 60+ nutrients from modern science.</p>
+    <a href="https://apps.apple.com/app/foodlore/id6760920100" class="btn-white">Download FoodLore for iOS</a>
+</section>
+
+<div class="related">
+    <h3>Keep reading</h3>
+    <a href="/blog/ginger-body-type">🫚 Is Ginger Good for Your Body Type? Warming Foods and Constitution</a>
+    <a href="/blog/turmeric-body-type">🫚 Is Turmeric Good for Your Body Type? Warming Spice and Constitution</a>
+    <a href="/blog/avocado-body-type">🥑 Is Avocado Good for Your Body Type? Healthy Fats and Constitution</a>
+</div>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="nav-brand-icon" style="width:28px; height:28px; font-size:13px; border-radius:7px;">FL</div>
+            FoodLore
+        </div>
+        <div class="footer-links">
+            <a href="/blog">Blog</a>
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms of Use</a>
+            <a href="/support">Support</a>
+            <a href="mailto:support@foodlore.app">Contact</a>
+        </div>
+        <div class="footer-copy">
+            &copy; 2026 FoodLore. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
