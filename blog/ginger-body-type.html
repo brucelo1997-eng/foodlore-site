@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is Ginger Good for Your Body Type? Warming Foods and TCM Constitution: FoodLore Blog</title>
+    <meta name="description" content="Ginger is TCM's classic warming food — it dispels cold and supports digestion. But warming isn't right for every body. Learn how the nine TCM constitutions respond to ginger.">
+    <link rel="canonical" href="https://foodlore.app/blog/ginger-body-type">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --blue: #2563EB; --blue-dark: #1D4ED8; --blue-light: #DBEAFE;
+            --slate-900: #0F172A; --slate-700: #334155; --slate-500: #64748B;
+            --slate-300: #CBD5E1; --slate-100: #F1F5F9; --white: #FFFFFF;
+            --green: #059669; --green-light: #D1FAE5;
+            --purple: #7C3AED; --purple-light: #EDE9FE;
+            --rose: #E11D48; --rose-light: #FFE4E6;
+            --amber: #D97706; --amber-light: #FEF3C7;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7; color: var(--slate-700); background: var(--white);
+            -webkit-font-smoothing: antialiased;
+        }
+        nav {
+            position: fixed; top: 0; width: 100%; z-index: 100;
+            background: rgba(255,255,255,0.92); backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+        .nav-inner {
+            max-width: 1120px; margin: 0 auto; display: flex;
+            align-items: center; justify-content: space-between; padding: 16px 24px;
+        }
+        .nav-brand {
+            font-size: 22px; font-weight: 800; color: var(--slate-900);
+            text-decoration: none; display: flex; align-items: center; gap: 10px;
+        }
+        .nav-brand-icon {
+            width: 36px; height: 36px; border-radius: 10px;
+            background: linear-gradient(135deg, var(--blue), var(--purple));
+            display: flex; align-items: center; justify-content: center;
+            font-size: 18px; color: white;
+        }
+        .nav-links { display: flex; gap: 32px; align-items: center; }
+        .nav-links a {
+            font-size: 14px; font-weight: 500; color: var(--slate-500);
+            text-decoration: none; transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--slate-900); }
+        .nav-cta {
+            background: var(--blue) !important; color: var(--white) !important;
+            padding: 8px 20px !important; border-radius: 8px !important;
+            font-weight: 600 !important;
+        }
+        .nav-cta:hover { background: var(--blue-dark) !important; }
+
+        .article-hero {
+            padding: 140px 24px 48px; text-align: center;
+            background: linear-gradient(180deg, #FEF3C7 0%, var(--white) 100%);
+        }
+        .article-badge {
+            display: inline-block; padding: 6px 16px; border-radius: 100px;
+            font-size: 13px; font-weight: 600; margin-bottom: 20px;
+            background: var(--white); color: var(--blue);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .article-hero h1 {
+            font-size: clamp(30px, 4.5vw, 44px); font-weight: 800;
+            color: var(--slate-900); line-height: 1.15; margin-bottom: 16px;
+            letter-spacing: -0.02em; max-width: 720px; margin-left: auto; margin-right: auto;
+        }
+        .article-meta {
+            font-size: 14px; color: var(--slate-500);
+            display: flex; gap: 12px; justify-content: center;
+        }
+
+        .article-body { max-width: 740px; margin: 0 auto; padding: 48px 24px 24px; }
+        .article-body p { margin-bottom: 20px; font-size: 17px; }
+        .article-body h2 {
+            font-size: 26px; font-weight: 800; color: var(--slate-900);
+            margin: 44px 0 16px; letter-spacing: -0.01em;
+        }
+        .article-body h3 {
+            font-size: 19px; font-weight: 700; color: var(--slate-900);
+            margin: 28px 0 10px;
+        }
+        .article-body ul, .article-body ol { margin: 0 0 20px 24px; font-size: 17px; }
+        .article-body li { margin-bottom: 10px; }
+        .article-body strong { color: var(--slate-900); }
+
+        .callout {
+            border-radius: 14px; padding: 24px 28px; margin: 28px 0;
+            background: var(--purple-light);
+            border-left: 4px solid var(--purple);
+        }
+        .callout h3 { margin-top: 0 !important; color: var(--purple) !important; }
+        .callout p, .callout li { font-size: 15px !important; }
+        .callout ul { margin-bottom: 0; }
+
+        .verdict-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+        .verdict {
+            border-radius: 14px; padding: 20px 22px;
+            border: 1px solid rgba(0,0,0,0.06);
+        }
+        .verdict h4 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+        .verdict ul { margin: 0 0 0 18px; font-size: 14px; }
+        .verdict li { margin-bottom: 6px; }
+        .verdict.good { background: var(--green-light); }
+        .verdict.good h4 { color: var(--green); }
+        .verdict.caution { background: var(--amber-light); }
+        .verdict.caution h4 { color: var(--amber); }
+
+        .disclaimer {
+            background: var(--slate-100); border-radius: 12px;
+            padding: 18px 22px; margin: 36px 0; font-size: 13px !important;
+            color: var(--slate-500) !important; line-height: 1.6;
+        }
+        .disclaimer p { font-size: 13px !important; margin-bottom: 0 !important; }
+
+        .cta-section {
+            text-align: center; padding: 72px 24px;
+            background: linear-gradient(135deg, var(--blue) 0%, var(--purple) 100%);
+            color: var(--white); margin-top: 24px;
+        }
+        .cta-section h2 {
+            font-size: clamp(26px, 3.5vw, 36px); font-weight: 800;
+            margin-bottom: 14px; letter-spacing: -0.01em;
+        }
+        .cta-section p {
+            font-size: 16px; opacity: 0.85; margin-bottom: 28px;
+            max-width: 480px; margin-left: auto; margin-right: auto;
+        }
+        .btn-white {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--white); color: var(--blue);
+            padding: 14px 36px; border-radius: 12px;
+            font-size: 16px; font-weight: 700; text-decoration: none;
+            transition: all 0.2s; box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+        }
+        .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+
+        .related { max-width: 740px; margin: 0 auto; padding: 40px 24px 64px; }
+        .related h3 { font-size: 18px; font-weight: 700; color: var(--slate-900); margin-bottom: 16px; }
+        .related a {
+            display: block; padding: 14px 18px; border-radius: 10px;
+            border: 1px solid rgba(0,0,0,0.06); margin-bottom: 10px;
+            text-decoration: none; color: var(--slate-700); font-size: 15px; font-weight: 500;
+            transition: all 0.2s;
+        }
+        .related a:hover { border-color: var(--blue); color: var(--blue); }
+
+        footer {
+            background: var(--slate-900); color: rgba(255,255,255,0.5);
+            padding: 48px 24px;
+        }
+        .footer-inner {
+            max-width: 1120px; margin: 0 auto;
+            display: flex; justify-content: space-between; align-items: center;
+            flex-wrap: wrap; gap: 16px;
+        }
+        .footer-brand {
+            font-size: 18px; font-weight: 700; color: var(--white);
+            display: flex; align-items: center; gap: 8px;
+        }
+        .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+        .footer-links a {
+            font-size: 14px; color: rgba(255,255,255,0.5);
+            text-decoration: none; transition: color 0.2s;
+        }
+        .footer-links a:hover { color: var(--white); }
+        .footer-copy {
+            font-size: 13px; width: 100%; text-align: center;
+            margin-top: 24px; padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .article-hero { padding: 120px 20px 40px; }
+            .verdict-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="/" class="nav-brand">
+            <div class="nav-brand-icon">FL</div>
+            FoodLore
+        </a>
+        <div class="nav-links">
+            <a href="/#features">Features</a>
+            <a href="/blog">Blog</a>
+            <a href="/support">Support</a>
+            <a href="https://apps.apple.com/app/foodlore/id6760920100" class="nav-cta">Download</a>
+        </div>
+    </div>
+</nav>
+
+<header class="article-hero">
+    <div class="article-badge">🫚 TCM Body Types</div>
+    <h1>Is Ginger Good for Your Body Type? Warming Foods and Constitution</h1>
+    <div class="article-meta"><span>Sep 28, 2026</span><span>·</span><span>5 min read</span></div>
+</header>
+
+<article class="article-body">
+    <p>
+        If watermelon is TCM's signature cooling food, ginger is its warming mirror image. For
+        over 2,000 years, fresh ginger (shēng jiāng) and dried ginger (gān jiāng) have been
+        staples of both the Chinese kitchen and the herbal pharmacy. Ginger tea for a cold,
+        ginger soup after getting rained on, ginger to settle the stomach — the folk uses are
+        endless. But in constitution-based thinking, even a beloved warming food is not right
+        for every body. Here is how to think about ginger through the lens of your body type.
+    </p>
+
+    <div class="callout">
+        <h3>The nine TCM body constitutions</h3>
+        <p>
+            TCM groups people into nine body constitutions: <strong>Balanced</strong>,
+            <strong>Qi Deficiency</strong>, <strong>Yang Deficiency</strong>, <strong>Yin Deficiency</strong>,
+            <strong>Phlegm-Dampness</strong>, <strong>Damp-Heat</strong>, <strong>Blood Stasis</strong>,
+            <strong>Qi Stagnation</strong>, and <strong>Special/Inherited</strong>. Your constitution
+            shapes how you respond to a food's thermal nature, not just its calories. FoodLore maps
+            your constitution and scores foods against it.
+        </p>
+    </div>
+
+    <h2>What TCM says: ginger dispels cold and warms digestion</h2>
+    <p>
+        TCM classifies ginger as warm in nature with a pungent flavor, entering the lung, spleen,
+        and stomach meridians. Its classic actions read like a direct answer to cold-type problems:
+        it dispels cold, warms the middle (the digestive center), settles nausea and vomiting from
+        a cold stomach, and helps resolve phlegm. This is why ginger tea is the traditional first
+        response to a wind-cold cold, to motion-related nausea, and to that chilled, heavy feeling
+        after eating too much cold or raw food.
+    </p>
+    <p>
+        One useful distinction: <strong>fresh ginger and dried ginger are not the same food in TCM.</strong>
+        Fresh ginger is mildly warming and dispersing — good for everyday use and early-stage colds.
+        Dried ginger is hotter and more deeply warming, used for more serious cold patterns. For
+        daily food use, fresh ginger is the gentler choice.
+    </p>
+
+    <h2>What modern science says</h2>
+    <p>
+        Ginger's active compounds, gingerols and shogaols, are well studied. The strongest evidence
+        is for nausea: ginger has moderate clinical support for easing pregnancy-related nausea,
+        motion sickness, and some chemotherapy-related nausea. Lab and animal studies suggest
+        anti-inflammatory and mild thermogenic (heat-producing) effects, and ginger is generally
+        recognized as safe in normal food amounts. Two cautions from the research: concentrated
+        ginger supplements in high doses may interact with blood-thinning medication, and
+        medicinal doses during pregnancy should be discussed with a doctor first. Food amounts of
+        fresh ginger are a different story from supplement doses.
+    </p>
+
+    <h2>How each body type responds</h2>
+    <div class="verdict-grid">
+        <div class="verdict good">
+            <h4>✓ Ginger loves you back</h4>
+            <ul>
+                <li><strong>Yang Deficiency:</strong> the classic cold-type constitution — cold hands and feet, fatigue, weak digestion. Ginger is one of the best everyday foods for this type.</li>
+                <li><strong>Phlegm-Dampness:</strong> warming and drying, ginger helps counter the heavy, sluggish feeling of dampness.</li>
+                <li><strong>Qi Deficiency:</strong> a cold, easily-bloated stomach often does well with ginger's warming, digestive support.</li>
+                <li><strong>Blood Stasis:</strong> cold constricts circulation; ginger's warmth helps keep things moving.</li>
+            </ul>
+        </div>
+        <div class="verdict caution">
+            <h4>⚠ Go easy or skip</h4>
+            <ul>
+                <li><strong>Yin Deficiency:</strong> dryness, night sweats, a hot feeling in the afternoon. Warming and drying ginger can aggravate these patterns.</li>
+                <li><strong>Damp-Heat:</strong> oily skin, bitter taste, irritability — signs of internal heat that ginger's warmth can intensify.</li>
+                <li><strong>Balanced (in summer):</strong> even balanced types can overdo warming foods in hot weather. Season matters.</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>Practical guidelines</h2>
+    <ul>
+        <li><strong>Start with fresh ginger tea.</strong> A few thin slices steeped in hot water is the classic daily form — warming without being aggressive.</li>
+        <li><strong>Use dried ginger sparingly.</strong> It is hotter than fresh. A small amount in soups or teas goes a long way.</li>
+        <li><strong>Match the season.</strong> Ginger shines in autumn and winter, and on cold rainy days. Ease off in peak summer heat if you run warm.</li>
+        <li><strong>Morning beats midnight.</strong> Warming foods fit the body's active daytime phase better than late at night.</li>
+        <li><strong>Watch for heat signals.</strong> Mouth ulcers, sore throat, or a flushed "heated" feeling after ginger are your body asking you to cut back.</li>
+        <li><strong>Talk to your doctor first</strong> about concentrated ginger supplements if you are pregnant or take blood-thinning medication. Food amounts are a separate, milder matter.</li>
+    </ul>
+
+    <h2>The bottom line</h2>
+    <p>
+        Ginger earns its reputation: it is one of the best everyday warming foods, especially for
+        cold-type and damp-type constitutions. But "warming" is a direction, not a virtue — for
+        heat-type and yin-deficient bodies, the same warmth works against them. Knowing which
+        body you are in turns ginger from folk habit into a precise tool.
+    </p>
+
+    <div class="disclaimer">
+        <p>
+            <strong>Wellness information, not medical advice.</strong> This article shares general
+            Traditional Chinese Medicine food wisdom for educational purposes. It is not a diagnosis
+            or treatment recommendation. If you have a digestive condition or other health concern,
+            talk to a qualified healthcare provider.
+        </p>
+    </div>
+</article>
+
+<section class="cta-section">
+    <h2>What is your body type?</h2>
+    <p>Scan any food or drink with FoodLore and see how it scores for your TCM constitution, plus 60+ nutrients from modern science.</p>
+    <a href="https://apps.apple.com/app/foodlore/id6760920100" class="btn-white">Download FoodLore for iOS</a>
+</section>
+
+<div class="related">
+    <h3>Keep reading</h3>
+    <a href="/blog/watermelon-body-type">🍉 Is Watermelon Good for Your Body Type? A TCM Perspective</a>
+    <a href="/blog/ice-water-body-type">🧊 Should You Drink Ice Water? Cold Drinks and Body Type</a>
+    <a href="/blog/bubble-tea-body-type">🧋 Bubble Tea and Your Body Type: What TCM Says About Boba</a>
+</div>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="nav-brand-icon" style="width:28px; height:28px; font-size:13px; border-radius:7px;">FL</div>
+            FoodLore
+        </div>
+        <div class="footer-links">
+            <a href="/blog">Blog</a>
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms of Use</a>
+            <a href="/support">Support</a>
+            <a href="mailto:support@foodlore.app">Contact</a>
+        </div>
+        <div class="footer-copy">
+            &copy; 2026 FoodLore. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
