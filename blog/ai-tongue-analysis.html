@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tongue Analysis: What Your Tongue Reveals in TCM | FoodLore Blog</title>
+    <meta name="description" content="In TCM, the tongue is a window into the body's state — color, coating, shape, moisture. Learn what each traditionally suggests and how FoodLore's AI tongue scan works.">
+    <link rel="canonical" href="https://foodlore.app/blog/ai-tongue-analysis">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --blue: #2563EB; --blue-dark: #1D4ED8; --blue-light: #DBEAFE;
+            --slate-900: #0F172A; --slate-700: #334155; --slate-500: #64748B;
+            --slate-300: #CBD5E1; --slate-100: #F1F5F9; --white: #FFFFFF;
+            --green: #059669; --green-light: #D1FAE5;
+            --purple: #7C3AED; --purple-light: #EDE9FE;
+            --rose: #E11D48; --rose-light: #FFE4E6;
+            --amber: #D97706; --amber-light: #FEF3C7;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7; color: var(--slate-700); background: var(--white);
+            -webkit-font-smoothing: antialiased;
+        }
+        nav {
+            position: fixed; top: 0; width: 100%; z-index: 100;
+            background: rgba(255,255,255,0.92); backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+        .nav-inner {
+            max-width: 1120px; margin: 0 auto; display: flex;
+            align-items: center; justify-content: space-between; padding: 16px 24px;
+        }
+        .nav-brand {
+            font-size: 22px; font-weight: 800; color: var(--slate-900);
+            text-decoration: none; display: flex; align-items: center; gap: 10px;
+        }
+        .nav-brand-icon {
+            width: 36px; height: 36px; border-radius: 10px;
+            background: linear-gradient(135deg, var(--blue), var(--purple));
+            display: flex; align-items: center; justify-content: center;
+            font-size: 18px; color: white;
+        }
+        .nav-links { display: flex; gap: 32px; align-items: center; }
+        .nav-links a {
+            font-size: 14px; font-weight: 500; color: var(--slate-500);
+            text-decoration: none; transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--slate-900); }
+        .nav-cta {
+            background: var(--blue) !important; color: var(--white) !important;
+            padding: 8px 20px !important; border-radius: 8px !important;
+            font-weight: 600 !important;
+        }
+        .nav-cta:hover { background: var(--blue-dark) !important; }
+
+        .article-hero {
+            padding: 140px 24px 48px; text-align: center;
+            background: linear-gradient(180deg, #FFF1F2 0%, var(--white) 100%);
+        }
+        .article-badge {
+            display: inline-block; padding: 6px 16px; border-radius: 100px;
+            font-size: 13px; font-weight: 600; margin-bottom: 20px;
+            background: var(--white); color: var(--blue);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .article-hero h1 {
+            font-size: clamp(30px, 4.5vw, 44px); font-weight: 800;
+            color: var(--slate-900); line-height: 1.15; margin-bottom: 16px;
+            letter-spacing: -0.02em; max-width: 720px; margin-left: auto; margin-right: auto;
+        }
+        .article-meta {
+            font-size: 14px; color: var(--slate-500);
+            display: flex; gap: 12px; justify-content: center;
+        }
+
+        .article-body { max-width: 740px; margin: 0 auto; padding: 48px 24px 24px; }
+        .article-body p { margin-bottom: 20px; font-size: 17px; }
+        .article-body h2 {
+            font-size: 26px; font-weight: 800; color: var(--slate-900);
+            margin: 44px 0 16px; letter-spacing: -0.01em;
+        }
+        .article-body h3 {
+            font-size: 19px; font-weight: 700; color: var(--slate-900);
+            margin: 28px 0 10px;
+        }
+        .article-body ul, .article-body ol { margin: 0 0 20px 24px; font-size: 17px; }
+        .article-body li { margin-bottom: 10px; }
+        .article-body strong { color: var(--slate-900); }
+
+        .callout {
+            border-radius: 14px; padding: 24px 28px; margin: 28px 0;
+            background: var(--purple-light);
+            border-left: 4px solid var(--purple);
+        }
+        .callout h3 { margin-top: 0 !important; color: var(--purple) !important; }
+        .callout p, .callout li { font-size: 15px !important; }
+        .callout ul { margin-bottom: 0; }
+
+        .verdict-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+        .verdict {
+            border-radius: 14px; padding: 20px 22px;
+            border: 1px solid rgba(0,0,0,0.06);
+        }
+        .verdict h4 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+        .verdict ul { margin: 0 0 0 18px; font-size: 14px; }
+        .verdict li { margin-bottom: 6px; }
+        .verdict.good { background: var(--green-light); }
+        .verdict.good h4 { color: var(--green); }
+        .verdict.caution { background: var(--amber-light); }
+        .verdict.caution h4 { color: var(--amber); }
+
+        .disclaimer {
+            background: var(--slate-100); border-radius: 12px;
+            padding: 18px 22px; margin: 36px 0; font-size: 13px !important;
+            color: var(--slate-500) !important; line-height: 1.6;
+        }
+        .disclaimer p { font-size: 13px !important; margin-bottom: 0 !important; }
+
+        .cta-section {
+            text-align: center; padding: 72px 24px;
+            background: linear-gradient(135deg, var(--blue) 0%, var(--purple) 100%);
+            color: var(--white); margin-top: 24px;
+        }
+        .cta-section h2 {
+            font-size: clamp(26px, 3.5vw, 36px); font-weight: 800;
+            margin-bottom: 14px; letter-spacing: -0.01em;
+        }
+        .cta-section p {
+            font-size: 16px; opacity: 0.85; margin-bottom: 28px;
+            max-width: 480px; margin-left: auto; margin-right: auto;
+        }
+        .btn-white {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--white); color: var(--blue);
+            padding: 14px 36px; border-radius: 12px;
+            font-size: 16px; font-weight: 700; text-decoration: none;
+            transition: all 0.2s; box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+        }
+        .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+
+        .related { max-width: 740px; margin: 0 auto; padding: 40px 24px 64px; }
+        .related h3 { font-size: 18px; font-weight: 700; color: var(--slate-900); margin-bottom: 16px; }
+        .related a {
+            display: block; padding: 14px 18px; border-radius: 10px;
+            border: 1px solid rgba(0,0,0,0.06); margin-bottom: 10px;
+            text-decoration: none; color: var(--slate-700); font-size: 15px; font-weight: 500;
+            transition: all 0.2s;
+        }
+        .related a:hover { border-color: var(--blue); color: var(--blue); }
+
+        footer {
+            background: var(--slate-900); color: rgba(255,255,255,0.5);
+            padding: 48px 24px;
+        }
+        .footer-inner {
+            max-width: 1120px; margin: 0 auto;
+            display: flex; justify-content: space-between; align-items: center;
+            flex-wrap: wrap; gap: 16px;
+        }
+        .footer-brand {
+            font-size: 18px; font-weight: 700; color: var(--white);
+            display: flex; align-items: center; gap: 8px;
+        }
+        .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+        .footer-links a {
+            font-size: 14px; color: rgba(255,255,255,0.5);
+            text-decoration: none; transition: color 0.2s;
+        }
+        .footer-links a:hover { color: var(--white); }
+        .footer-copy {
+            font-size: 13px; width: 100%; text-align: center;
+            margin-top: 24px; padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .article-hero { padding: 120px 20px 40px; }
+            .verdict-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="/" class="nav-brand">
+            <div class="nav-brand-icon">FL</div>
+            FoodLore
+        </a>
+        <div class="nav-links">
+            <a href="/#features">Features</a>
+            <a href="/blog">Blog</a>
+            <a href="/support">Support</a>
+            <a href="https://apps.apple.com/app/foodlore/id6760920100" class="nav-cta">Download</a>
+        </div>
+    </div>
+</nav>
+
+<header class="article-hero">
+    <div class="article-badge">👅 TCM Explained</div>
+    <h1>AI Tongue Analysis: What Your Tongue Reveals in TCM</h1>
+    <div class="article-meta"><span>Sep 29, 2026</span><span>·</span><span>6 min read</span></div>
+</header>
+
+<article class="article-body">
+    <p>
+        Of all the tools in Traditional Chinese Medicine, tongue diagnosis is the one that surprises
+        newcomers most. No needles, no herbs, no questions — the practitioner simply asks you to
+        stick out your tongue and looks. And from that glance, trained eyes read a surprising amount:
+        the color of the tongue body, the coating on top, its shape, its moisture. This is not a folk
+        curiosity. Tongue inspection is one of TCM's four examinations — looking, listening and
+        smelling, asking, and pulse-taking — with thousands of years of observational practice
+        behind it.
+    </p>
+    <p>
+        FoodLore brings this tradition into the phone era with AI tongue analysis: take a photo of
+        your tongue, and the app maps what it sees to constitution signals that feed your profile and
+        your food scores. Here is what the tradition looks for, how the AI version works, and —
+        honestly — what it can and cannot do.
+    </p>
+
+    <div class="callout">
+        <h3>An honest frame</h3>
+        <p>
+            Tongue observation is a traditional practice refined over millennia — it is not a
+            medical diagnosis, and neither is FoodLore's scan. Think of it as structured observation:
+            one signal among several (your quiz answers, symptoms, and scan history) that builds your
+            constitution picture. If something looks wrong with your tongue or your health, see a
+            qualified professional.
+        </p>
+    </div>
+
+    <h2>What a practitioner reads on the tongue</h2>
+
+    <h3>Color of the tongue body</h3>
+    <p>
+        A healthy tongue is generally described as pale red — not too pale, not too red. A
+        <strong>pale</strong> tongue traditionally suggests deficiency patterns: qi or blood not quite
+        reaching the surface. A <strong>red</strong> tongue suggests heat in the body. A
+        <strong>dusky or purplish</strong> tongue is read as a sign of blood stasis — circulation
+        not moving smoothly. Color is the first and broadest signal.
+    </p>
+
+    <h3>Coating</h3>
+    <p>
+        The thin white coating most people have is considered normal. A <strong>thick white</strong>
+        coating traditionally points to cold-dampness — the heavy, sluggish pattern. A
+        <strong>yellow</strong> coating suggests heat. Little or no coating — a "peeled" or
+        mirror-like tongue — is associated with yin deficiency, the dried-out pattern.
+        Practitioners watch coating closely because it can change faster than the tongue body itself.
+    </p>
+
+    <h3>Shape</h3>
+    <p>
+        A <strong>swollen</strong> tongue, sometimes with teeth marks along the edges, traditionally
+        suggests qi deficiency with dampness — the body not transforming fluids well. A
+        <strong>thin, small</strong> tongue points toward deficiency. <strong>Cracks</strong> on the
+        surface are associated with yin deficiency or internal heat drying the tissues.
+    </p>
+
+    <h3>Moisture</h3>
+    <p>
+        A <strong>dry</strong> tongue traditionally suggests yin deficiency or heat consuming fluids.
+        An <strong>overly wet</strong> tongue, sometimes with excess saliva, points the other way
+        — toward cold or dampness. Moisture is the subtlest of the four readings, and
+        practitioners weigh it alongside everything else.
+    </p>
+
+    <h2>How FoodLore's AI tongue scan works</h2>
+    <p>
+        In the FoodLore app, you take a photo of your tongue in good light. The image is analyzed by
+        approved US-based AI providers — the photo is used for that analysis and then discarded,
+        never used for training — and your personal health data stays on your device. The AI maps
+        visual signals (color, coating distribution, shape cues) to the same constitution patterns
+        practitioners have described for centuries, and the result feeds your constitution profile.
+        That profile is what your food scores are matched against: the tongue reading literally helps
+        decide whether a cooling food or a warming food suits you today.
+    </p>
+    <p>
+        It is a striking example of the FoodLore thesis: holistic nutrition keeps rediscovering what
+        TCM systematized thousands of years ago — here, an ancient observational art, carried out
+        by a modern phone camera.
+    </p>
+
+    <h2>What it can and can't do</h2>
+    <ul>
+        <li><strong>It can</strong> add a real, traditional signal to your constitution picture — one that updates as your body changes.</li>
+        <li><strong>It can</strong> catch patterns worth paying attention to, like a suddenly thick coating after weeks of heavy food.</li>
+        <li><strong>It can't</strong> diagnose disease. A strange-looking tongue deserves a professional, not an app.</li>
+        <li><strong>It can't</strong> overcome bad input — dim light, odd angles, and food staining all affect the read. Use natural light, keep the tongue relaxed and extended, and avoid strongly-colored food or drink right before.</li>
+    </ul>
+
+    <h2>The bottom line</h2>
+    <p>
+        Your tongue has been telling a story for as long as anyone has thought to look — color,
+        coating, shape, and moisture, each a chapter. TCM spent millennia learning to read it;
+        FoodLore's AI tongue scan simply lets your phone do the looking. It is not a diagnosis, and it
+        was never meant to be. It is something rarer: a traditional observational practice, made
+        effortless, feeding directly into the question of what you should eat today.
+    </p>
+
+    <div class="disclaimer">
+        <p>
+            <strong>Wellness information, not medical advice.</strong> This article shares general
+            Traditional Chinese Medicine food wisdom for educational purposes. It is not a diagnosis
+            or treatment recommendation. If you have a digestive condition or other health concern,
+            talk to a qualified healthcare provider.
+        </p>
+    </div>
+</article>
+
+<section class="cta-section">
+    <h2>What is your body type?</h2>
+    <p>Scan any food or drink with FoodLore and see how it scores for your TCM constitution, plus 60+ nutrients from modern science.</p>
+    <a href="https://apps.apple.com/app/foodlore/id6760920100" class="btn-white">Download FoodLore for iOS</a>
+</section>
+
+<div class="related">
+    <h3>Keep reading</h3>
+    <a href="/blog/tcm-vs-holistic-nutrition">☯️ Is TCM Just Holistic Nutrition? Same Instinct, 5,000 Years of Practice</a>
+    <a href="/blog/foodlore-vs-myfitnesspal">📊 FoodLore vs MyFitnessPal: A Different Question About Food</a>
+    <a href="/blog/ginger-body-type">🫚 Is Ginger Good for Your Body Type? Warming Foods and Constitution</a>
+</div>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="nav-brand-icon" style="width:28px; height:28px; font-size:13px; border-radius:7px;">FL</div>
+            FoodLore
+        </div>
+        <div class="footer-links">
+            <a href="/blog">Blog</a>
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms of Use</a>
+            <a href="/support">Support</a>
+            <a href="mailto:support@foodlore.app">Contact</a>
+        </div>
+        <div class="footer-copy">
+            &copy; 2026 FoodLore. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
