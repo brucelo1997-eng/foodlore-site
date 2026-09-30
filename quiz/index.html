@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's Your TCM Body Type? — Free 60-Second Quiz | FoodLore</title>
+    <meta name="description" content="Take FoodLore's free 60-second quiz to discover your Traditional Chinese Medicine body type — then see how every meal scores for YOUR body in the app.">
+    <meta name="apple-itunes-app" content="app-id=6760920100">
+    <link rel="canonical" href="https://foodlore.app/quiz/">
+    <meta property="og:title" content="What's Your TCM Body Type? — Free 60-Second Quiz">
+    <meta property="og:description" content="Discover your Traditional Chinese Medicine body type in 60 seconds, then see how every meal scores for YOUR body with FoodLore.">
+    <meta property="og:url" content="https://foodlore.app/quiz/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --blue: #2563EB; --blue-dark: #1D4ED8; --blue-light: #DBEAFE;
+            --slate-900: #0F172A; --slate-700: #334155; --slate-500: #64748B;
+            --slate-300: #CBD5E1; --slate-100: #F1F5F9; --white: #FFFFFF;
+            --green: #059669; --green-light: #D1FAE5; --orange: #EA580C;
+            --orange-light: #FED7AA; --purple: #7C3AED; --purple-light: #EDE9FE;
+            --rose: #E11D48; --rose-light: #FFE4E6; --teal: #0D9488;
+            --teal-light: #CCFBF1; --amber: #D97706; --amber-light: #FEF3C7;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6; color: var(--slate-700); background: var(--white);
+            -webkit-font-smoothing: antialiased;
+        }
+        nav {
+            position: fixed; top: 0; width: 100%; z-index: 100;
+            background: rgba(255,255,255,0.92); backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+        .nav-inner {
+            max-width: 1120px; margin: 0 auto; display: flex;
+            align-items: center; justify-content: space-between; padding: 16px 24px;
+        }
+        .nav-brand {
+            font-size: 22px; font-weight: 800; color: var(--slate-900);
+            text-decoration: none; display: flex; align-items: center; gap: 10px;
+        }
+        .nav-brand-icon {
+            width: 36px; height: 36px; border-radius: 10px;
+            background: linear-gradient(135deg, var(--blue), var(--purple));
+            display: flex; align-items: center; justify-content: center;
+            font-size: 18px; color: white; font-weight: 800;
+        }
+        .nav-links { display: flex; gap: 28px; align-items: center; }
+        .nav-links a { color: var(--slate-500); text-decoration: none; font-weight: 500; font-size: 15px; }
+        .nav-links a:hover { color: var(--slate-900); }
+        .nav-cta {
+            background: var(--blue); color: var(--white) !important;
+            padding: 10px 20px; border-radius: 10px; font-weight: 600 !important;
+        }
+        .nav-cta:hover { background: var(--blue-dark); }
+        main { max-width: 680px; margin: 0 auto; padding: 120px 24px 80px; }
+        .quiz-shell {
+            background: var(--white); border: 1px solid var(--slate-100);
+            border-radius: 24px; padding: 40px 36px;
+            box-shadow: 0 20px 60px rgba(15,23,42,0.08);
+        }
+        .eyebrow {
+            display: inline-block; font-size: 12px; font-weight: 700;
+            letter-spacing: 1.5px; text-transform: uppercase; color: var(--purple);
+            background: var(--purple-light); padding: 6px 14px; border-radius: 999px;
+            margin-bottom: 18px;
+        }
+        h1 { font-size: 34px; line-height: 1.2; color: var(--slate-900); font-weight: 800; margin-bottom: 14px; }
+        h1 .grad {
+            background: linear-gradient(135deg, var(--blue), var(--purple));
+            -webkit-background-clip: text; background-clip: text; color: transparent;
+        }
+        .lede { font-size: 17px; color: var(--slate-500); margin-bottom: 28px; }
+        .btn-primary {
+            display: inline-block; background: linear-gradient(135deg, var(--blue), var(--purple));
+            color: var(--white); font-weight: 700; font-size: 17px; text-decoration: none;
+            padding: 15px 38px; border-radius: 14px; border: none; cursor: pointer;
+            box-shadow: 0 8px 24px rgba(37,99,235,0.35); transition: transform .15s;
+        }
+        .btn-primary:hover { transform: translateY(-2px); }
+        .btn-secondary {
+            display: inline-block; background: var(--slate-100); color: var(--slate-900);
+            font-weight: 600; font-size: 15px; text-decoration: none; padding: 13px 28px;
+            border-radius: 12px; border: none; cursor: pointer;
+        }
+        .btn-secondary:hover { background: var(--slate-300); }
+        .meta-row { display: flex; gap: 18px; margin-top: 22px; font-size: 13px; color: var(--slate-500); }
+        .progress-track { height: 8px; background: var(--slate-100); border-radius: 999px; margin-bottom: 28px; overflow: hidden; }
+        .progress-fill {
+            height: 100%; border-radius: 999px;
+            background: linear-gradient(90deg, var(--blue), var(--purple));
+            transition: width .35s ease;
+        }
+        .q-count { font-size: 13px; font-weight: 600; color: var(--slate-500); margin-bottom: 10px; }
+        .q-text { font-size: 23px; font-weight: 700; color: var(--slate-900); margin-bottom: 22px; line-height: 1.35; }
+        .opt {
+            display: block; width: 100%; text-align: left; background: var(--white);
+            border: 2px solid var(--slate-100); border-radius: 14px; padding: 16px 20px;
+            font-size: 16px; color: var(--slate-700); cursor: pointer; margin-bottom: 12px;
+            font-family: inherit; transition: border-color .15s, background .15s;
+        }
+        .opt:hover { border-color: var(--blue); background: var(--blue-light); }
+        .result-badge {
+            display: inline-block; font-size: 13px; font-weight: 700; padding: 8px 18px;
+            border-radius: 999px; margin-bottom: 16px;
+        }
+        .result-name { font-size: 32px; font-weight: 800; color: var(--slate-900); margin-bottom: 6px; }
+        .result-tag { font-size: 18px; color: var(--slate-500); margin-bottom: 24px; }
+        .result-block { margin-bottom: 22px; }
+        .result-block h3 { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--slate-900); margin-bottom: 10px; }
+        .result-block ul { list-style: none; }
+        .result-block li { padding: 8px 0 8px 28px; position: relative; font-size: 16px; }
+        .result-block li::before { position: absolute; left: 4px; }
+        .traits li::before { content: "●"; color: var(--purple); font-size: 12px; top: 13px; }
+        .favor li::before { content: "✓"; color: var(--green); font-weight: 800; }
+        .avoid li::before { content: "–"; color: var(--rose); font-weight: 800; }
+        .app-cta {
+            background: linear-gradient(135deg, #EEF2FF, #F5F3FF);
+            border: 1px solid var(--blue-light); border-radius: 18px;
+            padding: 28px; margin: 28px 0; text-align: center;
+        }
+        .app-cta h3 { font-size: 20px; color: var(--slate-900); margin-bottom: 8px; }
+        .app-cta p { font-size: 15px; color: var(--slate-500); margin-bottom: 18px; }
+        .share-row { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 18px; }
+        .share-btn {
+            display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px;
+            border-radius: 10px; font-size: 14px; font-weight: 600; cursor: pointer;
+            border: 1px solid var(--slate-300); background: var(--white); color: var(--slate-700);
+            text-decoration: none; font-family: inherit;
+        }
+        .share-btn:hover { border-color: var(--blue); color: var(--blue); }
+        .retake { text-align: center; margin-top: 20px; }
+        .retake button { background: none; border: none; color: var(--slate-500); font-size: 14px; cursor: pointer; text-decoration: underline; font-family: inherit; }
+        .disclaimer { font-size: 12.5px; color: var(--slate-500); margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--slate-100); }
+        footer { border-top: 1px solid var(--slate-100); padding: 36px 24px; text-align: center; font-size: 14px; color: var(--slate-500); }
+        footer a { color: var(--slate-500); margin: 0 10px; text-decoration: none; }
+        footer a:hover { color: var(--slate-900); }
+        @media (max-width: 640px) {
+            main { padding: 100px 16px 60px; }
+            .quiz-shell { padding: 28px 22px; }
+            h1 { font-size: 27px; }
+            .q-text { font-size: 20px; }
+            .nav-links a:not(.nav-cta) { display: none; }
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <div class="nav-inner">
+        <a href="/" class="nav-brand"><div class="nav-brand-icon">FL</div>FoodLore</a>
+        <div class="nav-links">
+            <a href="/blog">Blog</a>
+            <a href="https://apps.apple.com/app/foodlore/id6760920100" class="nav-cta">Download</a>
+        </div>
+    </div>
+</nav>
+
+<main>
+    <div class="quiz-shell" id="quiz-shell"><!-- rendered by JS --></div>
+    <p class="disclaimer">This quiz reflects Traditional Chinese Medicine concepts for wellness and education. It is a simplified snapshot — not a medical diagnosis. For health concerns, please see a qualified practitioner.</p>
+</main>
+
+<footer>
+    <a href="/blog">Blog</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/support">Support</a>
+    <div style="margin-top:12px;">&copy; 2026 FoodLore. All rights reserved.</div>
+</footer>
+
+<script>
+(function () {
+    "use strict";
+
+    var TYPES = {
+        "balanced": {
+            name: "Balanced Constitution", tag: "Yin and yang in harmony — the steady baseline.",
+            color: "#059669", bg: "#D1FAE5",
+            traits: ["Steady energy through the day", "Comfortable digestion, regular appetite", "Adapts easily to weather and seasons"],
+            favor: ["A varied diet of whole foods", "Regular, unhurried meals", "Seasonal fruits and vegetables"],
+            avoid: ["Extremes — excess greasy, raw-cold, or very spicy food", "Skipping meals or erratic eating"]
+        },
+        "qi-deficient": {
+            name: "Qi-Deficient", tag: "Your battery runs low — nourish and restore.",
+            color: "#D97706", bg: "#FEF3C7",
+            traits: ["Tire easily, prefer rest over exertion", "Soft voice, dislike talking at length", "Catch colds more often than others"],
+            favor: ["Chicken, sweet potato, and cooked grains", "Red dates, mushrooms, and yams", "Warm, easy-to-digest meals"],
+            avoid: ["Raw and cold foods", "Greasy, fried food", "Skipping meals"]
+        },
+        "yang-deficient": {
+            name: "Yang-Deficient", tag: "You run cold — warm from the inside out.",
+            color: "#EA580C", bg: "#FED7AA",
+            traits: ["Cold hands and feet, love warmth", "Dislike cold food and chilly weather", "Loose stools after cold or raw food"],
+            favor: ["Fresh ginger, cinnamon, and walnuts", "Lamb and warming soups", "Warm cooked meals, warm drinks"],
+            avoid: ["Iced drinks and ice cream", "Watermelon and other very cold-natured foods", "Large raw salads"]
+        },
+        "yin-deficient": {
+            name: "Yin-Deficient", tag: "Running warm and dry — cool and moisten.",
+            color: "#7C3AED", bg: "#EDE9FE",
+            traits: ["Warmth or restlessness at night", "Dry mouth, throat, or skin", "Light sleep with vivid dreams"],
+            favor: ["Pears, lily bulb, and snow fungus", "Duck, black sesame, and tofu", "Lightly cooling, moistening foods"],
+            avoid: ["Spicy and fried food", "Alcohol and lamb", "Late nights and overwork"]
+        },
+        "phlegm-damp": {
+            name: "Phlegm-Damp", tag: "Heavy and sluggish — time to lighten up.",
+            color: "#0D9488", bg: "#CCFBF1",
+            traits: ["Heavy limbs, sluggish after meals", "Gain weight easily, soft build", "Snoring or waking unrefreshed"],
+            favor: ["Adzuki beans and winter melon", "Job's tears (coix seed) and white radish", "Light, simple meals"],
+            avoid: ["Greasy and fried food", "Sweets and rich desserts", "Excess dairy"]
+        },
+        "damp-heat": {
+            name: "Damp-Heat", tag: "Oily and overheated — clear the heat.",
+            color: "#E11D48", bg: "#FFE4E6",
+            traits: ["Oily skin or frequent breakouts", "Bitter taste, sticky feeling in the mouth", "Quick to feel irritated"],
+            favor: ["Mung beans, bitter melon, and cucumber", "Green tea and light broths", "Fresh vegetables"],
+            avoid: ["Spicy and fried food", "Alcohol", "Sweets and rich sauces"]
+        },
+        "blood-stasis": {
+            name: "Blood-Stasis", tag: "Circulation feels stuck — get things moving.",
+            color: "#BE123C", bg: "#FFE4E6",
+            traits: ["Dark circles or a dull complexion", "Fixed aches or morning stiffness", "Skin marks or bruises easily"],
+            favor: ["Hawthorn, black beans, and rose tea", "Turmeric and a little vinegar", "Daily movement and stretching"],
+            avoid: ["Long hours sitting still", "Greasy, heavy food", "Cold exposure when tired"]
+        },
+        "qi-stagnation": {
+            name: "Qi-Stagnation", tag: "Tense and wound up — unwind the flow.",
+            color: "#2563EB", bg: "#DBEAFE",
+            traits: ["Sigh often, feel chest tightness", "Mood swings with stress", "Trouble falling asleep from overthinking"],
+            favor: ["Citrus peel, rose or jasmine tea", "Mint and hawthorn", "Daily walks or any movement you enjoy"],
+            avoid: ["Bottling up stress", "Heavy, greasy meals when tense", "Long sedentary days"]
+        },
+        "allergic": {
+            name: "Sensitive Constitution", tag: "Reactive by nature — keep it simple.",
+            color: "#475569", bg: "#F1F5F9",
+            traits: ["Skin or nose reacts to triggers", "Sensitive to dust, pollen, or new products", "Catch seasonal sniffles easily"],
+            favor: ["Simple, fresh, lightly seasoned foods", "Learning and noting your personal triggers", "Gentle, regular meals"],
+            avoid: ["Your known triggers", "Overly processed food", "Strong flavors and heavy additives"]
+        }
+    };
+
+    // priority order for breaking ties (balanced last — a tie means the other type is more informative)
+    var PRIORITY = ["qi-stagnation", "blood-stasis", "damp-heat", "phlegm-damp", "yang-deficient", "yin-deficient", "qi-deficient", "allergic", "balanced"];
+
+    var QUESTIONS = [
+        { q: "How do your hands and feet usually feel?",
+          a: [["Usually warm and comfortable", "balanced"], ["Often cold — I reach for warm drinks", "yang-deficient", "qi-deficient"], ["Often hot, with restless warmth at night", "yin-deficient"], ["Palms and feet sweat easily", "damp-heat"]] },
+        { q: "How is your energy through the day?",
+          a: [["Steady from morning to night", "balanced"], ["I tire easily and prefer to sit", "qi-deficient"], ["Heavy limbs, sluggish after meals", "phlegm-damp"], ["My mind races — hard to unwind", "qi-stagnation"]] },
+        { q: "How is your digestion?",
+          a: [["Comfortable and regular", "balanced"], ["Bloating or loose stools, worse with cold food", "yang-deficient", "qi-deficient"], ["Dry mouth, thirst, or constipation", "yin-deficient"], ["Bitter taste, sticky feeling, or reflux", "damp-heat"]] },
+        { q: "How would you describe your skin?",
+          a: [["Clear and even", "balanced"], ["Pale or dull", "qi-deficient"], ["Oily, with breakouts", "damp-heat"], ["Dark circles, or marks/bruises easily", "blood-stasis"]] },
+        { q: "How do you sleep?",
+          a: [["Fall asleep easily, sleep through", "balanced"], ["Light sleeper with vivid dreams", "yin-deficient"], ["Trouble falling asleep — I overthink", "qi-stagnation"], ["Snore, or wake up unrefreshed", "phlegm-damp"]] },
+        { q: "How is your mood day to day?",
+          a: [["Even-keeled", "balanced"], ["I sigh a lot, feel a bit 'stuck'", "qi-stagnation"], ["Quick to feel irritated", "damp-heat"], ["Achy and stiff, especially in the morning", "blood-stasis"]] },
+        { q: "How does your weight behave?",
+          a: [["Stable and easy to maintain", "balanced"], ["Gains easily, soft build", "phlegm-damp"], ["Thin, hard to gain", "yin-deficient"], ["Fluctuates with my stress levels", "qi-stagnation"]] },
+        { q: "How do you handle cold and seasons?",
+          a: [["I adapt easily", "balanced"], ["Always cold — I love heat", "yang-deficient", "qi-deficient"], ["I catch every cold; dust or pollen sets me off", "allergic"], ["I overheat easily and crave cold drinks", "yin-deficient"]] },
+        { q: "Any aches or pains?",
+          a: [["Rarely ache", "balanced"], ["Fixed, nagging aches", "blood-stasis"], ["Neck and shoulder tension when stressed", "qi-stagnation"], ["Heavy, achy joints in damp weather", "phlegm-damp"]] },
+        { q: "How sensitive are you to new things?",
+          a: [["I handle new foods and environments fine", "balanced"], ["My skin reacts to new products or fabrics", "allergic"], ["Dust, pollen, or temperature swings set me off", "allergic"], ["Rich food or alcohol hits me harder than most", "damp-heat"]] }
+    ];
+
+    var APP_URL = "https://apps.apple.com/app/foodlore/id6760920100";
+    var shell = document.getElementById("quiz-shell");
+    var answers = [];
+    var step = 0;
+
+    function esc(s) {
+        return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+    }
+
+    function renderStart() {
+        shell.innerHTML =
+            '<span class="eyebrow">Free quiz</span>' +
+            '<h1>What\'s your <span class="grad">TCM body type?</span></h1>' +
+            '<p class="lede">Traditional Chinese Medicine describes nine body constitutions — and the same food can suit one body and burden another. Answer 10 quick questions to discover yours, then see how every meal scores for <strong>your</strong> body in FoodLore.</p>' +
+            '<button class="btn-primary" id="start-btn">Start the 60-second quiz</button>' +
+            '<div class="meta-row"><span>10 questions</span><span>No sign-up</span><span>Instant result</span></div>';
+        document.getElementById("start-btn").addEventListener("click", function () { step = 0; answers = []; renderQ(); });
+    }
+
+    function renderQ() {
+        var item = QUESTIONS[step];
+        var pct = Math.round((step / QUESTIONS.length) * 100);
+        var html = '<div class="progress-track"><div class="progress-fill" style="width:' + pct + '%"></div></div>' +
+            '<div class="q-count">Question ' + (step + 1) + ' of ' + QUESTIONS.length + '</div>' +
+            '<div class="q-text">' + esc(item.q) + '</div>';
+        for (var i = 0; i < item.a.length; i++) {
+            html += '<button class="opt" data-i="' + i + '">' + esc(item.a[i][0]) + '</button>';
+        }
+        shell.innerHTML = html;
+        var btns = shell.querySelectorAll(".opt");
+        for (var j = 0; j < btns.length; j++) {
+            btns[j].addEventListener("click", (function (idx) {
+                return function () {
+                    answers.push(QUESTIONS[step].a[idx]);
+                    step++;
+                    if (step < QUESTIONS.length) { renderQ(); } else { renderResult(score()); }
+                };
+            })(j));
+        }
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function score() {
+        var pts = {};
+        Object.keys(TYPES).forEach(function (k) { pts[k] = 0; });
+        answers.forEach(function (ans) {
+            pts[ans[1]] += 2;
+            if (ans[2]) { pts[ans[2]] += 1; }
+        });
+        var best = PRIORITY[PRIORITY.length - 1], bestScore = -1;
+        PRIORITY.forEach(function (k) {
+            if (pts[k] > bestScore) { bestScore = pts[k]; best = k; }
+        });
+        return best;
+    }
+
+    function resultUrl(slug) { return "https://foodlore.app/quiz/?r=" + slug; }
+
+    function renderResult(slug) {
+        var t = TYPES[slug];
+        var shareText = "I got " + t.name + " — what's YOUR TCM body type? Take the free 60-second quiz:";
+        var html =
+            '<span class="result-badge" style="color:' + t.color + ';background:' + t.bg + '">Your result</span>' +
+            '<div class="result-name">' + esc(t.name) + '</div>' +
+            '<div class="result-tag">' + esc(t.tag) + '</div>' +
+            '<div class="result-block traits"><h3>Typical signs</h3><ul>' +
+            t.traits.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + '</ul></div>' +
+            '<div class="result-block favor"><h3>In TCM food therapy, favor</h3><ul>' +
+            t.favor.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + '</ul></div>' +
+            '<div class="result-block avoid"><h3>Go easy on</h3><ul>' +
+            t.avoid.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + '</ul></div>' +
+            '<div class="app-cta"><h3>See how every meal scores for your body</h3>' +
+            '<p>This quiz is one snapshot. FoodLore builds your full Constitution Blend from 5 sources — the quiz, AI tongue analysis, Apple Health, daily check-ins, and your scan history — then scores every meal against it.</p>' +
+            '<a class="btn-primary" href="' + APP_URL + '">Get FoodLore free</a></div>' +
+            '<div class="share-row">' +
+            '<a class="share-btn" target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?text=' + encodeURIComponent(shareText) + '&url=' + encodeURIComponent(resultUrl(slug)) + '">Share on X</a>' +
+            '<a class="share-btn" target="_blank" rel="noopener" href="https://wa.me/?text=' + encodeURIComponent(shareText + " " + resultUrl(slug)) + '">Share on WhatsApp</a>' +
+            '<button class="share-btn" id="copy-link">Copy result link</button>' +
+            '</div>' +
+            '<div class="retake"><button id="retake-btn">Retake the quiz</button></div>';
+        shell.innerHTML = html;
+        document.getElementById("retake-btn").addEventListener("click", renderStart);
+        document.getElementById("copy-link").addEventListener("click", function () {
+            var done = function () {
+                var b = document.getElementById("copy-link");
+                b.textContent = "Copied!";
+                setTimeout(function () { b.textContent = "Copy result link"; }, 2000);
+            };
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(resultUrl(slug)).then(done, done);
+            } else {
+                var ta = document.createElement("textarea");
+                ta.value = resultUrl(slug);
+                document.body.appendChild(ta); ta.select();
+                try { document.execCommand("copy"); } catch (e) {}
+                document.body.removeChild(ta); done();
+            }
+        });
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    // Shared result links (?r=slug) open the result directly
+    (function init() {
+        var m = /[?&]r=([a-z-]+)/.exec(window.location.search);
+        if (m && TYPES[m[1]]) {
+            var slug = m[1], t = TYPES[slug];
+            document.title = "I'm " + t.name + " — What's Your TCM Body Type? | FoodLore";
+            renderResult(slug);
+            var rb = shell.querySelector(".retake");
+            if (rb) {
+                var take = document.createElement("div");
+                take.className = "retake";
+                take.innerHTML = '<button id="take-btn" style="font-size:16px;color:#2563EB;font-weight:600;">Take the quiz yourself →</button>';
+                rb.parentNode.insertBefore(take, rb);
+                document.getElementById("take-btn").addEventListener("click", renderStart);
+            }
+        } else {
+            renderStart();
+        }
+    })();
+})();
+</script>
+</body>
+</html>
