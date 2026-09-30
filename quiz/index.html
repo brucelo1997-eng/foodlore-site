@@ -308,18 +308,25 @@
         window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
+    // Scoring: a "no symptom" (balanced) answer carries no points — absence of
+    // one symptom is weak evidence for Balanced and must not outweigh real
+    // symptom signals. A constitution wins only with >= 4 points (two clear
+    // symptom answers); anything weaker falls back to Balanced. Ties break by
+    // PRIORITY order (earliest wins), with Balanced as the last resort.
     function score() {
         var pts = {};
         Object.keys(TYPES).forEach(function (k) { pts[k] = 0; });
         answers.forEach(function (ans) {
+            if (ans[1] === "balanced") { return; }
             pts[ans[1]] += 2;
             if (ans[2]) { pts[ans[2]] += 1; }
         });
-        var best = PRIORITY[PRIORITY.length - 1], bestScore = -1;
+        var best = null, bestScore = 0;
         PRIORITY.forEach(function (k) {
-            if (pts[k] > bestScore) { bestScore = pts[k]; best = k; }
+            if (k === "balanced") { return; }
+            if (pts[k] >= 4 && pts[k] > bestScore) { bestScore = pts[k]; best = k; }
         });
-        return best;
+        return best || "balanced";
     }
 
     function resultUrl(slug) { return "https://foodlore.app/quiz/?r=" + slug; }
