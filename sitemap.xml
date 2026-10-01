@@ -49,6 +49,12 @@
         <priority>0.7</priority>
     </url>
     <url>
+        <loc>https://foodlore.app/blog/dark-chocolate-body-type</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
         <loc>https://foodlore.app/blog/dairy-body-type</loc>
         <lastmod>2026-10-01</lastmod>
         <changefreq>monthly</changefreq>

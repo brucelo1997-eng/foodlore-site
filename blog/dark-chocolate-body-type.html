@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is Dark Chocolate Good for You? A TCM Body-Type Take on Cacao: FoodLore Blog</title>
+    <meta name="description" content="Is dark chocolate healthy? TCM reads cacao as warming and bitter — a heart-meridian food that moves qi and lifts mood. See how the nine body constitutions respond, what the flavanol research actually says, and how to pick a bar.">
+    <link rel="canonical" href="https://foodlore.app/blog/dark-chocolate-body-type">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+        :root {
+            --blue: #2563EB; --blue-dark: #1D4ED8; --blue-light: #DBEAFE;
+            --slate-900: #0F172A; --slate-700: #334155; --slate-500: #64748B;
+            --slate-300: #CBD5E1; --slate-100: #F1F5F9; --white: #FFFFFF;
+            --green: #059669; --green-light: #D1FAE5;
+            --purple: #7C3AED; --purple-light: #EDE9FE;
+            --rose: #E11D48; --rose-light: #FFE4E6;
+            --amber: #D97706; --amber-light: #FEF3C7;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7; color: var(--slate-700); background: var(--white);
+            -webkit-font-smoothing: antialiased;
+        }
+        nav {
+            position: fixed; top: 0; width: 100%; z-index: 100;
+            background: rgba(255,255,255,0.92); backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+        .nav-inner {
+            max-width: 1120px; margin: 0 auto; display: flex;
+            align-items: center; justify-content: space-between; padding: 16px 24px;
+        }
+        .nav-brand {
+            font-size: 22px; font-weight: 800; color: var(--slate-900);
+            text-decoration: none; display: flex; align-items: center; gap: 10px;
+        }
+        .nav-brand-icon {
+            width: 36px; height: 36px; border-radius: 10px;
+            background: linear-gradient(135deg, var(--blue), var(--purple));
+            display: flex; align-items: center; justify-content: center;
+            font-size: 18px; color: white;
+        }
+        .nav-links { display: flex; gap: 32px; align-items: center; }
+        .nav-links a {
+            font-size: 14px; font-weight: 500; color: var(--slate-500);
+            text-decoration: none; transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--slate-900); }
+        .nav-cta {
+            background: var(--blue) !important; color: var(--white) !important;
+            padding: 8px 20px !important; border-radius: 8px !important;
+            font-weight: 600 !important;
+        }
+        .nav-cta:hover { background: var(--blue-dark) !important; }
+
+        .article-hero {
+            padding: 140px 24px 48px; text-align: center;
+            background: linear-gradient(180deg, #EAD9C2 0%, var(--white) 100%);
+        }
+        .article-badge {
+            display: inline-block; padding: 6px 16px; border-radius: 100px;
+            font-size: 13px; font-weight: 600; margin-bottom: 20px;
+            background: var(--white); color: var(--blue);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .article-hero h1 {
+            font-size: clamp(30px, 4.5vw, 44px); font-weight: 800;
+            color: var(--slate-900); line-height: 1.15; margin-bottom: 16px;
+            letter-spacing: -0.02em; max-width: 720px; margin-left: auto; margin-right: auto;
+        }
+        .article-meta {
+            font-size: 14px; color: var(--slate-500);
+            display: flex; gap: 12px; justify-content: center;
+        }
+
+        .article-body { max-width: 740px; margin: 0 auto; padding: 48px 24px 24px; }
+        .article-body p { margin-bottom: 20px; font-size: 17px; }
+        .article-body h2 {
+            font-size: 26px; font-weight: 800; color: var(--slate-900);
+            margin: 44px 0 16px; letter-spacing: -0.01em;
+        }
+        .article-body h3 {
+            font-size: 19px; font-weight: 700; color: var(--slate-900);
+            margin: 28px 0 10px;
+        }
+        .article-body ul, .article-body ol { margin: 0 0 20px 24px; font-size: 17px; }
+        .article-body li { margin-bottom: 10px; }
+        .article-body strong { color: var(--slate-900); }
+
+        .callout {
+            border-radius: 14px; padding: 24px 28px; margin: 28px 0;
+            background: var(--purple-light);
+            border-left: 4px solid var(--purple);
+        }
+        .callout h3 { margin-top: 0 !important; color: var(--purple) !important; }
+        .callout p, .callout li { font-size: 15px !important; }
+        .callout ul { margin-bottom: 0; }
+
+        .verdict-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+        .verdict {
+            border-radius: 14px; padding: 20px 22px;
+            border: 1px solid rgba(0,0,0,0.06);
+        }
+        .verdict h4 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+        .verdict ul { margin: 0 0 0 18px; font-size: 14px; }
+        .verdict li { margin-bottom: 6px; }
+        .verdict.good { background: var(--green-light); }
+        .verdict.good h4 { color: var(--green); }
+        .verdict.caution { background: var(--amber-light); }
+        .verdict.caution h4 { color: var(--amber); }
+
+        .disclaimer {
+            background: var(--slate-100); border-radius: 12px;
+            padding: 18px 22px; margin: 36px 0; font-size: 13px !important;
+            color: var(--slate-500) !important; line-height: 1.6;
+        }
+        .disclaimer p { font-size: 13px !important; margin-bottom: 0 !important; }
+
+        .cta-section {
+            text-align: center; padding: 72px 24px;
+            background: linear-gradient(135deg, var(--blue) 0%, var(--purple) 100%);
+            color: var(--white); margin-top: 24px;
+        }
+        .cta-section h2 {
+            font-size: clamp(26px, 3.5vw, 36px); font-weight: 800;
+            margin-bottom: 14px; letter-spacing: -0.01em;
+        }
+        .cta-section p {
+            font-size: 16px; opacity: 0.85; margin-bottom: 28px;
+            max-width: 480px; margin-left: auto; margin-right: auto;
+        }
+        .btn-white {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--white); color: var(--blue);
+            padding: 14px 36px; border-radius: 12px;
+            font-size: 16px; font-weight: 700; text-decoration: none;
+            transition: all 0.2s; box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+        }
+        .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+
+        .related { max-width: 740px; margin: 0 auto; padding: 40px 24px 64px; }
+        .related h3 { font-size: 18px; font-weight: 700; color: var(--slate-900); margin-bottom: 16px; }
+        .related a {
+            display: block; padding: 14px 18px; border-radius: 10px;
+            border: 1px solid rgba(0,0,0,0.06); margin-bottom: 10px;
+            text-decoration: none; color: var(--slate-700); font-size: 15px; font-weight: 500;
+            transition: all 0.2s;
+        }
+        .related a:hover { border-color: var(--blue); color: var(--blue); }
+
+        footer {
+            background: var(--slate-900); color: rgba(255,255,255,0.5);
+            padding: 48px 24px;
+        }
+        .footer-inner {
+            max-width: 1120px; margin: 0 auto;
+            display: flex; justify-content: space-between; align-items: center;
+            flex-wrap: wrap; gap: 16px;
+        }
+        .footer-brand {
+            font-size: 18px; font-weight: 700; color: var(--white);
+            display: flex; align-items: center; gap: 8px;
+        }
+        .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+        .footer-links a {
+            font-size: 14px; color: rgba(255,255,255,0.5);
+            text-decoration: none; transition: color 0.2s;
+        }
+        .footer-links a:hover { color: var(--white); }
+        .footer-copy {
+            font-size: 13px; width: 100%; text-align: center;
+            margin-top: 24px; padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .article-hero { padding: 120px 20px 40px; }
+            .verdict-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is dark chocolate actually healthy?", "acceptedAnswer": {"@type": "Answer", "text": "The flavanol research is real but modest: trials link high-flavanol cocoa to small improvements in vascular function and blood pressure. But bars vary wildly in flavanol content, processing destroys flavanols, and sugar often outweighs the benefit. Think of dark chocolate as a better treat, not a health food."}}, {"@type": "Question", "name": "Does chocolate cause acne?", "acceptedAnswer": {"@type": "Answer", "text": "Evidence is mixed and mostly points at high-sugar, high-dairy chocolate rather than cacao itself. If breakouts follow chocolate binges, try two weeks of high-cacao, low-sugar chocolate only and compare — your skin's response is the data that matters."}}, {"@type": "Question", "name": "How much dark chocolate should I eat a day?", "acceptedAnswer": {"@type": "Answer", "text": "Research doses are usually 20-30 grams — a small square or two of dark chocolate. Benefits don't scale with dose, but calories and caffeine do, so more is not better."}}, {"@type": "Question", "name": "Does chocolate affect sleep?", "acceptedAnswer": {"@type": "Answer", "text": "It can. Dark chocolate contains modest caffeine plus theobromine, a longer-acting mild stimulant. If you're sensitive to stimulants, keep chocolate to the first half of the day."}}, {"@type": "Question", "name": "Is white chocolate actually chocolate?", "acceptedAnswer": {"@type": "Answer", "text": "Not really, nutritionally. White chocolate contains cocoa butter but no cacao solids — so no flavanols, just sugar and fat. Treat it as candy, not as the food this article is about."}}, {"@type": "Question", "name": "Is there lead in dark chocolate?", "acceptedAnswer": {"@type": "Answer", "text": "Consumer Reports testing found concerning lead and cadmium levels in some popular dark chocolate brands. The practical response: vary your brands, favor companies that publish heavy-metal testing, and keep portions small."}}]}
+</script>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="/" class="nav-brand">
+            <div class="nav-brand-icon">FL</div>
+            FoodLore
+        </a>
+        <div class="nav-links">
+            <a href="/#features">Features</a>
+            <a href="/blog">Blog</a>
+            <a href="/support">Support</a>
+            <a href="https://apps.apple.com/app/foodlore/id6760920100" class="nav-cta">Download</a>
+        </div>
+    </div>
+</nav>
+
+<header class="article-hero">
+    <div class="article-badge">🍫 TCM Body Types</div>
+    <h1>Is Dark Chocolate Good for You? A TCM Body-Type Take on Cacao, Mood, and Metabolism</h1>
+    <div class="article-meta"><span>Oct 1, 2026</span><span>·</span><span>6 min read</span></div>
+</header>
+
+<article class="article-body">
+    <p>Dark chocolate has the best PR of any candy in history. Headlines call it a superfood; your dentist calls it a problem. One square is "heart-healthy," the whole bar is "a binge." And somewhere between the flavanol studies and the checkout-aisle temptation, you're left wondering: is this actually good for me, or is it just the health halo talking?</p>
+
+    <div class="callout">
+        <h3>The nine TCM body constitutions</h3>
+        <p>
+            TCM groups people into nine body constitutions: <strong>Balanced</strong>,
+            <strong>Qi Deficiency</strong>, <strong>Yang Deficiency</strong>, <strong>Yin Deficiency</strong>,
+            <strong>Phlegm-Dampness</strong>, <strong>Damp-Heat</strong>, <strong>Blood Stasis</strong>,
+            <strong>Qi Stagnation</strong>, and <strong>Special/Inherited</strong>. Your constitution
+            shapes how you respond to a food's thermal nature, not just its calories. FoodLore maps
+            your constitution and scores foods against it.
+        </p>
+    </div>
+    <p>Traditional Chinese Medicine never met a cacao bean — chocolate arrived in China centuries after the classical texts were written. But TCM's framework for classifying foods by flavor, thermal nature, and effect on qi and blood applies to cacao beautifully. And interestingly, the traditional read on this food lines up with what modern research keeps finding. Let's look at both.</p>
+    <h2>Chocolate in TCM Terms: Bitter, Warming, and Moving</h2>
+    <p>Apply TCM food energetics to cacao and you get a clear profile:</p>
+    <ul>
+        <li><strong>Bitter flavor.</strong> In TCM's five-flavor system, bitterness corresponds to the <strong>Heart</strong>. Bitter foods are said to drain, dry, and move things downward — which is one reason bitter foods are traditionally associated with calming restlessness and clearing heat.</li>
+        <li><strong>Warming nature.</strong> Cacao is considered warming. It invigorates, lifts energy, and dispels cold — the opposite of cooling foods like watermelon or green tea.</li>
+        <li><strong>Moves qi and blood.</strong> The felt effect of chocolate — alertness, lifted mood, a sense of things flowing — reads in TCM terms as moving stagnant qi and invigorating blood. It's a mild version of what warming, stimulating medicinals do.</li>
+    </ul>
+    <p>This is a lens from centuries of empirical observation, not a set of proven scientific claims — use it to notice how chocolate actually feels in your body, not as medical fact. But notice how well it predicts the modern findings below: a warming stimulant that affects mood, circulation, and energy is exactly what the research describes.</p>
+    <div class="disclaimer">
+        <p><strong>A quick note:</strong> This article is educational, not medical advice. Chocolate contains caffeine and theobromine — if you have a heart condition, anxiety disorder, reflux, or take stimulant-sensitive medications, check with your doctor. True cocoa allergy is rare but real; reactions to milk, soy lecithin, or nuts in chocolate bars are more common — read labels.</p>
+    </div>
+    <h2>What Modern Nutrition Says About Dark Chocolate</h2>
+    <ul>
+        <li><strong>Flavanols are the real story.</strong> Cocoa flavanols (especially epicatechin) are the compounds behind the health headlines. Randomized trials have linked high-flavanol cocoa to modest improvements in vascular function and small reductions in blood pressure. The catch: flavanol content varies enormously between bars, and heavy processing (including Dutch alkalization) destroys most of them.</li>
+        <li><strong>Theobromine, the quiet stimulant.</strong> Cacao's signature compound is theobromine — a mild, long-acting stimulant related to caffeine. It contributes to the alert-but-calm feeling chocolate gives, and it's part of why chocolate feels different from coffee.</li>
+        <li><strong>Some caffeine too.</strong> Dark chocolate contains modest caffeine (roughly 20–30mg per ounce, versus ~95mg in coffee). Enough to matter for sensitive sleepers, not enough to replace your espresso.</li>
+        <li><strong>Sugar is the real variable.</strong> The health case for chocolate collapses as sugar rises. A 90% bar and a milk chocolate bar are different foods wearing the same name — one is mostly cacao, the other is mostly sugar with cocoa flavoring.</li>
+        <li><strong>The heavy-metal footnote.</strong> Consumer Reports testing found concerning lead and cadmium levels in a number of popular dark chocolate brands. This doesn't mean avoiding dark chocolate; it means varying your brands, favoring companies that publish heavy-metal testing, and keeping portions reasonable.</li>
+    </ul>
+    <p>The honest summary: dark chocolate is a genuinely interesting food with modest, real benefits — wrapped in a marketing story that oversells them. The benefits live in the cacao; the risks live in the sugar, the portion, and the bar you choose.</p>
+    <h2>How Each Body Type Responds to Dark Chocolate</h2>
+    <h3>Balanced (Ping He)</h3>
+    <p>Your system handles chocolate well. One to two squares of 70%+ dark as an afternoon treat is squarely in your zone. The one thing to watch is the oldest trap in the book: "dark chocolate is healthy" becoming permission for half a bar. The dose makes the treat.</p>
+    <h3>Qi-Deficient (Qi Xu)</h3>
+    <p><strong>Chocolate's gentle lift suits your fatigue.</strong> Qi deficiency is low energy, tired limbs, mental fogginess — and cacao's warming, invigorating quality directly addresses that flat feeling. A small amount of dark chocolate in the morning or early afternoon can be a genuine pick-me-up. The caveat: don't let it become your energy infrastructure. Stimulants borrow energy; they don't build qi. Pair chocolate with actual qi-builders — real meals, sleep, gentle movement.</p>
+    <h3>Yang-Deficient (Yang Xu)</h3>
+    <p><strong>One of your better treats.</strong> You run cold — cold limbs, low energy, sluggish digestion — and chocolate is warming, which is the direction your body wants. You likely tolerate (and enjoy) chocolate more than cold-natured sweets like ice cream. Keep it dark and low-sugar, and notice the difference in how warming versus cooling sweets feel an hour later.</p>
+    <h3>Yin-Deficient (Yin Xu)</h3>
+    <p><strong>Proceed with awareness.</strong> Yin deficiency is dryness and depleted fluids with restless heat: dry mouth, night sweats, insomnia, a wired-but-tired feeling. Warming stimulants can aggravate exactly this pattern — chocolate late in the day may cost you sleep. If you indulge, keep it tiny, early in the day, and high-cacao. And if chocolate reliably makes your sleep worse, that's your answer regardless of the flavanol headlines.</p>
+    <h3>Phlegm-Damp (Tan Shi)</h3>
+    <p><strong>The trap is milk chocolate, not cacao.</strong> Your pattern — heaviness, bloating, brain fog, sluggish digestion — gets worse with sugar and dairy, which is precisely what milk chocolate delivers. But high-cacao dark chocolate with minimal sugar is a completely different food: bitter, low in sugar, no dairy. That's the version that fits you. Read the label: cacao percentage up, sugar down, no milk fat.</p>
+    <h3>Damp-Heat (Shi Re)</h3>
+    <p>Oily skin, breakouts, irritability, sticky digestion. Chocolate is rich and warming — two things your pattern doesn't need more of. Heavy chocolate binges are a classic breakout trigger for damp-heat types. If you want chocolate, keep it to small amounts of very dark (85%+), and track your skin for 48 hours after. Your face will tell you your personal limit faster than any article.</p>
+    <h3>Blood-Stasis (Xue Yu)</h3>
+    <p>Poor circulation, dusky complexion, a feeling of stuckness. In TCM terms, cacao's bitter, moving quality is traditionally viewed as supporting movement — making small amounts of dark chocolate one of the more compatible treats for your pattern. It won't replace actual circulation-builders (walking, warmth, leafy greens), but as treats go, this one points in your direction.</p>
+    <h3>Qi-Stagnation (Qi Yu)</h3>
+    <p>Stress-held tension, mood tied to circumstances, the tight-chest feeling. <strong>The ritual matters as much as the chemistry.</strong> Chocolate's mood-lifting, qi-moving quality genuinely suits stuck energy — a square of dark chocolate, eaten slowly, as a deliberate pause, is good medicine for stagnation. What doesn't help: stress-eating a bar at your desk. Slow down and the same food works differently.</p>
+    <h3>Allergic (Te Zhi)</h3>
+    <p>True cocoa allergy is uncommon, but chocolate bars are minefields of other triggers: milk, soy lecithin, tree nuts, and cross-contamination. If chocolate gives you headaches, hives, or migraines, suspect the bar's companions before the cacao — then test plain, single-origin dark with a short ingredient list. Caffeine-sensitive people should also treat dark chocolate as a daytime-only food.</p>
+    <h2>Not All Chocolate Is Equal: A Practical Ranking</h2>
+    <p>From most cacao to least — which is roughly from most interesting to least:</p>
+    <ol>
+        <li><strong>Raw cacao nibs / cacao powder</strong> — all flavanols, no sugar. Bitter and intense; best blended into smoothies or oatmeal.</li>
+        <li><strong>Dark 85%+</strong> — minimal sugar, maximum cacao character. The connoisseur's zone.</li>
+        <li><strong>Dark 70%</strong> — the sweet spot for most people: real cacao flavor, real flavanols, enough sweetness to enjoy.</li>
+        <li><strong>Milk chocolate</strong> — mostly sugar and dairy with cocoa flavoring. A candy that happens to contain chocolate.</li>
+        <li><strong>White chocolate</strong> — no cacao solids at all. Not chocolate in any nutritional sense; treat it as candy.</li>
+    </ol>
+    <p>Whatever you choose, check for Dutch processing ("processed with alkali") if flavanols matter to you — it smooths the flavor but destroys most of them.</p>
+    <h2>The Chocolate Experiment: Find Your Personal Answer</h2>
+    <p>Two weeks, one swap:</p>
+    <ul>
+        <li><strong>Replace</strong> your usual sweet snacks with 20–30g of 70%+ dark chocolate per day (a square or two).</li>
+        <li><strong>Track</strong> energy at 3pm, sleep quality, skin, and digestion. One line a day is enough.</li>
+        <li><strong>Notice the timing effect.</strong> Try it before noon for a week, then as an evening treat for a week. Many people discover they're fine with morning chocolate and wrecked by nighttime chocolate — that's constitution + caffeine sensitivity talking.</li>
+    </ul>
+    <p>If nothing changes, you've lost nothing and gained a better-tasting habit. If your sleep or skin improves, you've found your answer.</p>
+    <h2>FAQ: What People Actually Ask About Dark Chocolate</h2>
+    <p><strong>Is dark chocolate actually healthy?</strong> The flavanol research is real but modest: trials link high-flavanol cocoa to small improvements in vascular function and blood pressure. But bars vary wildly in flavanol content, processing destroys flavanols, and sugar often outweighs the benefit. Think of dark chocolate as a better treat, not a health food.</p>
+    <p><strong>Does chocolate cause acne?</strong> Evidence is mixed and mostly points at high-sugar, high-dairy chocolate rather than cacao itself. If breakouts follow chocolate binges, try two weeks of high-cacao, low-sugar chocolate only and compare — your skin's response is the data that matters.</p>
+    <p><strong>How much dark chocolate should I eat a day?</strong> Research doses are usually 20–30 grams — a small square or two of dark chocolate. Benefits don't scale with dose, but calories and caffeine do, so more is not better.</p>
+    <p><strong>Does chocolate affect sleep?</strong> It can. Dark chocolate contains modest caffeine plus theobromine, a longer-acting mild stimulant. If you're sensitive to stimulants, keep chocolate to the first half of the day.</p>
+    <p><strong>Is white chocolate actually chocolate?</strong> Not really, nutritionally. White chocolate contains cocoa butter but no cacao solids — so no flavanols, just sugar and fat. Treat it as candy, not as the food this article is about.</p>
+    <p><strong>Is there lead in dark chocolate?</strong> Consumer Reports testing found concerning lead and cadmium levels in some popular dark chocolate brands. The practical response: vary your brands, favor companies that publish heavy-metal testing, and keep portions small.</p>
+    <h2>Know Your Constitution, Then Choose Your Chocolate</h2>
+    <p>Chocolate is the perfect example of why food advice needs a "for whom" attached. The same square of 85% dark that lifts a cold, fatigued yang-deficient afternoon can cost a yin-deficient person a night of sleep. Neither reaction is wrong — they're just different bodies meeting the same food.</p>
+    <p>The fastest way to know which body you have is FoodLore's free body-type quiz — a few minutes of questions about how you actually feel, mapped to one of the nine TCM constitutions.</p>
+    <p><strong><a href="https://foodlore.app/quiz/">Take the free body-type quiz →</a></strong></p>
+    <p>And when you want to know how <em>any</em> food fits <em>your</em> constitution — chocolate, coffee, dairy, late-night snacks — the FoodLore app scans foods and shows you how they match your body type, blending TCM food energetics with modern nutrition science. Stop guessing; start knowing.</p>
+    <p><strong><a href="https://apps.apple.com/app/foodlore/id6760920100">Download FoodLore on the App Store →</a></strong></p>
+</article>
+
+<section class="cta-section">
+    <h2>What is your body type?</h2>
+    <p>Scan any food or drink with FoodLore and see how it scores for your TCM constitution, plus 60+ nutrients from modern science.</p>
+    <a href="https://apps.apple.com/app/foodlore/id6760920100" class="btn-white">Download FoodLore for iOS</a>
+</section>
+
+<div class="related">
+    <h3>Keep reading</h3>
+    <a href="https://foodlore.app/blog/coffee-body-type">☕ Is Coffee Good for Your Body Type? Caffeine, Energy, and Constitution</a>
+    <a href="https://foodlore.app/blog/matcha-body-type">🍵 Matcha and Your Body Type: Calm Energy or Jitters?</a>
+    <a href="https://foodlore.app/blog/honey-body-type">🍯 Is Honey Actually Good for You? What TCM Says About Honey and Body Type</a>
+    <a href="https://foodlore.app/quiz/">🧭 What's Your Body Type? Take the 2-Minute Quiz</a>
+</div>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="nav-brand-icon" style="width:28px; height:28px; font-size:13px; border-radius:7px;">FL</div>
+            FoodLore
+        </div>
+        <div class="footer-links">
+            <a href="/blog">Blog</a>
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms of Use</a>
+            <a href="/support">Support</a>
+            <a href="mailto:support@foodlore.app">Contact</a>
+        </div>
+        <div class="footer-copy">
+            &copy; 2026 FoodLore. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
