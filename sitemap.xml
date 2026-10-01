@@ -43,6 +43,18 @@
         <priority>0.7</priority>
     </url>
     <url>
+        <loc>https://foodlore.app/blog/honey-body-type</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://foodlore.app/blog/dairy-body-type</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
         <loc>https://foodlore.app/blog/coffee-body-type</loc>
         <lastmod>2026-09-28</lastmod>
         <changefreq>monthly</changefreq>

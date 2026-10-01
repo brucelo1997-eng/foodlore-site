@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is Dairy Bad for You? A TCM Body-Type Take on Milk, Yogurt, and Cheese: FoodLore Blog</title>
+    <meta name="description" content="Is dairy bad for you? TCM has classified dairy as a dampness-producing food for centuries — yet yogurt and ghee tell a different story. See how the nine body constitutions respond to milk, yogurt, and cheese, plus the modern science.">
+    <link rel="canonical" href="https://foodlore.app/blog/dairy-body-type">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+        :root {
+            --blue: #2563EB; --blue-dark: #1D4ED8; --blue-light: #DBEAFE;
+            --slate-900: #0F172A; --slate-700: #334155; --slate-500: #64748B;
+            --slate-300: #CBD5E1; --slate-100: #F1F5F9; --white: #FFFFFF;
+            --green: #059669; --green-light: #D1FAE5;
+            --purple: #7C3AED; --purple-light: #EDE9FE;
+            --rose: #E11D48; --rose-light: #FFE4E6;
+            --amber: #D97706; --amber-light: #FEF3C7;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7; color: var(--slate-700); background: var(--white);
+            -webkit-font-smoothing: antialiased;
+        }
+        nav {
+            position: fixed; top: 0; width: 100%; z-index: 100;
+            background: rgba(255,255,255,0.92); backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+        .nav-inner {
+            max-width: 1120px; margin: 0 auto; display: flex;
+            align-items: center; justify-content: space-between; padding: 16px 24px;
+        }
+        .nav-brand {
+            font-size: 22px; font-weight: 800; color: var(--slate-900);
+            text-decoration: none; display: flex; align-items: center; gap: 10px;
+        }
+        .nav-brand-icon {
+            width: 36px; height: 36px; border-radius: 10px;
+            background: linear-gradient(135deg, var(--blue), var(--purple));
+            display: flex; align-items: center; justify-content: center;
+            font-size: 18px; color: white;
+        }
+        .nav-links { display: flex; gap: 32px; align-items: center; }
+        .nav-links a {
+            font-size: 14px; font-weight: 500; color: var(--slate-500);
+            text-decoration: none; transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--slate-900); }
+        .nav-cta {
+            background: var(--blue) !important; color: var(--white) !important;
+            padding: 8px 20px !important; border-radius: 8px !important;
+            font-weight: 600 !important;
+        }
+        .nav-cta:hover { background: var(--blue-dark) !important; }
+
+        .article-hero {
+            padding: 140px 24px 48px; text-align: center;
+            background: linear-gradient(180deg, #FEF3C7 0%, var(--white) 100%);
+        }
+        .article-badge {
+            display: inline-block; padding: 6px 16px; border-radius: 100px;
+            font-size: 13px; font-weight: 600; margin-bottom: 20px;
+            background: var(--white); color: var(--blue);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .article-hero h1 {
+            font-size: clamp(30px, 4.5vw, 44px); font-weight: 800;
+            color: var(--slate-900); line-height: 1.15; margin-bottom: 16px;
+            letter-spacing: -0.02em; max-width: 720px; margin-left: auto; margin-right: auto;
+        }
+        .article-meta {
+            font-size: 14px; color: var(--slate-500);
+            display: flex; gap: 12px; justify-content: center;
+        }
+
+        .article-body { max-width: 740px; margin: 0 auto; padding: 48px 24px 24px; }
+        .article-body p { margin-bottom: 20px; font-size: 17px; }
+        .article-body h2 {
+            font-size: 26px; font-weight: 800; color: var(--slate-900);
+            margin: 44px 0 16px; letter-spacing: -0.01em;
+        }
+        .article-body h3 {
+            font-size: 19px; font-weight: 700; color: var(--slate-900);
+            margin: 28px 0 10px;
+        }
+        .article-body ul, .article-body ol { margin: 0 0 20px 24px; font-size: 17px; }
+        .article-body li { margin-bottom: 10px; }
+        .article-body strong { color: var(--slate-900); }
+
+        .callout {
+            border-radius: 14px; padding: 24px 28px; margin: 28px 0;
+            background: var(--purple-light);
+            border-left: 4px solid var(--purple);
+        }
+        .callout h3 { margin-top: 0 !important; color: var(--purple) !important; }
+        .callout p, .callout li { font-size: 15px !important; }
+        .callout ul { margin-bottom: 0; }
+
+        .verdict-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+        .verdict {
+            border-radius: 14px; padding: 20px 22px;
+            border: 1px solid rgba(0,0,0,0.06);
+        }
+        .verdict h4 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+        .verdict ul { margin: 0 0 0 18px; font-size: 14px; }
+        .verdict li { margin-bottom: 6px; }
+        .verdict.good { background: var(--green-light); }
+        .verdict.good h4 { color: var(--green); }
+        .verdict.caution { background: var(--amber-light); }
+        .verdict.caution h4 { color: var(--amber); }
+
+        .disclaimer {
+            background: var(--slate-100); border-radius: 12px;
+            padding: 18px 22px; margin: 36px 0; font-size: 13px !important;
+            color: var(--slate-500) !important; line-height: 1.6;
+        }
+        .disclaimer p { font-size: 13px !important; margin-bottom: 0 !important; }
+
+        .cta-section {
+            text-align: center; padding: 72px 24px;
+            background: linear-gradient(135deg, var(--blue) 0%, var(--purple) 100%);
+            color: var(--white); margin-top: 24px;
+        }
+        .cta-section h2 {
+            font-size: clamp(26px, 3.5vw, 36px); font-weight: 800;
+            margin-bottom: 14px; letter-spacing: -0.01em;
+        }
+        .cta-section p {
+            font-size: 16px; opacity: 0.85; margin-bottom: 28px;
+            max-width: 480px; margin-left: auto; margin-right: auto;
+        }
+        .btn-white {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--white); color: var(--blue);
+            padding: 14px 36px; border-radius: 12px;
+            font-size: 16px; font-weight: 700; text-decoration: none;
+            transition: all 0.2s; box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+        }
+        .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+
+        .related { max-width: 740px; margin: 0 auto; padding: 40px 24px 64px; }
+        .related h3 { font-size: 18px; font-weight: 700; color: var(--slate-900); margin-bottom: 16px; }
+        .related a {
+            display: block; padding: 14px 18px; border-radius: 10px;
+            border: 1px solid rgba(0,0,0,0.06); margin-bottom: 10px;
+            text-decoration: none; color: var(--slate-700); font-size: 15px; font-weight: 500;
+            transition: all 0.2s;
+        }
+        .related a:hover { border-color: var(--blue); color: var(--blue); }
+
+        footer {
+            background: var(--slate-900); color: rgba(255,255,255,0.5);
+            padding: 48px 24px;
+        }
+        .footer-inner {
+            max-width: 1120px; margin: 0 auto;
+            display: flex; justify-content: space-between; align-items: center;
+            flex-wrap: wrap; gap: 16px;
+        }
+        .footer-brand {
+            font-size: 18px; font-weight: 700; color: var(--white);
+            display: flex; align-items: center; gap: 8px;
+        }
+        .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+        .footer-links a {
+            font-size: 14px; color: rgba(255,255,255,0.5);
+            text-decoration: none; transition: color 0.2s;
+        }
+        .footer-links a:hover { color: var(--white); }
+        .footer-copy {
+            font-size: 13px; width: 100%; text-align: center;
+            margin-top: 24px; padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .article-hero { padding: 120px 20px 40px; }
+            .verdict-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is dairy inflammatory?", "acceptedAnswer": {"@type": "Answer", "text": "For most people, no — dairy doesn't appear broadly pro-inflammatory in research. But individual responses vary, and people with sensitivities, damp-heavy constitutions, or certain skin conditions often do feel worse with it. Your body is the final study."}}, {"@type": "Question", "name": "Does milk really cause mucus?", "acceptedAnswer": {"@type": "Answer", "text": "Studies haven't found increased mucus production, but many people experience a thicker mouthfeel after dairy that feels like congestion. If dairy makes your throat feel coated, that's a valid reason to cut back regardless of the mechanism."}}, {"@type": "Question", "name": "Is yogurt better than milk?", "acceptedAnswer": {"@type": "Answer", "text": "For most people, yes — fermentation pre-digests lactose, adds probiotics, and makes it lighter and easier. Plain, unsweetened yogurt is one of the least controversial dairy foods in both TCM and modern nutrition."}}, {"@type": "Question", "name": "What about raw milk?", "acceptedAnswer": {"@type": "Answer", "text": "Raw milk carries real food-safety risks (bacterial contamination) that pasteurization eliminates, and health agencies advise against it, especially for children, pregnant people, and the immunocompromised. The claimed benefits don't outweigh the documented risks for most people."}}, {"@type": "Question", "name": "Do I need dairy for calcium?", "acceptedAnswer": {"@type": "Answer", "text": "No — but you need calcium from somewhere. Leafy greens, tofu made with calcium sulfate, sardines, fortified plant milks, and sesame seeds are all solid sources. If you drop dairy, build a replacement plan rather than just removing it."}}, {"@type": "Question", "name": "Is ghee dairy?", "acceptedAnswer": {"@type": "Answer", "text": "Technically yes, but the clarifying process removes nearly all lactose and casein, so most lactose-intolerant and even many dairy-sensitive people tolerate it well. In Ayurvedic and TCM-influenced traditions, it's considered the most refined, easiest form of dairy."}}]}
+</script>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="/" class="nav-brand">
+            <div class="nav-brand-icon">FL</div>
+            FoodLore
+        </a>
+        <div class="nav-links">
+            <a href="/#features">Features</a>
+            <a href="/blog">Blog</a>
+            <a href="/support">Support</a>
+            <a href="https://apps.apple.com/app/foodlore/id6760920100" class="nav-cta">Download</a>
+        </div>
+    </div>
+</nav>
+
+<header class="article-hero" style="background: linear-gradient(180deg, #DBEAFE 0%, var(--white) 100%);">
+    <div class="article-badge">🥛 TCM Body Types</div>
+    <h1>Is Dairy Bad for You? A TCM Body-Type Take on Milk, Yogurt, and Cheese</h1>
+    <div class="article-meta"><span>Oct 1, 2026</span><span>·</span><span>6 min read</span></div>
+</header>
+
+<article class="article-body">
+    <p>Few foods are as polarizing as dairy. One camp calls milk nature's perfect food; the other calls it inflammatory mucus in a carton. Your doctor may shrug, your naturopath may ban it, and your grandmother may insist you need it for strong bones. Meanwhile you're standing in front of the dairy case with seventeen kinds of milk wondering what to believe.</p>
+
+    <div class="callout">
+        <h3>The nine TCM body constitutions</h3>
+        <p>
+            TCM groups people into nine body constitutions: <strong>Balanced</strong>,
+            <strong>Qi Deficiency</strong>, <strong>Yang Deficiency</strong>, <strong>Yin Deficiency</strong>,
+            <strong>Phlegm-Dampness</strong>, <strong>Damp-Heat</strong>, <strong>Blood Stasis</strong>,
+            <strong>Qi Stagnation</strong>, and <strong>Special/Inherited</strong>. Your constitution
+            shapes how you respond to a food's thermal nature, not just its calories. FoodLore maps
+            your constitution and scores foods against it.
+        </p>
+    </div>
+    <p>Traditional Chinese Medicine has had a position on dairy for a very long time — and it's not "drink three glasses a day." TCM classifies dairy as rich, heavy, and <strong>dampness-producing</strong>: nourishing in the right body, congesting in the wrong one. Modern nutrition science, interestingly, keeps circling back to a similar conclusion: dairy's effects are highly individual. Let's unpack both sides, then get specific about which body types thrive on dairy and which should tread carefully.</p>
+    <h2>Dairy in TCM: Rich, Heavy, and Damp</h2>
+    <p>In TCM food energetics, dairy (milk, cheese, butter, cream, yogurt) is generally considered sweet in flavor, neutral to slightly cool in temperature, and — crucially — <strong>damp-generating</strong>.</p>
+    <p>"Dampness" is one of TCM's core pathological concepts. In plain language, it describes a state of heaviness and sluggishness: bloating, brain fog, sticky digestion, phlegm, water retention, a feeling of being weighed down. Foods that are rich, greasy, sweet, and heavy are thought to <em>produce</em> dampness when the digestive system can't fully process them.</p>
+    <p>Why does dairy get this label?</p>
+    <ul>
+        <li><strong>Richness.</strong> Whole milk, cheese, and cream are dense, fatty foods. In TCM's view, richness that exceeds the digestive system's capacity turns into dampness rather than nourishment.</li>
+        <li><strong>Cooling + heavy.</strong> Milk's slightly cool nature combined with its heaviness is seen as slowing digestion down — the opposite of what a sluggish system needs.</li>
+        <li><strong>Phlegm association.</strong> The classic TCM warning: dairy increases phlegm. Anyone who's noticed thicker mucus or post-nasal drip after a milkshake has felt the folk version of this idea. (Modern research on the dairy-mucus link is mixed — more on that below.)</li>
+    </ul>
+    <p>But TCM doesn't condemn dairy outright. The key question is always: <em>can your digestion handle it?</em> A strong digestive system transforms dairy's richness into nourishment — traditionally, dairy was valued for moistening dryness, supporting yin, and building strength in thin, depleted people. A weak or damp-prone system turns the same food into congestion.</p>
+    <p>TCM is a system of tradition and centuries of empirical observation, not a set of proven scientific claims — use it as a lens for noticing how foods feel in your body, not as medical fact.</p>
+    <div class="disclaimer">
+        <p><strong>A quick note:</strong> This article is educational, not medical advice. If you have a diagnosed milk allergy, lactose intolerance, or any health condition, work with your doctor or a registered dietitian. Dairy allergy (an immune reaction to milk proteins) is different from lactose intolerance (difficulty digesting milk sugar) — and both are different from a general sensitivity.</p>
+    </div>
+    <h2>What Modern Nutrition Says About Dairy</h2>
+    <p>The science is genuinely mixed, which is why the debate never ends:</p>
+    <ul>
+        <li><strong>Lactose intolerance is the global norm.</strong> Roughly two-thirds of the world's adults have reduced lactase enzyme after infancy, with rates highest in East Asian, West African, and Indigenous American populations. If milk gives you gas, bloating, or diarrhea, you're in the majority of humanity — not broken.</li>
+        <li><strong>The mucus question.</strong> The belief that milk increases mucus production is widespread, but controlled studies have generally not found that dairy increases actual mucus secretion. What it may do: mix with saliva to create a thicker-feeling coating in the mouth and throat, which <em>feels</em> like more mucus. Perception matters, though — if dairy makes your throat feel congested, that experience is real even if the mechanism is sensory.</li>
+        <li><strong>Fermented dairy is different.</strong> Yogurt and kefir consistently show more favorable effects than milk in research — better tolerated by many lactose-sensitive people (the fermentation cultures pre-digest much of the lactose), and associated in observational studies with better gut and metabolic markers.</li>
+        <li><strong>Inflammation is individual.</strong> Dairy doesn't appear to be broadly pro-inflammatory in the general population, but individual responses vary widely — some people clearly feel worse with dairy, others feel fine.</li>
+        <li><strong>Nutrient density is real.</strong> Dairy is a concentrated source of calcium, protein, B12, iodine, and (in fortified milk) vitamin D. Cutting it out without replacements can leave genuine gaps.</li>
+    </ul>
+    <p>The emerging consensus looks a lot like the TCM view: <em>it depends on the person.</em> Which brings us to constitutions.</p>
+    <h2>How Each Body Type Responds to Dairy</h2>
+    <h3>Balanced (Ping He)</h3>
+    <p>Your digestion is strong and your system runs clean. Dairy in moderate amounts is fine for you — milk in coffee, yogurt with breakfast, cheese on things. The one thing to watch: even balanced types can tip toward dampness with <em>heavy</em> daily dairy (cream sauces, cheese-loaded everything). Keep it moderate and varied, and enjoy.</p>
+    <h3>Qi-Deficient (Qi Xu)</h3>
+    <p><strong>Dairy can genuinely help you — with a caveat.</strong> Qi-deficient types are depleted: fatigue, weak digestion, low appetite, feeling drained. Dairy is a rich, building food, and building foods are what deficiency calls for. Warm milk, yogurt, and mild cheeses can be nourishing. The caveat: your digestion is also <em>weak</em>, and heavy dairy can overwhelm it — producing exactly the bloating and heaviness you're trying to fix. Go for small amounts of easy dairy (yogurt, warm milk) rather than heavy cheese, and always pair with digestive-friendly spices like ginger or cardamom.</p>
+    <h3>Yang-Deficient (Yang Xu)</h3>
+    <p>You run cold — cold limbs, low energy, sluggish digestion, loose stools. Dairy is a tricky one for you: its cool, heavy nature is the opposite of what your system wants. Cold milk straight from the fridge is about the worst format. <strong>If you eat dairy, warm it and spice it:</strong> warm milk with ginger or turmeric, warm yogurt drinks, ghee (clarified butter — warming, light, and lactose-free) instead of cold butter. Small amounts, warm preparations, and notice how your digestion responds the next morning.</p>
+    <h3>Yin-Deficient (Yin Xu)</h3>
+    <p><strong>Dairy is one of your better food groups.</strong> Yin deficiency is dryness and depleted fluids: dry mouth, dry skin, dry cough, night sweats, restless heat. Dairy's moistening, yin-nourishing quality directly addresses dryness — this is one of the traditional uses of milk in TCM. Warm milk before bed is the classic yin-nourishing move. Yogurt is excellent for you too. Just keep portions reasonable; even yin-deficient types can generate dampness from dairy excess.</p>
+    <h3>Phlegm-Damp (Tan Shi)</h3>
+    <p><strong>Dairy is your constitution's classic problem food.</strong> You already tend toward heaviness, bloating, brain fog, phlegm, and sluggish digestion — and dairy is TCM's textbook dampness-producer. This is the body type most likely to notice the "dairy makes me congested and bloated" effect. The practical move: cut dairy back significantly for 2–3 weeks and observe. Many phlegm-damp people report clearer sinuses, less bloating, and lighter mornings. If you keep some dairy, make it small amounts of yogurt or kefir (fermented = lighter and easier), never heavy cheese or cream.</p>
+    <h3>Damp-Heat (Shi Re)</h3>
+    <p>Oily skin, breakouts, bad breath, sticky digestion, irritability. Dairy feeds both sides of your pattern: the damp side through richness, the heat side through... well, cheese at midnight has never cooled anyone's inflammation. Heavy, aged cheeses are the worst offenders. If you want dairy, keep it light and cool: plain yogurt (genuinely cooling), small amounts of fresh cheese. And watch your skin — for damp-heat types, breakouts after dairy are common enough to be worth tracking.</p>
+    <h3>Blood-Stasis (Xue Yu)</h3>
+    <p>Poor circulation, dusky complexion, dark circles, fixed or stabbing pains. Dairy isn't a circulation food and doesn't address your core pattern, but moderate amounts won't hurt you either. One consideration: heavy, greasy dairy can add to the "stuck, sluggish" feeling that blood-stasis types already fight. Prefer lighter dairy, and pair with circulation-supporting foods and spices (ginger, turmeric, vinegar, leafy greens).</p>
+    <h3>Qi-Stagnation (Qi Yu)</h3>
+    <p>Stress-held tension, sighing, tight chest, mood tied to stress, digestive upset that flares with emotions. Dairy is neutral-to-slightly-negative for you: it doesn't move stuck energy, and heavy dairy can add a layer of digestive sluggishness on top of emotional stagnation. Warm, spiced preparations (golden milk with turmeric is genuinely soothing) fit better than cold, heavy ones. The ritual of a warm drink matters as much as the dairy itself.</p>
+    <h3>Allergic (Te Zhi)</h3>
+    <p>This is the constitution where dairy caution is most literal. True milk allergy (immune response to casein or whey proteins) can be serious — hives, swelling, breathing difficulty — and is not something to experiment with. Lactose intolerance is different and dose-dependent. Beyond those, many allergy-prone people notice dairy worsens eczema, sinus congestion, or post-nasal drip. If you're in this group, an elimination trial (2–4 weeks dairy-free, then reintroduce one dairy food at a time) is the most honest way to learn your personal response.</p>
+    <h2>Not All Dairy Is Equal: A Practical Ranking</h2>
+    <p>From lightest/easiest to heaviest/hardest, in both TCM and modern terms:</p>
+    <ol>
+        <li><strong>Ghee (clarified butter)</strong> — lactose-free, light, warming. The easiest dairy for almost every constitution, especially yang-deficient and qi-deficient types.</li>
+        <li><strong>Kefir &amp; yogurt</strong> — fermented, lower in lactose, probiotic. The best everyday dairy for phlegm-damp and damp-heat types who want to keep some dairy.</li>
+        <li><strong>Fresh milk</strong> — fine for strong digestion; warm it and spice it for cold or weak types.</li>
+        <li><strong>Soft/fresh cheeses</strong> (ricotta, cottage cheese, fresh mozzarella) — moderate richness, easier than aged.</li>
+        <li><strong>Hard aged cheeses</strong> (parmesan, aged cheddar) — concentrated, salty, heavy. Small amounts as flavor, not as food groups.</li>
+        <li><strong>Cream, ice cream, processed cheese</strong> — the heaviest end. Occasional treats, not staples, for anyone with damp tendencies.</li>
+    </ol>
+    <h2>The Dairy Experiment: Find Your Personal Answer</h2>
+    <p>Forget the internet debate. Run a 3-week experiment:</p>
+    <ul>
+        <li><strong>Weeks 1–2:</strong> Cut out all dairy. Note your digestion, sinuses, skin, energy, and morning clarity.</li>
+        <li><strong>Week 3:</strong> Reintroduce one dairy food at a time (yogurt first, then milk, then cheese), 2–3 days apart. Note what changes.</li>
+        <li><strong>Decide by constitution + experience.</strong> If you're phlegm-damp and cheese makes you foggy, that's your answer — no study needed. If you're yin-deficient and warm milk helps you sleep, that's your answer too.</li>
+    </ul>
+    <p>Keep a simple log. "Felt clearer" is data when it's consistent.</p>
+    <h2>FAQ: What People Actually Ask About Dairy</h2>
+    <p><strong>Is dairy inflammatory?</strong> For most people, no — dairy doesn't appear broadly pro-inflammatory in research. But individual responses vary, and people with sensitivities, damp-heavy constitutions, or certain skin conditions often do feel worse with it. Your body is the final study.</p>
+    <p><strong>Does milk really cause mucus?</strong> Studies haven't found increased mucus <em>production</em>, but many people experience a thicker mouthfeel after dairy that feels like congestion. If dairy makes your throat feel coated, that's a valid reason to cut back regardless of the mechanism.</p>
+    <p><strong>Is yogurt better than milk?</strong> For most people, yes — fermentation pre-digests lactose, adds probiotics, and makes it lighter and easier. Plain, unsweetened yogurt is one of the least controversial dairy foods in both TCM and modern nutrition.</p>
+    <p><strong>What about raw milk?</strong> Raw milk carries real food-safety risks (bacterial contamination) that pasteurization eliminates, and health agencies advise against it, especially for children, pregnant people, and the immunocompromised. The claimed benefits don't outweigh the documented risks for most people.</p>
+    <p><strong>Do I need dairy for calcium?</strong> No — but you need calcium from <em>somewhere</em>. Leafy greens, tofu made with calcium sulfate, sardines, fortified plant milks, and sesame seeds are all solid sources. If you drop dairy, build a replacement plan rather than just removing it.</p>
+    <p><strong>Is ghee dairy?</strong> Technically yes, but the clarifying process removes nearly all lactose and casein, so most lactose-intolerant and even many dairy-sensitive people tolerate it well. In Ayurvedic and TCM-influenced traditions, it's considered the most refined, easiest form of dairy.</p>
+    <h2>Know Your Constitution, Then Decide About Dairy</h2>
+    <p>Dairy is the perfect example of why one-size-fits-all nutrition advice fails. The same glass of milk that nourishes a depleted, dry yin-deficient person can congest a phlegm-damp person into a foggy, bloated afternoon. Neither reaction is wrong — they're just different bodies.</p>
+    <p>The fastest way to know which body you have is FoodLore's free body-type quiz — a few minutes of questions about how you actually feel, mapped to one of the nine TCM constitutions.</p>
+    <p><strong><a href="https://foodlore.app/quiz/">Take the free body-type quiz →</a></strong></p>
+    <p>And when you want to know how <em>any</em> food fits <em>your</em> constitution — dairy, honey, coffee, late-night snacks — the FoodLore app scans foods and shows you how they match your body type, blending TCM food energetics with modern nutrition science. Stop guessing; start knowing.</p>
+    <p><strong><a href="https://apps.apple.com/app/foodlore/id6760920100">Download FoodLore on the App Store →</a></strong></p>
+</article>
+
+<section class="cta-section">
+    <h2>What is your body type?</h2>
+    <p>Scan any food or drink with FoodLore and see how it scores for your TCM constitution, plus 60+ nutrients from modern science.</p>
+    <a href="https://apps.apple.com/app/foodlore/id6760920100" class="btn-white">Download FoodLore for iOS</a>
+</section>
+
+<div class="related">
+    <h3>Keep reading</h3>
+    <a href="https://foodlore.app/blog/oatmeal-body-type">🥣 Is Oatmeal Good for Your Body Type? Breakfast Grains and Constitution</a>
+    <a href="https://foodlore.app/blog/avocado-body-type">🥑 Is Avocado Good for Your Body Type? Healthy Fats and Constitution</a>
+    <a href="https://foodlore.app/blog/honey-body-type">🍯 Is Honey Actually Good for You? What TCM Says About Honey and Body Type</a>
+    <a href="https://foodlore.app/quiz/">🧭 What's Your Body Type? Take the 2-Minute Quiz</a>
+</div>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="nav-brand-icon" style="width:28px; height:28px; font-size:13px; border-radius:7px;">FL</div>
+            FoodLore
+        </div>
+        <div class="footer-links">
+            <a href="/blog">Blog</a>
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms of Use</a>
+            <a href="/support">Support</a>
+            <a href="mailto:support@foodlore.app">Contact</a>
+        </div>
+        <div class="footer-copy">
+            &copy; 2026 FoodLore. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
