@@ -150,6 +150,9 @@
         }
         .share-btn:hover { border-color: var(--blue); color: var(--blue); }
         .retake { text-align: center; margin-top: 20px; }
+        .rate-nudge { text-align: center; margin-top: 22px; font-size: 14px; color: var(--slate-500); }
+        .rate-nudge a { color: var(--amber); font-weight: 700; text-decoration: none; }
+        .rate-nudge a:hover { text-decoration: underline; }
         .retake button { background: none; border: none; color: var(--slate-500); font-size: 14px; cursor: pointer; text-decoration: underline; font-family: inherit; }
         .disclaimer { font-size: 12.5px; color: var(--slate-500); margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--slate-100); }
         footer { border-top: 1px solid var(--slate-100); padding: 36px 24px; text-align: center; font-size: 14px; color: var(--slate-500); }
@@ -377,6 +380,7 @@
             '<a class="share-btn" target="_blank" rel="noopener" href="https://wa.me/?text=' + encodeURIComponent(shareText + " " + resultUrl(slug)) + '">Share on WhatsApp</a>' +
             '<button class="share-btn" id="copy-link">Copy result link</button>' +
             '</div>' +
+            '<div class="rate-nudge">Using the FoodLore app? <a target="_blank" rel="noopener" href="' + APP_URL + '?action=write-review">★★★★★ Rate us on the App Store</a> — it helps a tiny indie app enormously.</div>' +
             '<div class="retake"><button id="retake-btn">Retake the quiz</button></div>';
         shell.innerHTML = html;
         document.getElementById("retake-btn").addEventListener("click", renderStart);
