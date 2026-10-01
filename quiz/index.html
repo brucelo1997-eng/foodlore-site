@@ -126,6 +126,21 @@
         }
         .app-cta h3 { font-size: 20px; color: var(--slate-900); margin-bottom: 8px; }
         .app-cta p { font-size: 15px; color: var(--slate-500); margin-bottom: 18px; }
+        .course-cta {
+            background: linear-gradient(135deg, #ECFDF5, #F0FDF4);
+            border: 1px solid #A7F3D0; border-radius: 18px;
+            padding: 28px; margin: 28px 0; text-align: center;
+        }
+        .course-cta h3 { font-size: 20px; color: var(--slate-900); margin-bottom: 8px; }
+        .course-cta p { font-size: 15px; color: var(--slate-500); margin-bottom: 18px; }
+        .course-form-row { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+        .course-form-row input[type="email"] {
+            padding: 12px 16px; border-radius: 10px; font-size: 15px; font-family: inherit;
+            border: 1px solid var(--slate-300); min-width: 240px; color: var(--slate-900);
+        }
+        .course-form-msg { font-size: 14px; margin-top: 12px !important; margin-bottom: 0 !important; min-height: 20px; }
+        .course-form-msg.error { color: #DC2626; }
+        .course-success { font-size: 16px; color: var(--slate-900); margin-bottom: 0 !important; }
         .share-row { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 18px; }
         .share-btn {
             display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px;
@@ -347,6 +362,16 @@
             '<div class="app-cta"><h3>See how every meal scores for your body</h3>' +
             '<p>This quiz is one snapshot. FoodLore builds your full Constitution Blend from 5 sources — the quiz, AI tongue analysis, Apple Health, daily check-ins, and your scan history — then scores every meal against it.</p>' +
             '<a class="btn-primary" href="' + APP_URL + '">Get FoodLore free</a></div>' +
+            '<div class="course-cta"><h3>Get the free 7-day Eat for Your Type course</h3>' +
+            '<p>One short email a day, personalized for your <b>' + esc(t.name) + '</b> result — breakfasts, drinks, eating out, the 3 biggest mistakes for your type.</p>' +
+            '<form id="course-form" novalidate>' +
+            '<div class="course-form-row">' +
+            '<input type="email" name="email" required placeholder="you@example.com" aria-label="Email address">' +
+            '<button type="submit" class="btn-primary">Send me day 1</button>' +
+            '</div>' +
+            '<p class="course-consent">One email a day for 7 days. Unsubscribe anytime with one click.</p>' +
+            '<p class="course-form-msg" id="course-form-msg" role="status"></p>' +
+            '</form></div>' +
             '<div class="share-row">' +
             '<a class="share-btn" target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?text=' + encodeURIComponent(shareText) + '&url=' + encodeURIComponent(resultUrl(slug)) + '">Share on X</a>' +
             '<a class="share-btn" target="_blank" rel="noopener" href="https://wa.me/?text=' + encodeURIComponent(shareText + " " + resultUrl(slug)) + '">Share on WhatsApp</a>' +
@@ -355,6 +380,44 @@
             '<div class="retake"><button id="retake-btn">Retake the quiz</button></div>';
         shell.innerHTML = html;
         document.getElementById("retake-btn").addEventListener("click", renderStart);
+        // 7-day email course signup (FormSubmit endpoint; Bruce's email not in page source)
+        (function () {
+            var form = document.getElementById("course-form");
+            if (!form) { return; }
+            var msg = document.getElementById("course-form-msg");
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+                var email = form.email.value.trim();
+                if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+                    msg.textContent = "Please enter a valid email address.";
+                    msg.className = "course-form-msg error";
+                    return;
+                }
+                msg.textContent = "Sending…";
+                msg.className = "course-form-msg";
+                fetch("https://formsubmit.co/ajax/58fd2ee937e0804b139407d26c593b37", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json", "Accept": "application/json" },
+                    body: JSON.stringify({
+                        email: email,
+                        constitution: slug,
+                        type_name: t.name,
+                        _subject: "New FoodLore 7-day course signup",
+                        _template: "table"
+                    })
+                }).then(function (r) { return r.json(); }).then(function (j) {
+                    if (j.success === "true" || j.success === true) {
+                        form.innerHTML = "<p class='course-success'>You're in! Day 1 is on its way to <b>" + email.replace(/</g, "&lt;") + "</b>.</p>";
+                    } else {
+                        msg.textContent = "Something went wrong — please try again.";
+                        msg.className = "course-form-msg error";
+                    }
+                }).catch(function () {
+                    msg.textContent = "Something went wrong — please try again.";
+                    msg.className = "course-form-msg error";
+                });
+            });
+        })();
         document.getElementById("copy-link").addEventListener("click", function () {
             var done = function () {
                 var b = document.getElementById("copy-link");
