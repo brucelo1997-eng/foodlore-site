@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 5 Best AI Food Scanner Apps for iPhone in 2026: FoodLore Blog</title>
+    <meta name="description" content="Comparing AI food scanner apps? We break down FoodLore, MyFitnessPal, SnapCalorie, Yuka, and Calorie Mama on photo scanning, databases, and pricing — and which one actually fits how you eat.">
+    <link rel="canonical" href="https://foodlore.app/blog/best-ai-food-scanner-apps">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+        :root {
+            --blue: #2563EB; --blue-dark: #1D4ED8; --blue-light: #DBEAFE;
+            --slate-900: #0F172A; --slate-700: #334155; --slate-500: #64748B;
+            --slate-300: #CBD5E1; --slate-100: #F1F5F9; --white: #FFFFFF;
+            --green: #059669; --green-light: #D1FAE5;
+            --purple: #7C3AED; --purple-light: #EDE9FE;
+            --rose: #E11D48; --rose-light: #FFE4E6;
+            --amber: #D97706; --amber-light: #FEF3C7;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7; color: var(--slate-700); background: var(--white);
+            -webkit-font-smoothing: antialiased;
+        }
+        nav {
+            position: fixed; top: 0; width: 100%; z-index: 100;
+            background: rgba(255,255,255,0.92); backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+        .nav-inner {
+            max-width: 1120px; margin: 0 auto; display: flex;
+            align-items: center; justify-content: space-between; padding: 16px 24px;
+        }
+        .nav-brand {
+            font-size: 22px; font-weight: 800; color: var(--slate-900);
+            text-decoration: none; display: flex; align-items: center; gap: 10px;
+        }
+        .nav-brand-icon {
+            width: 36px; height: 36px; border-radius: 10px;
+            background: linear-gradient(135deg, var(--blue), var(--purple));
+            display: flex; align-items: center; justify-content: center;
+            font-size: 18px; color: white;
+        }
+        .nav-links { display: flex; gap: 32px; align-items: center; }
+        .nav-links a {
+            font-size: 14px; font-weight: 500; color: var(--slate-500);
+            text-decoration: none; transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--slate-900); }
+        .nav-cta {
+            background: var(--blue) !important; color: var(--white) !important;
+            padding: 8px 20px !important; border-radius: 8px !important;
+            font-weight: 600 !important;
+        }
+        .nav-cta:hover { background: var(--blue-dark) !important; }
+
+        .article-hero {
+            padding: 140px 24px 48px; text-align: center;
+            background: linear-gradient(180deg, #EDE9FE 0%, var(--white) 100%);
+        }
+        .article-badge {
+            display: inline-block; padding: 6px 16px; border-radius: 100px;
+            font-size: 13px; font-weight: 600; margin-bottom: 20px;
+            background: var(--white); color: var(--blue);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .article-hero h1 {
+            font-size: clamp(30px, 4.5vw, 44px); font-weight: 800;
+            color: var(--slate-900); line-height: 1.15; margin-bottom: 16px;
+            letter-spacing: -0.02em; max-width: 720px; margin-left: auto; margin-right: auto;
+        }
+        .article-meta {
+            font-size: 14px; color: var(--slate-500);
+            display: flex; gap: 12px; justify-content: center;
+        }
+
+        .article-body { max-width: 740px; margin: 0 auto; padding: 48px 24px 24px; }
+        .article-body p { margin-bottom: 20px; font-size: 17px; }
+        .article-body h2 {
+            font-size: 26px; font-weight: 800; color: var(--slate-900);
+            margin: 44px 0 16px; letter-spacing: -0.01em;
+        }
+        .article-body h3 {
+            font-size: 19px; font-weight: 700; color: var(--slate-900);
+            margin: 28px 0 10px;
+        }
+        .article-body ul, .article-body ol { margin: 0 0 20px 24px; font-size: 17px; }
+        .article-body li { margin-bottom: 10px; }
+        .article-body strong { color: var(--slate-900); }
+
+        .callout {
+            border-radius: 14px; padding: 24px 28px; margin: 28px 0;
+            background: var(--purple-light);
+            border-left: 4px solid var(--purple);
+        }
+        .callout h3 { margin-top: 0 !important; color: var(--purple) !important; }
+        .callout p, .callout li { font-size: 15px !important; }
+        .callout ul { margin-bottom: 0; }
+
+        .verdict-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+        .verdict {
+            border-radius: 14px; padding: 20px 22px;
+            border: 1px solid rgba(0,0,0,0.06);
+        }
+        .verdict h4 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+        .verdict ul { margin: 0 0 0 18px; font-size: 14px; }
+        .verdict li { margin-bottom: 6px; }
+        .verdict.good { background: var(--green-light); }
+        .verdict.good h4 { color: var(--green); }
+        .verdict.caution { background: var(--amber-light); }
+        .verdict.caution h4 { color: var(--amber); }
+
+        .app-card {
+            border: 1px solid rgba(0,0,0,0.08); border-radius: 16px;
+            padding: 26px 28px; margin: 24px 0; background: var(--white);
+        }
+        .app-card h3 { margin-top: 0 !important; font-size: 21px !important; }
+        .app-card .best-for {
+            display: inline-block; font-size: 13px; font-weight: 700;
+            background: var(--blue-light); color: var(--blue-dark);
+            padding: 4px 12px; border-radius: 100px; margin-bottom: 12px;
+        }
+        .app-card ul { font-size: 16px; }
+        .pick { background: linear-gradient(180deg, #EFF6FF 0%, var(--white) 100%); border-color: var(--blue); }
+
+        .disclaimer {
+            background: var(--slate-100); border-radius: 12px;
+            padding: 18px 22px; margin: 36px 0; font-size: 13px !important;
+            color: var(--slate-500) !important; line-height: 1.6;
+        }
+        .disclaimer p { font-size: 13px !important; margin-bottom: 0 !important; }
+
+        .cta-section {
+            text-align: center; padding: 72px 24px;
+            background: linear-gradient(135deg, var(--blue) 0%, var(--purple) 100%);
+            color: var(--white); margin-top: 24px;
+        }
+        .cta-section h2 {
+            font-size: clamp(26px, 3.5vw, 36px); font-weight: 800;
+            margin-bottom: 14px; letter-spacing: -0.01em;
+        }
+        .cta-section p {
+            font-size: 16px; opacity: 0.85; margin-bottom: 28px;
+            max-width: 480px; margin-left: auto; margin-right: auto;
+        }
+        .btn-white {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--white); color: var(--blue);
+            padding: 14px 36px; border-radius: 12px;
+            font-size: 16px; font-weight: 700; text-decoration: none;
+            transition: all 0.2s; box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+        }
+        .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+
+        .related { max-width: 740px; margin: 0 auto; padding: 40px 24px 64px; }
+        .related h3 { font-size: 18px; font-weight: 700; color: var(--slate-900); margin-bottom: 16px; }
+        .related a {
+            display: block; padding: 14px 18px; border-radius: 10px;
+            border: 1px solid rgba(0,0,0,0.06); margin-bottom: 10px;
+            text-decoration: none; color: var(--slate-700); font-size: 15px; font-weight: 500;
+            transition: all 0.2s;
+        }
+        .related a:hover { border-color: var(--blue); color: var(--blue); }
+
+        footer {
+            background: var(--slate-900); color: rgba(255,255,255,0.5);
+            padding: 48px 24px;
+        }
+        .footer-inner {
+            max-width: 1120px; margin: 0 auto;
+            display: flex; justify-content: space-between; align-items: center;
+            flex-wrap: wrap; gap: 16px;
+        }
+        .footer-brand {
+            font-size: 18px; font-weight: 700; color: var(--white);
+            display: flex; align-items: center; gap: 8px;
+        }
+        .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+        .footer-links a {
+            font-size: 14px; color: rgba(255,255,255,0.5);
+            text-decoration: none; transition: color 0.2s;
+        }
+        .footer-links a:hover { color: var(--white); }
+        .footer-copy {
+            font-size: 13px; width: 100%; text-align: center;
+            margin-top: 24px; padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .article-hero { padding: 120px 20px 40px; }
+            .verdict-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Are AI food scanners accurate?", "acceptedAnswer": {"@type": "Answer", "text": "Roughly, not precisely. AI photo estimates are good for consistent daily logging but struggle with portion sizes, hidden oils, and mixed dishes — expect estimates, not lab measurements. Barcode scans of packaged foods are exact because they read the label."}}, {"@type": "Question", "name": "Do I still need to count calories if I use a food scanner?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on your goal. If you're managing weight, the scanner does the counting for you — that's the point. If you eat intuitively or follow a framework like TCM body types, you may care more about the food's quality and fit than its calorie number."}}, {"@type": "Question", "name": "Which food scanner app is free?", "acceptedAnswer": {"@type": "Answer", "text": "Most have a free tier: Yuka's core barcode scanning is free, MyFitnessPal has a free plan with ads and limits, and FoodLore offers a 3-day free trial. Full AI photo features are usually behind a subscription ($8-25/month depending on the app)."}}, {"@type": "Question", "name": "Can a food scanner tell me what I should eat?", "acceptedAnswer": {"@type": "Answer", "text": "Most scanners report what's IN your food, not what's right for YOU — they don't know your body, goals, or constitution. That's the gap FoodLore was built for: it scores foods against your TCM body type instead of just listing nutrients."}}, {"@type": "Question", "name": "Is photo scanning or barcode scanning better?", "acceptedAnswer": {"@type": "Answer", "text": "They solve different problems. Barcode scanning wins for packaged foods (exact label data). Photo scanning wins for fresh food, home cooking, and restaurant meals where there's no label. The best apps offer both."}}, {"@type": "Question", "name": "What happens to my food photos? Is it private?", "acceptedAnswer": {"@type": "Answer", "text": "It varies by app — always check the privacy policy. FoodLore's policy: food and tongue photos go to US-based AI providers for analysis, are then discarded, and are never used for training. Personal health data stays on your device by default."}}]}
+</script>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="/" class="nav-brand">
+            <div class="nav-brand-icon">FL</div>
+            FoodLore
+        </a>
+        <div class="nav-links">
+            <a href="/#features">Features</a>
+            <a href="/blog">Blog</a>
+            <a href="/support">Support</a>
+            <a href="https://apps.apple.com/app/foodlore/id6760920100" class="nav-cta">Download</a>
+        </div>
+    </div>
+</nav>
+
+<header class="article-hero">
+    <div class="article-badge">📱 App Guides</div>
+    <h1>The 5 Best AI Food Scanner Apps for iPhone in 2026</h1>
+    <div class="article-meta"><span>Oct 1, 2026</span><span>·</span><span>8 min read</span></div>
+</header>
+
+<article class="article-body">
+    <p>Point your phone at dinner, get the calories. That trick — once a tech demo — is now a whole app category. But here's what nobody tells you: nearly every food scanner answers the same question ("what's in this?") while ignoring the question you actually have ("is this good <em>for me</em>?").</p>
+    <p>We compared the five apps that matter in 2026 — on scanning quality, what they do with the answer, and who each one is actually for. Fair warning: we make one of them. We'll tell you exactly where the others beat us, too.</p>
+
+    <div class="callout">
+        <h3>The short version</h3>
+        <ul>
+            <li><strong>FoodLore</strong> — best for personalized answers: AI scanning plus TCM body-type scoring and tongue analysis. The only one that tells you what a food means <em>for your body</em>.</li>
+            <li><strong>MyFitnessPal</strong> — best for database depth: the largest food database on earth and the default choice for serious macro trackers.</li>
+            <li><strong>SnapCalorie</strong> — best for photo-first simplicity: point, shoot, done; built around AI photo estimates.</li>
+            <li><strong>Yuka</strong> — best for packaged-food transparency: barcode scans rated for additives and processing.</li>
+            <li><strong>Calorie Mama</strong> — best for casual photo logging: lightweight AI photo recognition with Apple Health sync.</li>
+        </ul>
+    </div>
+
+    <div class="app-card">
+        <h3>MyFitnessPal</h3>
+        <div class="best-for">Best for database depth</div>
+        <p>The incumbent. MyFitnessPal's food database — tens of millions of entries, much of it user-contributed — remains unmatched. Barcode scanning is fast and reliable, and if your goal is strict macro or calorie tracking, the tooling (goals, streaks, integrations) is the most mature in the category.</p>
+        <ul>
+            <li><strong>Strengths:</strong> enormous database, reliable barcode scan, deep integrations, huge community for support.</li>
+            <li><strong>Limits:</strong> the interface carries years of feature accumulation; AI photo logging exists but isn't the star. Free tier is ad-supported with feature limits; premium is a subscription.</li>
+            <li><strong>Choose it if:</strong> you want the deepest database and don't mind a busier app.</li>
+        </ul>
+    </div>
+
+    <div class="app-card">
+        <h3>SnapCalorie</h3>
+        <div class="best-for">Best for photo-first simplicity</div>
+        <p>Built by Perception Labs around a single idea: photo in, nutrition out, as accurately as current AI allows. The team has published research on its estimation approach, and the experience is deliberately minimal — no database spelunking, just snap and log.</p>
+        <ul>
+            <li><strong>Strengths:</strong> fastest photo-to-log flow in the category; research-backed accuracy claims; clean, focused design.</li>
+            <li><strong>Limits:</strong> photo-only means packaged foods don't get exact label data; premium runs roughly $20/month at time of writing — the priciest of the five. No "is this right for me" layer.</li>
+            <li><strong>Choose it if:</strong> you want the least friction between seeing food and logging it, and mostly eat fresh or restaurant meals.</li>
+        </ul>
+    </div>
+
+    <div class="app-card">
+        <h3>Yuka</h3>
+        <div class="best-for">Best for packaged-food transparency</div>
+        <p>Yuka doesn't count your calories — it judges your groceries. Scan a barcode and get a 0–100 score based on nutritional quality and additives, with plain-language explanations of what's in the product. It's the fastest way to compare two boxes in a supermarket aisle.</p>
+        <ul>
+            <li><strong>Strengths:</strong> additive and ultra-processing transparency nobody else does as well; core scanning is free; genuinely changes shopping behavior.</li>
+            <li><strong>Limits:</strong> barcode-only — useless for fresh food, cooking, or restaurants. No calorie or macro tracking to speak of.</li>
+            <li><strong>Choose it if:</strong> your question is "which packaged option is less bad," not "what did I eat today."</li>
+        </ul>
+        <p>We wrote a deeper head-to-head: <a href="https://foodlore.app/blog/foodlore-vs-yuka">FoodLore vs Yuka</a>.</p>
+    </div>
+
+    <div class="app-card">
+        <h3>Calorie Mama</h3>
+        <div class="best-for">Best for casual photo logging</div>
+        <p>Azumio's long-running AI photo logger. Snap a meal, get an instant calorie estimate, sync it to Apple Health. It's the lightest-weight option here — less a nutrition platform, more a frictionless diary with a camera.</p>
+        <ul>
+            <li><strong>Strengths:</strong> simple and fast; Apple Health integration; premium around $10/month (or ~$30/year) at time of writing — the cheapest AI option.</li>
+            <li><strong>Limits:</strong> estimates are rougher than the specialists'; little depth beyond the calorie number.</li>
+            <li><strong>Choose it if:</strong> you want the cheapest, simplest photo log and don't need deep analysis.</li>
+        </ul>
+    </div>
+
+    <div class="app-card pick">
+        <h3>FoodLore</h3>
+        <div class="best-for">Best for personalized answers · our app</div>
+        <p>Every app above tells you what's <em>in</em> your food. FoodLore asks a different question: what does this food mean <em>for your body</em>? Scan a meal (photo, barcode, or multi-item) and get two scores — modern nutrition science and your TCM body constitution — plus AI tongue analysis as a second signal on your type.</p>
+        <ul>
+            <li><strong>Strengths:</strong> the only scanner with a personalization layer (nine TCM body constitutions); tongue analysis no competitor offers; photo + barcode + multi-item scanning; 60+ nutrients per scan.</li>
+            <li><strong>Limits:</strong> iPhone-only, English-only; the database is younger than MyFitnessPal's; $7.99/month or $39.99/year after a 3-day trial — no free-forever tier.</li>
+            <li><strong>Choose it if:</strong> you're tired of generic nutrition advice and want to know how food fits <em>you</em> — including the traditional Chinese medicine lens that modern holistic nutrition keeps rediscovering.</li>
+        </ul>
+    </div>
+
+    <h2>How to choose in 30 seconds</h2>
+    <ul>
+        <li><strong>Strict macro tracking, biggest database</strong> → MyFitnessPal.</li>
+        <li><strong>Fastest photo logging, fresh/restaurant food</strong> → SnapCalorie.</li>
+        <li><strong>Grocery aisle, additives, packaged foods</strong> → Yuka (free).</li>
+        <li><strong>Cheapest simple photo diary</strong> → Calorie Mama.</li>
+        <li><strong>"Is this good for MY body?"</strong> → FoodLore.</li>
+        <li><strong>Fresh food AND packaged food</strong> → pick a photo app plus Yuka; or FoodLore, which does both.</li>
+    </ul>
+
+    <h2>The question none of them answer (except one)</h2>
+    <p>Here's the honest limitation of the whole category: four of these five apps will tell you a bowl of oatmeal has 150 calories and 5g of protein. None will tell you whether oatmeal suits <em>your</em> digestion, your energy patterns, your constitution. They report the food; they don't know the eater.</p>
+    <p>That gap is why FoodLore exists. Traditional Chinese Medicine spent two millennia systematizing how foods interact with different body types — warming vs. cooling, damp-producing vs. drying, moving vs. stagnating. Modern holistic nutrition keeps rediscovering the same patterns. FoodLore just puts both lenses on every scan.</p>
+    <p>You don't have to take our word for it: <a href="https://foodlore.app/quiz/">take the free 2-minute body-type quiz</a> and see which constitution you are. Then scan lunch and watch the two scores disagree — that's the interesting part.</p>
+
+    <div class="disclaimer">
+        <p><strong>A quick note:</strong> This article is educational, not medical advice. App features and pricing change — check the App Store listing for current details. Competitor descriptions reflect publicly available information at time of writing (October 2026).</p>
+    </div>
+
+    <h2>FAQ: What People Actually Ask About Food Scanner Apps</h2>
+    <p><strong>Are AI food scanners accurate?</strong> Roughly, not precisely. AI photo estimates are good for consistent daily logging but struggle with portion sizes, hidden oils, and mixed dishes — expect estimates, not lab measurements. Barcode scans of packaged foods are exact because they read the label.</p>
+    <p><strong>Do I still need to count calories if I use a food scanner?</strong> It depends on your goal. If you're managing weight, the scanner does the counting for you — that's the point. If you eat intuitively or follow a framework like TCM body types, you may care more about the food's quality and fit than its calorie number.</p>
+    <p><strong>Which food scanner app is free?</strong> Most have a free tier: Yuka's core barcode scanning is free, MyFitnessPal has a free plan with ads and limits, and FoodLore offers a 3-day free trial. Full AI photo features are usually behind a subscription ($8–25/month depending on the app).</p>
+    <p><strong>Can a food scanner tell me what I should eat?</strong> Most scanners report what's <em>in</em> your food, not what's right for <em>you</em> — they don't know your body, goals, or constitution. That's the gap FoodLore was built for: it scores foods against your TCM body type instead of just listing nutrients.</p>
+    <p><strong>Is photo scanning or barcode scanning better?</strong> They solve different problems. Barcode scanning wins for packaged foods (exact label data). Photo scanning wins for fresh food, home cooking, and restaurant meals where there's no label. The best apps offer both.</p>
+    <p><strong>What happens to my food photos? Is it private?</strong> It varies by app — always check the privacy policy. FoodLore's policy: food and tongue photos go to US-based AI providers for analysis, are then discarded, and are never used for training. Personal health data stays on your device by default.</p>
+    <h2>Know Your Body Type, Then Scan Your Food</h2>
+    <p>The fastest way to know which body you have is FoodLore's free body-type quiz — a few minutes of questions about how you actually feel, mapped to one of the nine TCM constitutions.</p>
+    <p><strong><a href="https://foodlore.app/quiz/">Take the free body-type quiz →</a></strong></p>
+    <p>Then scan your next meal and see both scores — modern nutrition science and your constitution — side by side.</p>
+    <p><strong><a href="https://apps.apple.com/app/foodlore/id6760920100">Download FoodLore on the App Store →</a></strong></p>
+</article>
+
+<section class="cta-section">
+    <h2>What is your body type?</h2>
+    <p>Scan any food or drink with FoodLore and see how it scores for your TCM constitution, plus 60+ nutrients from modern science.</p>
+    <a href="https://apps.apple.com/app/foodlore/id6760920100" class="btn-white">Download FoodLore for iOS</a>
+</section>
+
+<div class="related">
+    <h3>Keep reading</h3>
+    <a href="https://foodlore.app/blog/foodlore-vs-myfitnesspal">⚖️ FoodLore vs MyFitnessPal: A Different Question About Food</a>
+    <a href="https://foodlore.app/blog/foodlore-vs-yuka">⚖️ FoodLore vs Yuka: Beyond the Barcode Score</a>
+    <a href="https://foodlore.app/blog/ai-tongue-analysis">👅 AI Tongue Analysis: What Your Tongue Reveals in TCM</a>
+    <a href="https://foodlore.app/quiz/">🧭 What's Your Body Type? Take the 2-Minute Quiz</a>
+</div>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="nav-brand-icon" style="width:28px; height:28px; font-size:13px; border-radius:7px;">FL</div>
+            FoodLore
+        </div>
+        <div class="footer-links">
+            <a href="/blog">Blog</a>
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms of Use</a>
+            <a href="/support">Support</a>
+            <a href="mailto:support@foodlore.app">Contact</a>
+        </div>
+        <div class="footer-copy">
+            &copy; 2026 FoodLore. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
