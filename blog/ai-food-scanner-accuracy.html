@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Accurate Are AI Food Scanners? An Honest Answer</title>
+    <meta name="description" content="AI food scanners show confident calorie numbers — but how accurate are they really? An honest breakdown of where photo estimates go wrong, where they're solid, and how to actually use them.">
+    <link rel="canonical" href="https://foodlore.app/blog/ai-food-scanner-accuracy">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+        :root {
+            --blue: #2563EB; --blue-dark: #1D4ED8; --blue-light: #DBEAFE;
+            --slate-900: #0F172A; --slate-700: #334155; --slate-500: #64748B;
+            --slate-300: #CBD5E1; --slate-100: #F1F5F9; --white: #FFFFFF;
+            --green: #059669; --green-light: #D1FAE5;
+            --purple: #7C3AED; --purple-light: #EDE9FE;
+            --rose: #E11D48; --rose-light: #FFE4E6;
+            --amber: #D97706; --amber-light: #FEF3C7;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7; color: var(--slate-700); background: var(--white);
+            -webkit-font-smoothing: antialiased;
+        }
+        nav {
+            position: fixed; top: 0; width: 100%; z-index: 100;
+            background: rgba(255,255,255,0.92); backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+        .nav-inner {
+            max-width: 1120px; margin: 0 auto; display: flex;
+            align-items: center; justify-content: space-between; padding: 16px 24px;
+        }
+        .nav-brand {
+            font-size: 22px; font-weight: 800; color: var(--slate-900);
+            text-decoration: none; display: flex; align-items: center; gap: 10px;
+        }
+        .nav-brand-icon {
+            width: 36px; height: 36px; border-radius: 10px;
+            background: linear-gradient(135deg, var(--blue), var(--purple));
+            display: flex; align-items: center; justify-content: center;
+            font-size: 18px; color: white;
+        }
+        .nav-links { display: flex; gap: 32px; align-items: center; }
+        .nav-links a {
+            font-size: 14px; font-weight: 500; color: var(--slate-500);
+            text-decoration: none; transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--slate-900); }
+        .nav-cta {
+            background: var(--blue) !important; color: var(--white) !important;
+            padding: 8px 20px !important; border-radius: 8px !important;
+            font-weight: 600 !important;
+        }
+        .nav-cta:hover { background: var(--blue-dark) !important; }
+
+        .article-hero {
+            padding: 140px 24px 48px; text-align: center;
+            background: linear-gradient(180deg, #DBEAFE 0%, var(--white) 100%);
+        }
+        .article-badge {
+            display: inline-block; padding: 6px 16px; border-radius: 100px;
+            font-size: 13px; font-weight: 600; margin-bottom: 20px;
+            background: var(--white); color: var(--blue);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .article-hero h1 {
+            font-size: clamp(30px, 4.5vw, 44px); font-weight: 800;
+            color: var(--slate-900); line-height: 1.15; margin-bottom: 16px;
+            letter-spacing: -0.02em; max-width: 720px; margin-left: auto; margin-right: auto;
+        }
+        .article-meta {
+            font-size: 14px; color: var(--slate-500);
+            display: flex; gap: 12px; justify-content: center;
+        }
+
+        .article-body { max-width: 740px; margin: 0 auto; padding: 48px 24px 24px; }
+        .article-body p { margin-bottom: 20px; font-size: 17px; }
+        .article-body h2 {
+            font-size: 26px; font-weight: 800; color: var(--slate-900);
+            margin: 44px 0 16px; letter-spacing: -0.01em;
+        }
+        .article-body h3 {
+            font-size: 19px; font-weight: 700; color: var(--slate-900);
+            margin: 28px 0 10px;
+        }
+        .article-body ul, .article-body ol { margin: 0 0 20px 24px; font-size: 17px; }
+        .article-body li { margin-bottom: 10px; }
+        .article-body strong { color: var(--slate-900); }
+
+        .callout {
+            border-radius: 14px; padding: 24px 28px; margin: 28px 0;
+            background: var(--blue-light);
+            border-left: 4px solid var(--blue);
+        }
+        .callout h3 { margin-top: 0 !important; color: var(--blue-dark) !important; }
+        .callout p, .callout li { font-size: 15px !important; }
+        .callout ul { margin-bottom: 0; }
+
+        .verdict-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+        .verdict {
+            border-radius: 14px; padding: 20px 22px;
+            border: 1px solid rgba(0,0,0,0.06);
+        }
+        .verdict h4 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+        .verdict ul { margin: 0 0 0 18px; font-size: 14px; }
+        .verdict li { margin-bottom: 6px; }
+        .verdict.good { background: var(--green-light); }
+        .verdict.good h4 { color: var(--green); }
+        .verdict.caution { background: var(--amber-light); }
+        .verdict.caution h4 { color: var(--amber); }
+
+        .disclaimer {
+            background: var(--slate-100); border-radius: 12px;
+            padding: 18px 22px; margin: 36px 0; font-size: 13px !important;
+            color: var(--slate-500) !important; line-height: 1.6;
+        }
+        .disclaimer p { font-size: 13px !important; margin-bottom: 0 !important; }
+
+        .cta-section {
+            text-align: center; padding: 72px 24px;
+            background: linear-gradient(135deg, var(--blue) 0%, var(--purple) 100%);
+            color: var(--white); margin-top: 24px;
+        }
+        .cta-section h2 {
+            font-size: clamp(26px, 3.5vw, 36px); font-weight: 800;
+            margin-bottom: 14px; letter-spacing: -0.01em;
+        }
+        .cta-section p {
+            font-size: 16px; opacity: 0.85; margin-bottom: 28px;
+            max-width: 480px; margin-left: auto; margin-right: auto;
+        }
+        .btn-white {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--white); color: var(--blue);
+            padding: 14px 36px; border-radius: 12px;
+            font-size: 16px; font-weight: 700; text-decoration: none;
+            transition: all 0.2s; box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+        }
+        .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+
+        .related { max-width: 740px; margin: 0 auto; padding: 40px 24px 64px; }
+        .related h3 { font-size: 18px; font-weight: 700; color: var(--slate-900); margin-bottom: 16px; }
+        .related a {
+            display: block; padding: 14px 18px; border-radius: 10px;
+            border: 1px solid rgba(0,0,0,0.06); margin-bottom: 10px;
+            text-decoration: none; color: var(--slate-700); font-size: 15px; font-weight: 500;
+            transition: all 0.2s;
+        }
+        .related a:hover { border-color: var(--blue); color: var(--blue); }
+
+        footer {
+            background: var(--slate-900); color: rgba(255,255,255,0.5);
+            padding: 48px 24px;
+        }
+        .footer-inner {
+            max-width: 1120px; margin: 0 auto;
+            display: flex; justify-content: space-between; align-items: center;
+            flex-wrap: wrap; gap: 16px;
+        }
+        .footer-brand {
+            font-size: 18px; font-weight: 700; color: var(--white);
+            display: flex; align-items: center; gap: 8px;
+        }
+        .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+        .footer-links a {
+            font-size: 14px; color: rgba(255,255,255,0.5);
+            text-decoration: none; transition: color 0.2s;
+        }
+        .footer-links a:hover { color: var(--white); }
+        .footer-copy {
+            font-size: 13px; width: 100%; text-align: center;
+            margin-top: 24px; padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .article-hero { padding: 120px 20px 40px; }
+            .verdict-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How accurate are AI food scanners?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the method. Barcode scans are exact because they read the label. Photo estimates are directional — good for spotting patterns over weeks, unreliable as precise per-meal measurements. The biggest error sources are portion sizes, hidden oils and sauces, and mixed dishes."}}, {"@type": "Question", "name": "Why are calorie estimates from photos often wrong?", "acceptedAnswer": {"@type": "Answer", "text": "A photo can't show what the camera can't see: cooking oils, butter, sugar in sauces, or exact portion weights. Two identical-looking plates can differ by hundreds of calories. AI estimates from a single image are educated guesses, not measurements."}}, {"@type": "Question", "name": "Is barcode scanning more accurate than photo scanning?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, for packaged foods. A barcode pulls the manufacturer's label data, which is regulated and exact per serving. Photo scanning wins for fresh food, home cooking, and restaurant meals where no label exists — but its numbers are estimates."}}, {"@type": "Question", "name": "Should I trust the protein and nutrient numbers from a food scanner?", "acceptedAnswer": {"@type": "Answer", "text": "Treat them as directional. They're useful for comparing days and spotting gaps (like consistently low fiber), but not precise enough for clinical decisions. If you need exact intake — for a medical condition, say — work with a dietitian, not an app."}}, {"@type": "Question", "name": "How should I actually use a food scanner, given the limits?", "acceptedAnswer": {"@type": "Answer", "text": "Use trends, not single meals. Scan consistently, look at weekly patterns, and pay attention to the qualitative layer — what kinds of foods you eat and how they fit your body — rather than fixating on any one day's calorie number."}}]}
+</script>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="/" class="nav-brand">
+            <div class="nav-brand-icon">FL</div>
+            FoodLore
+        </a>
+        <div class="nav-links">
+            <a href="/#features">Features</a>
+            <a href="/blog">Blog</a>
+            <a href="/support">Support</a>
+            <a href="https://apps.apple.com/app/foodlore/id6760920100" class="nav-cta">Download</a>
+        </div>
+    </div>
+</nav>
+
+<header class="article-hero">
+    <div class="article-badge">🔬 Trust & Transparency</div>
+    <h1>How Accurate Are AI Food Scanners? An Honest Answer</h1>
+    <div class="article-meta"><span>Oct 2, 2026</span><span>·</span><span>6 min read</span></div>
+</header>
+
+<article class="article-body">
+    <p>Every food scanner shows you confident numbers. <em>412 calories. 28g protein.</em> Precise to the digit. So here's the question nobody in the category wants to answer first: how much of that precision is real?</p>
+    <p>We make one of these apps, so we'll go first. The honest answer: it depends entirely on <em>how</em> the number was produced — and the industry does a poor job of telling you which numbers to trust and which to hold loosely.</p>
+
+    <div class="callout">
+        <h3>The honest summary</h3>
+        <ul>
+            <li><strong>Barcode scans:</strong> exact. They read the regulated label. Trust them.</li>
+            <li><strong>Photo estimates:</strong> directional. Good for patterns across weeks; unreliable as precise per-meal measurements.</li>
+            <li><strong>The fix:</strong> use trends, not single meals — and pay attention to the qualitative layer (what kinds of foods, how they fit your body), not just the digits.</li>
+        </ul>
+    </div>
+
+    <h2>Where photo estimates go wrong</h2>
+    <p>A photo can't show what the camera can't see. That's the whole problem in one sentence. The five usual suspects:</p>
+    <ol>
+        <li><strong>Portions.</strong> The camera sees area, not weight or depth. A bowl photographed from above hides how deep it is. This is the single biggest error source.</li>
+        <li><strong>Hidden fats and sugars.</strong> The tablespoon of oil the restaurant cooked in, the butter in the sauce, the sugar in the dressing — invisible, and each one is 100+ calories.</li>
+        <li><strong>Mixed dishes.</strong> A grain bowl with six components is six estimation problems stacked on top of each other. Errors compound.</li>
+        <li><strong>Lookalikes.</strong> Regular vs. diet soda, full-fat vs. low-fat yogurt, similar-looking grains — the photo often can't distinguish them.</li>
+        <li><strong>Database mismatches.</strong> Even when the food is identified correctly, the nutritional entry it's matched to might be an average that doesn't fit your specific version.</li>
+    </ol>
+    <p>None of this is a secret to anyone building these systems. It's just rarely said out loud, because confident numbers sell better than honest uncertainty.</p>
+
+    <h2>Where the numbers are solid</h2>
+    <div class="verdict-grid">
+        <div class="verdict good">
+            <h4>Trust these</h4>
+            <ul>
+                <li>Barcode scans of packaged food (regulated label data)</li>
+                <li>Food identification ("that's salmon, not chicken")</li>
+                <li>Relative comparisons (Tuesday vs. Thursday)</li>
+                <li>Pattern detection (fiber consistently low for two weeks)</li>
+                <li>Qualitative properties (warming vs. cooling, food categories)</li>
+            </ul>
+        </div>
+        <div class="verdict caution">
+            <h4>Hold these loosely</h4>
+            <ul>
+                <li>Exact calorie counts from photos</li>
+                <li>Precise macro grams from mixed dishes</li>
+                <li>Single-meal verdicts ("this lunch was 412")</li>
+                <li>Day-to-day deltas of 50–100 calories</li>
+                <li>Any number you'd make a medical decision on</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>How to actually use a scanner, given all that</h2>
+    <p>The mistake is treating the app like a scale. The right mental model is a <strong>journal with a good memory</strong>:</p>
+    <ul>
+        <li><strong>Scan consistently, judge weekly.</strong> Individual estimates are noisy; two weeks of estimates reveal real patterns. That's where the value lives.</li>
+        <li><strong>Watch the qualitative layer.</strong> What <em>kinds</em> of foods dominate your week? How do they fit your body? These answers don't depend on exact calorie counts — and they're often the more useful ones.</li>
+        <li><strong>When a scan looks wrong, say so.</strong> If the portion is obviously off, most scanners let you adjust it. A corrected log beats a precise-looking wrong one.</li>
+        <li><strong>Don't outsource medical decisions.</strong> If you're managing diabetes, kidney disease, or any condition where exact intake matters, the app is a companion to your clinician — not a replacement.</li>
+    </ul>
+
+    <h2>Why we're writing this</h2>
+    <p>Straightforward self-interest, honestly told: trust is the whole game for a new app. We'd rather you trust our uncertainty than doubt our confidence. The scanners that last will be the ones that show their work — what they know, what they're estimating, and where they could be wrong.</p>
+    <p>That's also why FoodLore has two scores instead of one number. The constitution fit — whether a food suits <em>your</em> body — doesn't depend on getting the calories exactly right. It's a different, sturdier kind of answer: the qualitative layer that stays useful even when the digits are approximate.</p>
+    <p><a href="https://foodlore.app/quiz/">Take the 2-minute body-type quiz</a>, scan a meal, and judge us on whether the <em>fit</em> feels true — that's the part we're betting on.</p>
+
+    <div class="disclaimer">
+        <p><strong>A quick note:</strong> This article is educational, not medical advice. AI nutrition estimates are approximate by nature — treat them as directional. For medical nutrition decisions, work with a qualified clinician or dietitian.</p>
+    </div>
+
+    <h2>FAQ: AI Food Scanner Accuracy</h2>
+    <p><strong>How accurate are AI food scanners?</strong> It depends on the method. Barcode scans are exact because they read the label. Photo estimates are directional — good for spotting patterns over weeks, unreliable as precise per-meal measurements. The biggest error sources are portion sizes, hidden oils and sauces, and mixed dishes.</p>
+    <p><strong>Why are calorie estimates from photos often wrong?</strong> A photo can't show what the camera can't see: cooking oils, butter, sugar in sauces, or exact portion weights. Two identical-looking plates can differ by hundreds of calories. AI estimates from a single image are educated guesses, not measurements.</p>
+    <p><strong>Is barcode scanning more accurate than photo scanning?</strong> Yes, for packaged foods. A barcode pulls the manufacturer's label data, which is regulated and exact per serving. Photo scanning wins for fresh food, home cooking, and restaurant meals where no label exists — but its numbers are estimates.</p>
+    <p><strong>Should I trust the protein and nutrient numbers from a food scanner?</strong> Treat them as directional. They're useful for comparing days and spotting gaps (like consistently low fiber), but not precise enough for clinical decisions. If you need exact intake — for a medical condition, say — work with a dietitian, not an app.</p>
+    <p><strong>How should I actually use a food scanner, given the limits?</strong> Use trends, not single meals. Scan consistently, look at weekly patterns, and pay attention to the qualitative layer — what kinds of foods you eat and how they fit your body — rather than fixating on any one day's calorie number.</p>
+    <h2>Judge the Fit, Not Just the Digits</h2>
+    <p>FoodLore's free body-type quiz maps you to one of the nine TCM constitutions in about two minutes — then every scan is scored against your body, not just counted.</p>
+    <p><strong><a href="https://foodlore.app/quiz/">Take the free body-type quiz →</a></strong></p>
+    <p><strong><a href="https://apps.apple.com/app/foodlore/id6760920100">Download FoodLore on the App Store →</a></strong></p>
+</article>
+
+<section class="cta-section">
+    <h2>What is your body type?</h2>
+    <p>Scan any food or drink with FoodLore and see how it scores for your TCM constitution, plus 60+ nutrients from modern science.</p>
+    <a href="https://apps.apple.com/app/foodlore/id6760920100" class="btn-white">Download FoodLore for iOS</a>
+</section>
+
+<div class="related">
+    <h3>Keep reading</h3>
+    <a href="https://foodlore.app/blog/best-ai-food-scanner-apps">📱 The 5 Best AI Food Scanner Apps for iPhone in 2026</a>
+    <a href="https://foodlore.app/blog/ai-tongue-analysis">👅 AI Tongue Analysis: What Your Tongue Reveals in TCM</a>
+    <a href="https://foodlore.app/blog/tcm-vs-holistic-nutrition">🌿 TCM vs Holistic Nutrition: Same Patterns, Older System</a>
+    <a href="https://foodlore.app/quiz/">🧭 What's Your Body Type? Take the 2-Minute Quiz</a>
+</div>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="nav-brand-icon" style="width:28px; height:28px; font-size:13px; border-radius:7px;">FL</div>
+            FoodLore
+        </div>
+        <div class="footer-links">
+            <a href="/blog">Blog</a>
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms of Use</a>
+            <a href="/support">Support</a>
+            <a href="mailto:support@foodlore.app">Contact</a>
+        </div>
+        <div class="footer-copy">
+            &copy; 2026 FoodLore. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
