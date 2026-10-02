@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodLore vs Noom: Psychology vs Body Type — Which Actually Changes How You Eat?</title>
+    <meta name="description" content="Noom vs FoodLore: Noom uses psychology and CBT lessons to change why you eat; FoodLore uses TCM body types to change what suits your body. Honest comparison on approach, pricing, and who each is for.">
+    <link rel="canonical" href="https://foodlore.app/blog/foodlore-vs-noom">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+        :root {
+            --blue: #2563EB; --blue-dark: #1D4ED8; --blue-light: #DBEAFE;
+            --slate-900: #0F172A; --slate-700: #334155; --slate-500: #64748B;
+            --slate-300: #CBD5E1; --slate-100: #F1F5F9; --white: #FFFFFF;
+            --green: #059669; --green-light: #D1FAE5;
+            --purple: #7C3AED; --purple-light: #EDE9FE;
+            --rose: #E11D48; --rose-light: #FFE4E6;
+            --amber: #D97706; --amber-light: #FEF3C7;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7; color: var(--slate-700); background: var(--white);
+            -webkit-font-smoothing: antialiased;
+        }
+        nav {
+            position: fixed; top: 0; width: 100%; z-index: 100;
+            background: rgba(255,255,255,0.92); backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+        .nav-inner {
+            max-width: 1120px; margin: 0 auto; display: flex;
+            align-items: center; justify-content: space-between; padding: 16px 24px;
+        }
+        .nav-brand {
+            font-size: 22px; font-weight: 800; color: var(--slate-900);
+            text-decoration: none; display: flex; align-items: center; gap: 10px;
+        }
+        .nav-brand-icon {
+            width: 36px; height: 36px; border-radius: 10px;
+            background: linear-gradient(135deg, var(--blue), var(--purple));
+            display: flex; align-items: center; justify-content: center;
+            font-size: 18px; color: white;
+        }
+        .nav-links { display: flex; gap: 32px; align-items: center; }
+        .nav-links a {
+            font-size: 14px; font-weight: 500; color: var(--slate-500);
+            text-decoration: none; transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--slate-900); }
+        .nav-cta {
+            background: var(--blue) !important; color: var(--white) !important;
+            padding: 8px 20px !important; border-radius: 8px !important;
+            font-weight: 600 !important;
+        }
+        .nav-cta:hover { background: var(--blue-dark) !important; }
+
+        .article-hero {
+            padding: 140px 24px 48px; text-align: center;
+            background: linear-gradient(180deg, #EDE9FE 0%, var(--white) 100%);
+        }
+        .article-badge {
+            display: inline-block; padding: 6px 16px; border-radius: 100px;
+            font-size: 13px; font-weight: 600; margin-bottom: 20px;
+            background: var(--white); color: var(--blue);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .article-hero h1 {
+            font-size: clamp(30px, 4.5vw, 44px); font-weight: 800;
+            color: var(--slate-900); line-height: 1.15; margin-bottom: 16px;
+            letter-spacing: -0.02em; max-width: 720px; margin-left: auto; margin-right: auto;
+        }
+        .article-meta {
+            font-size: 14px; color: var(--slate-500);
+            display: flex; gap: 12px; justify-content: center;
+        }
+
+        .article-body { max-width: 740px; margin: 0 auto; padding: 48px 24px 24px; }
+        .article-body p { margin-bottom: 20px; font-size: 17px; }
+        .article-body h2 {
+            font-size: 26px; font-weight: 800; color: var(--slate-900);
+            margin: 44px 0 16px; letter-spacing: -0.01em;
+        }
+        .article-body h3 {
+            font-size: 19px; font-weight: 700; color: var(--slate-900);
+            margin: 28px 0 10px;
+        }
+        .article-body ul, .article-body ol { margin: 0 0 20px 24px; font-size: 17px; }
+        .article-body li { margin-bottom: 10px; }
+        .article-body strong { color: var(--slate-900); }
+
+        .callout {
+            border-radius: 14px; padding: 24px 28px; margin: 28px 0;
+            background: var(--purple-light);
+            border-left: 4px solid var(--purple);
+        }
+        .callout h3 { margin-top: 0 !important; color: var(--purple) !important; }
+        .callout p, .callout li { font-size: 15px !important; }
+        .callout ul { margin-bottom: 0; }
+
+        .verdict-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+        .verdict {
+            border-radius: 14px; padding: 20px 22px;
+            border: 1px solid rgba(0,0,0,0.06);
+        }
+        .verdict h4 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+        .verdict ul { margin: 0 0 0 18px; font-size: 14px; }
+        .verdict li { margin-bottom: 6px; }
+        .verdict.good { background: var(--green-light); }
+        .verdict.good h4 { color: var(--green); }
+        .verdict.caution { background: var(--amber-light); }
+        .verdict.caution h4 { color: var(--amber); }
+
+        .app-card {
+            border: 1px solid rgba(0,0,0,0.08); border-radius: 16px;
+            padding: 26px 28px; margin: 24px 0; background: var(--white);
+        }
+        .app-card h3 { margin-top: 0 !important; font-size: 21px !important; }
+        .app-card .best-for {
+            display: inline-block; font-size: 13px; font-weight: 700;
+            background: var(--blue-light); color: var(--blue-dark);
+            padding: 4px 12px; border-radius: 100px; margin-bottom: 12px;
+        }
+        .app-card ul { font-size: 16px; }
+        .pick { background: linear-gradient(180deg, #EFF6FF 0%, var(--white) 100%); border-color: var(--blue); }
+
+        .disclaimer {
+            background: var(--slate-100); border-radius: 12px;
+            padding: 18px 22px; margin: 36px 0; font-size: 13px !important;
+            color: var(--slate-500) !important; line-height: 1.6;
+        }
+        .disclaimer p { font-size: 13px !important; margin-bottom: 0 !important; }
+
+        .cta-section {
+            text-align: center; padding: 72px 24px;
+            background: linear-gradient(135deg, var(--blue) 0%, var(--purple) 100%);
+            color: var(--white); margin-top: 24px;
+        }
+        .cta-section h2 {
+            font-size: clamp(26px, 3.5vw, 36px); font-weight: 800;
+            margin-bottom: 14px; letter-spacing: -0.01em;
+        }
+        .cta-section p {
+            font-size: 16px; opacity: 0.85; margin-bottom: 28px;
+            max-width: 480px; margin-left: auto; margin-right: auto;
+        }
+        .btn-white {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--white); color: var(--blue);
+            padding: 14px 36px; border-radius: 12px;
+            font-size: 16px; font-weight: 700; text-decoration: none;
+            transition: all 0.2s; box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+        }
+        .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+
+        .related { max-width: 740px; margin: 0 auto; padding: 40px 24px 64px; }
+        .related h3 { font-size: 18px; font-weight: 700; color: var(--slate-900); margin-bottom: 16px; }
+        .related a {
+            display: block; padding: 14px 18px; border-radius: 10px;
+            border: 1px solid rgba(0,0,0,0.06); margin-bottom: 10px;
+            text-decoration: none; color: var(--slate-700); font-size: 15px; font-weight: 500;
+            transition: all 0.2s;
+        }
+        .related a:hover { border-color: var(--blue); color: var(--blue); }
+
+        footer {
+            background: var(--slate-900); color: rgba(255,255,255,0.5);
+            padding: 48px 24px;
+        }
+        .footer-inner {
+            max-width: 1120px; margin: 0 auto;
+            display: flex; justify-content: space-between; align-items: center;
+            flex-wrap: wrap; gap: 16px;
+        }
+        .footer-brand {
+            font-size: 18px; font-weight: 700; color: var(--white);
+            display: flex; align-items: center; gap: 8px;
+        }
+        .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+        .footer-links a {
+            font-size: 14px; color: rgba(255,255,255,0.5);
+            text-decoration: none; transition: color 0.2s;
+        }
+        .footer-links a:hover { color: var(--white); }
+        .footer-copy {
+            font-size: 13px; width: 100%; text-align: center;
+            margin-top: 24px; padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .article-hero { padding: 120px 20px 40px; }
+            .verdict-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the difference between Noom and FoodLore?", "acceptedAnswer": {"@type": "Answer", "text": "They attack different problems. Noom is psychology-first: daily CBT-based lessons, habit coaching, and a color-coded food system designed to change why and how you eat. FoodLore is body-first: AI food scanning scored against your TCM body constitution, designed to change what you eat based on how your body responds. One works on behavior, the other on personalization."}}, {"@type": "Question", "name": "How much does Noom cost?", "acceptedAnswer": {"@type": "Answer", "text": "At time of writing (October 2026), Noom runs roughly $70 per month on a monthly plan or about $209 per year on an annual plan. Pricing varies by promotion and region, so check Noom's site for current offers."}}, {"@type": "Question", "name": "Does Noom tell you what to eat?", "acceptedAnswer": {"@type": "Answer", "text": "Not specifically. Noom's color system (green, yellow, red by caloric density) guides you toward lower-density foods in general, but it doesn't personalize recommendations to your body, digestion, or constitution — the guidance is the same framework for everyone."}}, {"@type": "Question", "name": "Is Noom's psychology approach proven?", "acceptedAnswer": {"@type": "Answer", "text": "CBT-based weight-loss interventions have real support in the research literature. Noom's own published trial data is more modest than its marketing suggests, but the core idea — that habits and psychology drive eating more than willpower — is well established."}}, {"@type": "Question", "name": "Can I use Noom and FoodLore together?", "acceptedAnswer": {"@type": "Answer", "text": "They're arguably complementary: Noom works on the behavioral side (why you eat, building sustainable habits) while FoodLore works on the personalization side (which foods suit your body type). If budget allows, the combination covers both halves of the problem."}}, {"@type": "Question", "name": "Which is better for someone who already eats healthy but feels off?", "acceptedAnswer": {"@type": "Answer", "text": "That's FoodLore's home turf. If your habits are already decent but generic 'healthy' foods don't seem to agree with you, the missing piece is usually personalization, not psychology — knowing which foods fit your constitution rather than learning new habits."}}]}
+</script>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="/" class="nav-brand">
+            <div class="nav-brand-icon">FL</div>
+            FoodLore
+        </a>
+        <div class="nav-links">
+            <a href="/#features">Features</a>
+            <a href="/blog">Blog</a>
+            <a href="/support">Support</a>
+            <a href="https://apps.apple.com/app/foodlore/id6760920100" class="nav-cta">Download</a>
+        </div>
+    </div>
+</nav>
+
+<header class="article-hero">
+    <div class="article-badge">⚖️ Comparisons</div>
+    <h1>FoodLore vs Noom: Psychology vs Body Type</h1>
+    <div class="article-meta"><span>Oct 1, 2026</span><span>·</span><span>7 min read</span></div>
+</header>
+
+<article class="article-body">
+    <p>Most diet apps argue about the same thing: calories, macros, which foods are "good." Noom and FoodLore are interesting because they both walked away from that argument — in opposite directions.</p>
+    <p><strong>Noom</strong> decided the problem is <em>why</em> you eat: psychology, habits, the behavioral patterns underneath the fork. <strong>FoodLore</strong> decided the problem is <em>what suits your body</em>: two people can eat the same "healthy" meal and get completely different results. Fair warning: we make one of them. We'll give the other its full due.</p>
+
+    <div class="callout">
+        <h3>The short version</h3>
+        <ul>
+            <li><strong>Choose Noom</strong> if your struggle is behavioral — emotional eating, portion creep, habits you can't seem to break. Its daily psychology lessons and coaching are the most structured behavior-change program in the category.</li>
+            <li><strong>Choose FoodLore</strong> if your habits are fine but generic advice doesn't fit you — you eat "healthy" and still feel off. Its TCM body-type scoring tells you which foods suit <em>your</em> constitution.</li>
+            <li>They're not really rivals. One fixes the eater, the other fixes the menu. The honest answer for some people is both.</li>
+        </ul>
+    </div>
+
+    <div class="app-card">
+        <h3>Noom</h3>
+        <div class="best-for">Best for behavior change</div>
+        <p>The psychology-first weight program. Instead of just handing you a calorie budget, Noom puts you through daily lessons built on cognitive behavioral therapy concepts: why you crave what you crave, how stress rewires appetite, how to build habits that survive bad weeks. Food logging uses a color system — green, yellow, red — based on caloric density rather than moral judgment (in theory).</p>
+        <ul>
+            <li><strong>Strengths:</strong> the only major app that treats eating as a behavioral problem first; the daily-lesson format genuinely helps people who need to understand their own patterns; coaching adds accountability most trackers lack; now expanding into GLP-1 medication programs.</li>
+            <li><strong>Limits:</strong> price — roughly $70/month monthly or ~$209/year annually at time of writing, several times the cost of a pure tracker; the color system is one framework for everyone, not personalized to your body; coaching is more scripted than the ads suggest; food database is smaller than the pure tracking giants.</li>
+            <li><strong>Choose it if:</strong> you've tried counting calories and the counting wasn't the problem — the habits were.</li>
+        </ul>
+    </div>
+
+    <div class="app-card pick">
+        <h3>FoodLore</h3>
+        <div class="best-for">Best for personalized answers · our app</div>
+        <p>FoodLore starts where Noom stops personalizing. Scan a meal (photo, barcode, or multi-item) and get two scores: modern nutrition science (60+ nutrients) and your TCM body constitution — one of nine body types from Traditional Chinese Medicine. The same oatmeal gets a different verdict for a damp-heat body than for a qi-deficient one, because their bodies process it differently. AI tongue analysis acts as a second signal on your type, the way TCM practitioners have read tongues for centuries.</p>
+        <ul>
+            <li><strong>Strengths:</strong> the only app that personalizes food guidance to your constitution instead of handing everyone the same framework; photo + barcode + multi-item scanning; tongue analysis no competitor offers.</li>
+            <li><strong>Limits:</strong> iPhone-only, English-only; no behavioral coaching or psychology curriculum — if your problem is habits, that's a real gap; $7.99/month or $39.99/year after a 3-day trial.</li>
+            <li><strong>Choose it if:</strong> your habits are already reasonable but "eat healthy" advice feels like it was written for someone else's body.</li>
+        </ul>
+    </div>
+
+    <h2>Head to head</h2>
+    <div class="verdict-grid">
+        <div class="verdict good">
+            <h4>Noom wins on</h4>
+            <ul>
+                <li>Behavioral psychology curriculum (CBT-based daily lessons)</li>
+                <li>Coaching and accountability structure</li>
+                <li>People whose core problem is habits, not information</li>
+                <li>Structured program with a beginning, middle, and end</li>
+            </ul>
+        </div>
+        <div class="verdict caution">
+            <h4>FoodLore wins on</h4>
+            <ul>
+                <li>Personalization to your body (nine constitutions, not one framework)</li>
+                <li>Answering "is this good for ME?" per meal, per food</li>
+                <li>Price ($39.99/year vs ~$209/year)</li>
+                <li>People whose habits are fine but generic advice misfires</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>The question to ask yourself</h2>
+    <p>Forget feature lists for a second. There's really one diagnostic question:</p>
+    <p><strong>Do you already know what you <em>should</em> do, and just can't do it consistently?</strong> That's a behavior problem. Noom's psychology curriculum is built exactly for you — and it's the best in the business at it.</p>
+    <p><strong>Or do you eat pretty well and still feel off — bloated, sluggish, or just not thriving on foods everyone calls healthy?</strong> That's a personalization problem. No amount of habit coaching fixes advice that was wrong for your body in the first place. That's the gap FoodLore was built for: Traditional Chinese Medicine spent two millennia systematizing how foods interact with different body types, and modern holistic nutrition keeps rediscovering the same patterns.</p>
+    <p>And if you're honest and the answer is "a bit of both" — that's most people. Behavior got you here, but the menu was never written for you. <a href="https://foodlore.app/quiz/">Take the free 2-minute body-type quiz</a> and see which constitution you're working with. It's the cheapest experiment in this whole article.</p>
+
+    <div class="disclaimer">
+        <p><strong>A quick note:</strong> This article is educational, not medical advice. App features and pricing change — check each app's site and the App Store listing for current details. Competitor descriptions reflect publicly available information at time of writing (October 2026).</p>
+    </div>
+
+    <h2>FAQ: What People Actually Ask About Noom vs FoodLore</h2>
+    <p><strong>What is the difference between Noom and FoodLore?</strong> They attack different problems. Noom is psychology-first: daily CBT-based lessons, habit coaching, and a color-coded food system designed to change why and how you eat. FoodLore is body-first: AI food scanning scored against your TCM body constitution, designed to change what you eat based on how your body responds. One works on behavior, the other on personalization.</p>
+    <p><strong>How much does Noom cost?</strong> At time of writing (October 2026), Noom runs roughly $70 per month on a monthly plan or about $209 per year on an annual plan. Pricing varies by promotion and region, so check Noom's site for current offers.</p>
+    <p><strong>Does Noom tell you what to eat?</strong> Not specifically. Noom's color system (green, yellow, red by caloric density) guides you toward lower-density foods in general, but it doesn't personalize recommendations to your body, digestion, or constitution — the guidance is the same framework for everyone.</p>
+    <p><strong>Is Noom's psychology approach proven?</strong> CBT-based weight-loss interventions have real support in the research literature. Noom's own published trial data is more modest than its marketing suggests, but the core idea — that habits and psychology drive eating more than willpower — is well established.</p>
+    <p><strong>Can I use Noom and FoodLore together?</strong> They're arguably complementary: Noom works on the behavioral side (why you eat, building sustainable habits) while FoodLore works on the personalization side (which foods suit your body type). If budget allows, the combination covers both halves of the problem.</p>
+    <p><strong>Which is better for someone who already eats healthy but feels off?</strong> That's FoodLore's home turf. If your habits are already decent but generic "healthy" foods don't seem to agree with you, the missing piece is usually personalization, not psychology — knowing which foods fit your constitution rather than learning new habits.</p>
+    <h2>Know Your Body Type First</h2>
+    <p>The fastest way to know which half of the problem is yours: FoodLore's free body-type quiz — a few minutes of questions about how you actually feel, mapped to one of the nine TCM constitutions.</p>
+    <p><strong><a href="https://foodlore.app/quiz/">Take the free body-type quiz →</a></strong></p>
+    <p>Then scan your next meal and see both scores — modern nutrition science and your constitution — side by side.</p>
+    <p><strong><a href="https://apps.apple.com/app/foodlore/id6760920100">Download FoodLore on the App Store →</a></strong></p>
+</article>
+
+<section class="cta-section">
+    <h2>What is your body type?</h2>
+    <p>Scan any food or drink with FoodLore and see how it scores for your TCM constitution, plus 60+ nutrients from modern science.</p>
+    <a href="https://apps.apple.com/app/foodlore/id6760920100" class="btn-white">Download FoodLore for iOS</a>
+</section>
+
+<div class="related">
+    <h3>Keep reading</h3>
+    <a href="https://foodlore.app/blog/best-ai-food-scanner-apps">📱 The 5 Best AI Food Scanner Apps for iPhone in 2026</a>
+    <a href="https://foodlore.app/blog/foodlore-vs-myfitnesspal">⚖️ FoodLore vs MyFitnessPal: A Different Question About Food</a>
+    <a href="https://foodlore.app/blog/tcm-vs-holistic-nutrition">🌿 TCM vs Holistic Nutrition: Same Patterns, Older System</a>
+    <a href="https://foodlore.app/quiz/">🧭 What's Your Body Type? Take the 2-Minute Quiz</a>
+</div>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="nav-brand-icon" style="width:28px; height:28px; font-size:13px; border-radius:7px;">FL</div>
+            FoodLore
+        </div>
+        <div class="footer-links">
+            <a href="/blog">Blog</a>
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms of Use</a>
+            <a href="/support">Support</a>
+            <a href="mailto:support@foodlore.app">Contact</a>
+        </div>
+        <div class="footer-copy">
+            &copy; 2026 FoodLore. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
