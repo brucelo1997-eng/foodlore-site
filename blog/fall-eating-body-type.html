@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fall Eating for Your Body Type: What TCM Says to Eat This Autumn</title>
+    <meta name="description" content="TCM treats fall as lung season — dryness is the enemy, and each body type needs a different fall strategy. What to eat this autumn for qi-deficient, yin-deficient, damp-heat, and other constitutions.">
+    <link rel="canonical" href="https://foodlore.app/blog/fall-eating-body-type">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+        :root {
+            --blue: #2563EB; --blue-dark: #1D4ED8; --blue-light: #DBEAFE;
+            --slate-900: #0F172A; --slate-700: #334155; --slate-500: #64748B;
+            --slate-300: #CBD5E1; --slate-100: #F1F5F9; --white: #FFFFFF;
+            --green: #059669; --green-light: #D1FAE5;
+            --purple: #7C3AED; --purple-light: #EDE9FE;
+            --rose: #E11D48; --rose-light: #FFE4E6;
+            --amber: #D97706; --amber-light: #FEF3C7;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7; color: var(--slate-700); background: var(--white);
+            -webkit-font-smoothing: antialiased;
+        }
+        nav {
+            position: fixed; top: 0; width: 100%; z-index: 100;
+            background: rgba(255,255,255,0.92); backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+        .nav-inner {
+            max-width: 1120px; margin: 0 auto; display: flex;
+            align-items: center; justify-content: space-between; padding: 16px 24px;
+        }
+        .nav-brand {
+            font-size: 22px; font-weight: 800; color: var(--slate-900);
+            text-decoration: none; display: flex; align-items: center; gap: 10px;
+        }
+        .nav-brand-icon {
+            width: 36px; height: 36px; border-radius: 10px;
+            background: linear-gradient(135deg, var(--blue), var(--purple));
+            display: flex; align-items: center; justify-content: center;
+            font-size: 18px; color: white;
+        }
+        .nav-links { display: flex; gap: 32px; align-items: center; }
+        .nav-links a {
+            font-size: 14px; font-weight: 500; color: var(--slate-500);
+            text-decoration: none; transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--slate-900); }
+        .nav-cta {
+            background: var(--blue) !important; color: var(--white) !important;
+            padding: 8px 20px !important; border-radius: 8px !important;
+            font-weight: 600 !important;
+        }
+        .nav-cta:hover { background: var(--blue-dark) !important; }
+
+        .article-hero {
+            padding: 140px 24px 48px; text-align: center;
+            background: linear-gradient(180deg, #FEF3C7 0%, var(--white) 100%);
+        }
+        .article-badge {
+            display: inline-block; padding: 6px 16px; border-radius: 100px;
+            font-size: 13px; font-weight: 600; margin-bottom: 20px;
+            background: var(--white); color: var(--blue);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .article-hero h1 {
+            font-size: clamp(30px, 4.5vw, 44px); font-weight: 800;
+            color: var(--slate-900); line-height: 1.15; margin-bottom: 16px;
+            letter-spacing: -0.02em; max-width: 720px; margin-left: auto; margin-right: auto;
+        }
+        .article-meta {
+            font-size: 14px; color: var(--slate-500);
+            display: flex; gap: 12px; justify-content: center;
+        }
+
+        .article-body { max-width: 740px; margin: 0 auto; padding: 48px 24px 24px; }
+        .article-body p { margin-bottom: 20px; font-size: 17px; }
+        .article-body h2 {
+            font-size: 26px; font-weight: 800; color: var(--slate-900);
+            margin: 44px 0 16px; letter-spacing: -0.01em;
+        }
+        .article-body h3 {
+            font-size: 19px; font-weight: 700; color: var(--slate-900);
+            margin: 28px 0 10px;
+        }
+        .article-body ul, .article-body ol { margin: 0 0 20px 24px; font-size: 17px; }
+        .article-body li { margin-bottom: 10px; }
+        .article-body strong { color: var(--slate-900); }
+
+        .callout {
+            border-radius: 14px; padding: 24px 28px; margin: 28px 0;
+            background: var(--amber-light);
+            border-left: 4px solid var(--amber);
+        }
+        .callout h3 { margin-top: 0 !important; color: var(--amber) !important; }
+        .callout p, .callout li { font-size: 15px !important; }
+        .callout ul { margin-bottom: 0; }
+
+        .type-card {
+            border: 1px solid rgba(0,0,0,0.08); border-radius: 16px;
+            padding: 26px 28px; margin: 24px 0; background: var(--white);
+        }
+        .type-card h3 { margin-top: 0 !important; font-size: 21px !important; }
+        .type-card .tag {
+            display: inline-block; font-size: 13px; font-weight: 700;
+            background: var(--amber-light); color: var(--amber);
+            padding: 4px 12px; border-radius: 100px; margin-bottom: 12px;
+        }
+        .type-card ul { font-size: 16px; }
+
+        .disclaimer {
+            background: var(--slate-100); border-radius: 12px;
+            padding: 18px 22px; margin: 36px 0; font-size: 13px !important;
+            color: var(--slate-500) !important; line-height: 1.6;
+        }
+        .disclaimer p { font-size: 13px !important; margin-bottom: 0 !important; }
+
+        .cta-section {
+            text-align: center; padding: 72px 24px;
+            background: linear-gradient(135deg, var(--blue) 0%, var(--purple) 100%);
+            color: var(--white); margin-top: 24px;
+        }
+        .cta-section h2 {
+            font-size: clamp(26px, 3.5vw, 36px); font-weight: 800;
+            margin-bottom: 14px; letter-spacing: -0.01em;
+        }
+        .cta-section p {
+            font-size: 16px; opacity: 0.85; margin-bottom: 28px;
+            max-width: 480px; margin-left: auto; margin-right: auto;
+        }
+        .btn-white {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--white); color: var(--blue);
+            padding: 14px 36px; border-radius: 12px;
+            font-size: 16px; font-weight: 700; text-decoration: none;
+            transition: all 0.2s; box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+        }
+        .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+
+        .related { max-width: 740px; margin: 0 auto; padding: 40px 24px 64px; }
+        .related h3 { font-size: 18px; font-weight: 700; color: var(--slate-900); margin-bottom: 16px; }
+        .related a {
+            display: block; padding: 14px 18px; border-radius: 10px;
+            border: 1px solid rgba(0,0,0,0.06); margin-bottom: 10px;
+            text-decoration: none; color: var(--slate-700); font-size: 15px; font-weight: 500;
+            transition: all 0.2s;
+        }
+        .related a:hover { border-color: var(--blue); color: var(--blue); }
+
+        footer {
+            background: var(--slate-900); color: rgba(255,255,255,0.5);
+            padding: 48px 24px;
+        }
+        .footer-inner {
+            max-width: 1120px; margin: 0 auto;
+            display: flex; justify-content: space-between; align-items: center;
+            flex-wrap: wrap; gap: 16px;
+        }
+        .footer-brand {
+            font-size: 18px; font-weight: 700; color: var(--white);
+            display: flex; align-items: center; gap: 8px;
+        }
+        .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+        .footer-links a {
+            font-size: 14px; color: rgba(255,255,255,0.5);
+            text-decoration: none; transition: color 0.2s;
+        }
+        .footer-links a:hover { color: var(--white); }
+        .footer-copy {
+            font-size: 13px; width: 100%; text-align: center;
+            margin-top: 24px; padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .article-hero { padding: 120px 20px 40px; }
+        }
+    </style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does TCM recommend eating in fall?", "acceptedAnswer": {"@type": "Answer", "text": "In Traditional Chinese Medicine, fall is the season of the lungs and large intestine, and dryness is the seasonal challenge. The general guidance: moistening foods (pears, lily bulb, honey), warming cooked foods over raw cold ones, and pungent flavors in moderation (ginger, scallion) to support the lungs. But the specifics depend on your constitution."}}, {"@type": "Question", "name": "Why do I get sick every fall, according to TCM?", "acceptedAnswer": {"@type": "Answer", "text": "TCM frames fall as the season when dryness attacks the lungs — dry cough, dry skin, dry throat. People with yin-deficient or qi-deficient constitutions tend to feel it first, because they have less moisture and defensive energy to spare. Moistening foods and adequate rest are the traditional countermeasures."}}, {"@type": "Question", "name": "Are pumpkin spice foods good for you in TCM?", "acceptedAnswer": {"@type": "Answer", "text": "Pumpkin itself is fine in TCM — sweet, warming, supportive of digestion. The issue is what comes with it: heavy sugar, dairy, and rich pastries can burden phlegm-damp and damp-heat constitutions. A plain roasted pumpkin suits most bodies better than a pumpkin spice latte."}}, {"@type": "Question", "name": "Should you eat differently in fall vs summer?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, in the TCM framework. Summer favors lighter, cooling foods that clear heat; fall shifts toward warming, cooked, moistening foods as temperatures drop and dryness rises. Eating summer foods deep into fall — lots of raw salads, iced drinks, watermelon — is a classic mismatch the framework warns against."}}, {"@type": "Question", "name": "What foods moisten dryness in the fall?", "acceptedAnswer": {"@type": "Answer", "text": "TCM's classic moistening foods for fall dryness include pears (especially steamed with honey), lily bulb, white fungus, honey, sesame, and almonds. These are considered especially helpful for yin-deficient constitutions and anyone with dry cough, dry skin, or dry throat in autumn."}}]}
+</script>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="/" class="nav-brand">
+            <div class="nav-brand-icon">FL</div>
+            FoodLore
+        </a>
+        <div class="nav-links">
+            <a href="/#features">Features</a>
+            <a href="/blog">Blog</a>
+            <a href="/support">Support</a>
+            <a href="https://apps.apple.com/app/foodlore/id6760920100" class="nav-cta">Download</a>
+        </div>
+    </div>
+</nav>
+
+<header class="article-hero">
+    <div class="article-badge">🍂 Seasonal Eating</div>
+    <h1>Fall Eating for Your Body Type: What TCM Says to Eat This Autumn</h1>
+    <div class="article-meta"><span>Oct 1, 2026</span><span>·</span><span>7 min read</span></div>
+</header>
+
+<article class="article-body">
+    <p>Every October, the same thing happens: pumpkin spice everything, hearty stews, comfort food season. And every October, plenty of people feel <em>worse</em> — sluggish digestion, dry coughs that won't quit, skin that suddenly hates them.</p>
+    <p>Traditional Chinese Medicine has a take on this, and it's more specific than "eat seasonally." In TCM, fall belongs to the lungs and large intestine, and the season's signature challenge is <strong>dryness</strong>. But here's the part generic seasonal-eating advice misses: the right fall diet depends on which body you're feeding. A qi-deficient person and a damp-heat person need opposite things from October.</p>
+
+    <div class="callout">
+        <h3>Fall in TCM, in 30 seconds</h3>
+        <ul>
+            <li><strong>Season:</strong> fall = metal element, lungs + large intestine. Dryness is the seasonal pathogen.</li>
+            <li><strong>General direction:</strong> warming and cooked over raw and cold; moistening foods to counter dryness; pungent flavors (ginger, scallion) in moderation to support the lungs.</li>
+            <li><strong>The catch:</strong> "general direction" is where most seasonal advice stops. Your constitution decides the details — and the details are where it works or backfires.</li>
+        </ul>
+    </div>
+
+    <div class="type-card">
+        <h3>Qi-Deficient: Warm It Up, Cook It Down</h3>
+        <div class="tag">Low energy · gets tired easily · weak digestion</div>
+        <p>Fall is your hardest season. Your digestive fire is already low, and cold weather plus raw foods ask more of it. This is the constitution that should most aggressively shift to cooked food in October.</p>
+        <ul>
+            <li><strong>Lean into:</strong> congee, soups, stews, roasted root vegetables (sweet potato, carrot, pumpkin), oats, ginger tea.</li>
+            <li><strong>Ease off:</strong> raw salads, iced drinks, watermelon and other summer leftovers — cold, raw food is the classic qi-deficient mismatch in fall.</li>
+            <li><strong>Why it works:</strong> in TCM, cooking is pre-digestion. For a weak digestive center, warm cooked food delivers energy instead of demanding it.</li>
+        </ul>
+    </div>
+
+    <div class="type-card">
+        <h3>Yin-Deficient: Moisten Everything</h3>
+        <div class="tag">Dry skin/cough · night sweats · runs warm</div>
+        <p>Fall dryness hits you first and hardest — you're already low on moisture, and the season drains what's left. Dry cough, dry throat, dry skin, restless sleep: the classic October package.</p>
+        <ul>
+            <li><strong>Lean into:</strong> pears (steamed with honey is the classic TCM remedy), lily bulb, white fungus soup, sesame, almonds, honey.</li>
+            <li><strong>Ease off:</strong> spicy, drying foods and excess caffeine — they spend moisture you don't have.</li>
+            <li><strong>Why it works:</strong> moistening foods directly counter the season's dryness instead of fighting symptoms one by one.</li>
+        </ul>
+    </div>
+
+    <div class="type-card">
+        <h3>Yang-Deficient: Warming Is Non-Negotiable</h3>
+        <div class="tag">Always cold · cold hands/feet · low vitality</div>
+        <p>You were cold in August; October is serious. Warming foods aren't a preference for you, they're the strategy.</p>
+        <ul>
+            <li><strong>Lean into:</strong> ginger, cinnamon, lamb, walnuts, roasted warming spices, warm breakfasts (no cold cereal).</li>
+            <li><strong>Ease off:</strong> anything iced, raw, or "cooling" — smoothies, iced coffee, cold salads. Your body reads them as winter arriving early.</li>
+        </ul>
+    </div>
+
+    <div class="type-card">
+        <h3>Damp-Heat: Fall Is Your Relief — Don't Waste It</h3>
+        <div class="tag">Oily skin · heaviness · strong appetite</div>
+        <p>Summer was your worst season; fall finally cools the heat. But comfort-food season is a trap for you — heavy, greasy, sweet fall foods rebuild exactly the dampness summer cleared.</p>
+        <ul>
+            <li><strong>Lean into:</strong> lighter fall foods — steamed vegetables, pears, mung beans, chrysanthemum tea.</li>
+            <li><strong>Ease off:</strong> rich stews, heavy dairy, pumpkin spice pastries, alcohol. The season invites heaviness; your constitution can't afford it.</li>
+        </ul>
+    </div>
+
+    <div class="type-card">
+        <h3>Phlegm-Damp: Lighten the Comfort Food</h3>
+        <div class="tag">Heaviness · brain fog · weight gain tendency</div>
+        <p>Fall comfort food is engineered to create phlegm-damp: creamy, sweet, heavy, starchy. You don't have to skip the season — just steer it.</p>
+        <ul>
+            <li><strong>Lean into:</strong> roasted (not fried) vegetables, barley, mushrooms, ginger tea, moderate portions of whole grains.</li>
+            <li><strong>Ease off:</strong> creamy soups, cheese-heavy dishes, excessive sweets and rich desserts.</li>
+        </ul>
+    </div>
+
+    <div class="type-card">
+        <h3>Balanced: Follow the Season Simply</h3>
+        <div class="tag">Generally well · adapts easily</div>
+        <p>You get the simple version: cook more, raw less; add moistening foods (pears, honey, sesame); keep pungent flavors moderate; let summer foods go. If something starts feeling off as the weather turns, that's worth noticing — constitutions shift, and the <a href="https://foodlore.app/quiz/">body-type quiz</a> takes two minutes.</p>
+    </div>
+
+    <h2>The pattern underneath</h2>
+    <p>Notice what just happened: six constitutions, six different Octobers. The qi-deficient person needs warming; the damp-heat person needs restraint; the yin-deficient person needs moisture. One seasonal-eating listicle can't serve all three — and this is exactly why generic nutrition advice keeps misfiring.</p>
+    <p>This is also why FoodLore tags 600+ ingredients by seasonal appropriateness and climate, not just nutrients. Scan a meal in October and the app weighs the season alongside your constitution — the same scan lands differently in fall than it did in July, because your body's context changed.</p>
+    <p>Don't know your constitution? <a href="https://foodlore.app/quiz/">Take the free 2-minute quiz</a> — then scan tonight's dinner and see whether fall agrees with it.</p>
+
+    <div class="disclaimer">
+        <p><strong>A quick note:</strong> This article is educational, not medical advice. TCM food therapy is a traditional framework, not a medical prescription — talk to a practitioner or clinician about persistent symptoms. If you have a health condition, check with your doctor before changing your diet.</p>
+    </div>
+
+    <h2>FAQ: Fall Eating by Body Type</h2>
+    <p><strong>What does TCM recommend eating in fall?</strong> In Traditional Chinese Medicine, fall is the season of the lungs and large intestine, and dryness is the seasonal challenge. The general guidance: moistening foods (pears, lily bulb, honey), warming cooked foods over raw cold ones, and pungent flavors in moderation (ginger, scallion) to support the lungs. But the specifics depend on your constitution.</p>
+    <p><strong>Why do I get sick every fall, according to TCM?</strong> TCM frames fall as the season when dryness attacks the lungs — dry cough, dry skin, dry throat. People with yin-deficient or qi-deficient constitutions tend to feel it first, because they have less moisture and defensive energy to spare. Moistening foods and adequate rest are the traditional countermeasures.</p>
+    <p><strong>Are pumpkin spice foods good for you in TCM?</strong> Pumpkin itself is fine in TCM — sweet, warming, supportive of digestion. The issue is what comes with it: heavy sugar, dairy, and rich pastries can burden phlegm-damp and damp-heat constitutions. A plain roasted pumpkin suits most bodies better than a pumpkin spice latte.</p>
+    <p><strong>Should you eat differently in fall vs summer?</strong> Yes, in the TCM framework. Summer favors lighter, cooling foods that clear heat; fall shifts toward warming, cooked, moistening foods as temperatures drop and dryness rises. Eating summer foods deep into fall — lots of raw salads, iced drinks, watermelon — is a classic mismatch the framework warns against.</p>
+    <p><strong>What foods moisten dryness in the fall?</strong> TCM's classic moistening foods for fall dryness include pears (especially steamed with honey), lily bulb, white fungus, honey, sesame, and almonds. These are considered especially helpful for yin-deficient constitutions and anyone with dry cough, dry skin, or dry throat in autumn.</p>
+    <h2>Eat for Your Fall, Not Someone Else's</h2>
+    <p>The fastest way to know which October is yours: FoodLore's free body-type quiz — a few minutes of questions about how you actually feel, mapped to one of the nine TCM constitutions.</p>
+    <p><strong><a href="https://foodlore.app/quiz/">Take the free body-type quiz →</a></strong></p>
+    <p>Then scan tonight's dinner and see both scores — modern nutrition science and your constitution — side by side.</p>
+    <p><strong><a href="https://apps.apple.com/app/foodlore/id6760920100">Download FoodLore on the App Store →</a></strong></p>
+</article>
+
+<section class="cta-section">
+    <h2>What is your body type?</h2>
+    <p>Scan any food or drink with FoodLore and see how it scores for your TCM constitution, plus 60+ nutrients from modern science.</p>
+    <a href="https://apps.apple.com/app/foodlore/id6760920100" class="btn-white">Download FoodLore for iOS</a>
+</section>
+
+<div class="related">
+    <h3>Keep reading</h3>
+    <a href="https://foodlore.app/blog/oatmeal-body-type">🥣 Is Oatmeal Good for Your Body Type?</a>
+    <a href="https://foodlore.app/blog/chrysanthemum-tea-body-type">🌼 Chrysanthemum Tea: A TCM Body-Type Take</a>
+    <a href="https://foodlore.app/blog/tcm-vs-holistic-nutrition">🌿 TCM vs Holistic Nutrition: Same Patterns, Older System</a>
+    <a href="https://foodlore.app/quiz/">🧭 What's Your Body Type? Take the 2-Minute Quiz</a>
+</div>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="nav-brand-icon" style="width:28px; height:28px; font-size:13px; border-radius:7px;">FL</div>
+            FoodLore
+        </div>
+        <div class="footer-links">
+            <a href="/blog">Blog</a>
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms of Use</a>
+            <a href="/support">Support</a>
+            <a href="mailto:support@foodlore.app">Contact</a>
+        </div>
+        <div class="footer-copy">
+            &copy; 2026 FoodLore. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
